@@ -1,0 +1,180 @@
+@import './vars.scss';
+
+.header {
+    padding: 270px 90px 90px 90px;
+    font-family: $S-FPro-Display;
+    background-image: url('../images/30-perspective.86.png'), url('../images/Path285.png');
+    background-repeat: no-repeat;
+    background-position: 127% 19%, -216px -43px;
+    background-size: 68% auto, calc(100% + 337px) 866px;
+
+    & > div:first-child {
+        display: flex;
+
+        .baner-text {
+            max-width: 280px;
+            h1 {
+                font-size: 60px;
+                line-height: 60px;
+                color: $primary;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+
+            a {
+                font-size: 13px;
+                line-height: 17px;
+                color: $primary;
+                font-weight: bold;
+
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        .baner-paragraph {
+            padding-left: 20px;
+
+            span {
+                width: 25px;
+                height: 3px;
+                display: block;
+                background-color: $primary;
+                margin: 8px 0 20px 0;
+            }
+            
+            p {
+                max-width: 312px;
+                font-size: 13px;
+                line-height: 17px;
+                color: $secondary;
+            }
+        }
+    }
+
+    & > div:last-child {
+        margin-top: 270px;
+
+        button {
+            margin-left: 35px;
+            width: 200px;
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .header {
+        background-position: 121% 74%, -216px -43px;
+        background-size: 60% auto, calc(100% + 337px) 866px;
+    }
+}
+
+@media (max-width: 800px) {
+    .header {
+        padding-top: 170px;
+        background-position: 110% 111%, -216px -43px;
+        background-size: 60% auto, calc(100% + 337px) 866px;
+
+        & > div:first-child {
+            flex-direction: column;
+            align-items: center;
+
+            .baner-text {
+                h1, div {
+                    text-align: center;
+                }
+
+                h1 {
+                    font-size: 50px;
+                    line-height: 50px;
+                }
+            }
+
+            .baner-paragraph {
+                margin-top: 20px;
+                padding-left: 0;
+            }
+        }
+
+        & > div:last-child {
+            margin-top: 175px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        background-position: 0 0, -166px -133px;
+        background-size: 0, calc(100% + 209px) 819px;
+        padding-bottom: 60px;
+
+        & > div:last-child {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 60px;
+
+            button {
+                margin: 0;
+            }
+
+            img {
+                width: 15px;
+                height: 36px;
+                order: 1;
+                margin-top: 40px;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 520px) {
+    .header {
+        padding: 170px 30px 60px;
+
+        & > div:first-child {
+            .baner-text {
+                max-width: 320px;
+
+                h1 {
+                    font-size: 40px;
+                    line-height: 40px;
+                }
+            }
+        }
+
+        & > div:last-child {
+        }
+
+    }
+}
+
+
+@media (min-width: 320px) {
+    .header {
+        transition: .5s ease all;
+
+        & > div:first-child {
+
+            .baner-text {
+                transition: .5s ease width;
+
+                h1 {
+                    transition: .5s ease text-align;
+                    transition: .5s ease font-size;
+                 }
+            }
+
+            .baner-paragraph {
+                transition: .5s ease all;
+            }
+        }
+
+        & > div:last-child {
+            transition: .5s ease margin;
+        }
+    }
+}

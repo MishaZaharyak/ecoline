@@ -1,0 +1,999 @@
+@import './vars.scss';
+
+// section with slider right
+.section-with-slider.right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $S-FPro-Display;
+    padding: 90px 0 100px 90px;
+    
+    & > div:first-child {
+        ul {
+            min-width: 300px;
+            li {
+                &.big-text {
+                    color: $success-alpha;
+
+                    &:hover, &.active {
+                        color: $success;
+                    }
+
+                    &.active {
+                        &::before {
+                            width: 36px;
+                            top: 42%;
+                            left: -36px;
+                            height: 15px;
+                            background-image: url('../images/Group181.png');
+                        }
+                    }
+                }
+
+                &.small-text {
+                    font-size: 12px;
+                    line-height: 17px;
+                    color: $success;
+                    font-weight: bold;
+                    padding-top: 10px;
+                }
+
+                &.small-text.first {
+                    padding-top: 25px;
+                }                
+            }
+        }
+
+        button {
+            margin-top: 70px;
+            max-width: 200px;
+        }
+    }
+
+    & > div:last-child {
+        padding: 70px 90px 70px 70px;
+        background: $mainBackgrondColor;
+        border-radius: 13px 0 0 13px;
+        min-width: 1px;
+        max-width: 895px;
+        
+        .slider {
+            max-width: 735px;
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 20px 10px 0;
+                margin: 0 5px;
+                min-height: 290px;
+
+                h2 {
+                    font-size: 25px;
+                    line-height: 25px;
+                    color: $secondary;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+
+                p {
+                    max-width: 213px;
+                    margin-bottom: 0;
+                    margin-top: 20px;
+                }
+
+                button {
+                    margin-top: 80px;
+                    width: 130px;
+                }
+            }
+
+            .slick-dots {
+                li {
+                    button {
+                        background-color: $success-alpha;
+                    }
+
+                    &.slick-active button {
+                        background-color: $success;
+                    }
+                }
+            }
+        }
+
+        .arrows {
+            .slick-new-prev, .slick-new-next {
+                position: absolute;
+                background-color: transparent;
+                border: none;
+                display: flex;
+                padding: 0;
+                top: -15px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .slick-new-prev {
+                transform: rotate(180deg);
+                left: 0;
+            }
+
+            .slick-new-next {
+                right: 0;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .section-with-slider.right {
+
+        & > div:first-child {
+            padding-right: 50px;
+        }
+
+        & > div:last-child .slider .slide {
+            .content {
+                text-align: center;
+            }
+
+            h2 {
+                max-width: 290px;
+                margin: auto;
+            }
+
+            p {
+                margin: 20px auto 0 auto;
+            }
+
+            button {
+                align-self: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .section-with-slider.right {
+
+        & > div:first-child ul {
+            min-width: 240px;
+        }
+
+        & > div:last-child {
+            padding: 0px 90px 30px 30px;
+
+            .slider .slide button {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .section-with-slider.right {
+
+        & > div:first-child {
+            transition: .5s ease padding;
+
+            ul {
+                transition: .5s ease width;
+            }
+        }
+
+        & > div:last-child .slider .slide {
+            .content {
+                transition: .5s ease text-align;
+            }
+
+            h2 {
+                transition: .5s ease all;
+            }
+
+            p {
+                transition: .5s ease margin;
+            }
+
+            button {
+                transition: .5s ease all;
+            }
+        }
+    }
+}
+// end section with slider right
+
+// clients
+.clients {
+    display: flex;
+    align-items: center;
+    padding: 100px 90px;
+    background-color: $mainBackgrondColor;
+
+    & > div:first-child {
+        max-width: 835px;
+        width: 100%;
+
+        .clients-slider {
+            max-width: 835px;
+
+            img {
+                padding: 0 15px;
+                margin: 10px;
+                max-width: 200px;
+            }
+
+            .slick-dots {
+                li {
+                    button {
+                        background-color: $primary-alpha;
+                    }
+
+                    &.slick-active button {
+                        background-color: $primary;
+                    }
+                }
+            }
+        }
+    }
+
+    & > div:last-child {
+        max-width: 420px;
+        padding-left: 90px;
+
+        h2 {
+            font-size: 40px;
+            line-height: 40px;
+            max-width: 290px;
+            color: $primary;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        button {
+            width: 145px;
+            margin-top: 40px;
+        }
+    }
+
+    .arrows {
+        .slick-new-prev, .slick-new-next {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            padding: 0;
+            top: -25px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .slick-new-prev {
+            transform: rotate(90deg);
+            left: 8px;
+        }
+
+        .slick-new-next {
+            transform: rotate(-90deg);
+            right: 8px;
+        }
+    }
+}
+// end clients
+
+// image slider section
+.image-slider-section {
+    padding: 115px 90px 100px 90px;
+
+    background-image: url('../images/Rectangle270.png'), 
+    url('../images/rectangl-gradient.png');
+    background-repeat: no-repeat;
+    background-position: 69% 51%, 83% 56%;
+    background-size: auto, auto;
+
+    & > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navigation-menu {
+        max-width: 330px;
+
+        h2 {
+            font-size: 40px;
+            line-height: 40px;
+            color: $success;
+            font-weight: bold;
+            margin: 50px 0 20px 0;
+        }
+
+        p {
+            margin-bottom: 60px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                font-size: 13px;
+                line-height: 17px;
+                color: $success-alpha;
+                font-weight: bold;
+                padding: 10px 0;
+                transition: .5s ease all;
+                cursor: pointer;
+
+                    &:hover, &.active {
+                        color: $success;
+                        position: relative;
+                        text-indent: 20px;
+                        transition: .5s ease all;                        
+                    }
+
+                    &.active {
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            width: 36px;
+                            top: 42%;
+                            left: -36px;
+                            height: 15px;
+                            background-image: url('../images/Group181.png');
+                            background-repeat: no-repeat;
+                        }
+                    }
+
+                img {
+                    max-width: 35px;
+                    max-height: 35px;
+                    margin-right: 20px;
+                }
+            }
+        }
+
+    }
+
+    .img-slider-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .image-slider {
+            max-width: 710px;
+            max-height: 390px;
+
+            .item img {
+                max-width: 710px;
+                max-height: 390px;
+            }
+        }
+
+        button {
+            width: 150px;
+            margin: 0px 0 15px -53px;
+        }
+    }
+}
+// end image slider section
+
+// section with slider left
+.section-with-slider.left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $S-FPro-Display;
+    padding: 90px 90px 100px 0;
+    
+    & > div:last-child {
+        ul {
+            min-width: 315px;
+
+            li {
+                &.big-text {
+                    color: $primary-alpha;
+
+                    &:hover, &.active {
+                        color: $primary;
+                    }
+
+                    &.active {
+                        &::before {
+                            width: 15px;
+                            height: 36px;
+                            top: 20%;
+                            left: -36px;
+                            background-image: url('../images/Group176.png');
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }            
+            }
+        }
+
+        div {
+            max-width: 300px;
+            margin-top: 30px;
+
+            a {
+                font-size: 13px;
+                line-height: 17px;
+                color: $primary-alpha;
+                font-weight: bold;
+                transition: .5s ease color;
+    
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+    
+                &:hover {
+                    color: $primary;
+                    transition: .5s ease color;
+                }
+            }
+        }
+
+        button {
+            margin-top: 100px;
+            max-width: 170px;
+        }
+    }
+
+    & > div:first-child {
+        padding: 90px 70px 90px 90px;
+        background: $mainBackgrondColor;
+        border-radius: 0 13px 13px 0;
+        width: 100%;
+        max-width: 895px;
+        
+        .slider {
+            max-width: 735px;
+            min-width: 735px;
+            // max-height: 300px;
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: flex-end;
+                margin: 0 5px;
+                min-height: 290px;
+
+                img {
+                    max-width: 35px;
+                    max-height: 35px;
+                    margin-bottom: 20px;    
+                }
+
+                h2 {
+                    font-size: 20px;
+                    line-height: 20px;
+                    color: $primary;
+                    font-weight: bold;
+                }
+
+                p {
+                    max-width: 213px;
+                    margin: 0;
+                }
+
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 15px 0;
+
+                    li {
+                        font-size: 15px;
+                        line-height: 22px;
+                        color: $secondary;
+                    }
+                }
+
+                button {
+                    margin-top: 25px;
+                    max-width: 130px;
+                }
+            }
+
+            .slick-dots {
+                padding: 85px 0 0;
+
+                li {
+                    button {
+                        background-color: $primary-alpha;
+                    }
+
+                    &.slick-active button {
+                        background-color: $primary;
+                    }
+                }
+            }
+        }
+
+        .arrows {
+            .slick-new-prev, .slick-new-next {
+                position: absolute;
+                background-color: transparent;
+                border: none;
+                display: flex;
+                padding: 0;
+                top: -25px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            .slick-new-prev {
+                transform: rotate(90deg);
+                left: 8px;
+            }
+    
+            .slick-new-next {
+                transform: rotate(-90deg);
+                right: 8px;
+            }
+        }
+    }
+
+}
+// end section with slider left
+
+// clients
+.preference {
+    display: flex;
+    align-items: center;
+    padding: 80px 90px 90px;
+    background-color: $mainBackgrondColor;
+
+    & > div:last-child {
+        max-width: 835px;
+        width: 100%;
+
+        .clients-slider {
+            max-width: 835px;
+
+            .slide {
+                display: flex !important;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin: 0 5px;
+                text-align: center;
+
+                img {
+                    max-width: 35px;
+                    max-height: 35px;
+                    margin: 0 auto 20px auto;    
+                }
+
+                p.secondary-paragraph {
+                    max-width: 190px;
+                    margin: 0 auto; 
+                }
+
+                p.success-paragraph {
+                    max-width: 150px;
+                    margin: 0 auto 20px auto;             
+                }                
+            }
+
+            .slick-dots {
+                li {
+                    button {
+                        background-color: $success-alpha;
+                    }
+
+                    &.slick-active button {
+                        background-color: $success;
+                    }
+                }
+            }
+        }
+    }
+
+    & > div:first-child {
+        max-width: 420px;
+        padding-right: 90px;
+
+        h2 {
+            font-size: 40px;
+            line-height: 40px;
+            max-width: 290px;
+            color: $success;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        button {
+            width: 145px;
+            margin-top: 40px;
+        }
+    }
+
+    .arrows {
+        .slick-new-prev, .slick-new-next {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            padding: 0;
+            top: -15px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .slick-new-prev {
+            transform: rotate(180deg);
+            left: 0;
+        }
+
+        .slick-new-next {
+            right: 0;
+        }
+    }
+}
+// end clients
+
+// promotions section 
+.promotions {
+    padding: 127px 90px 40px 0;
+    display: flex;
+    justify-content: space-between;
+
+    & > div:first-child {
+        background-image: url('../images/Rectangle301.png');
+        background-repeat: no-repeat;
+        background-position: 0 center;
+        background-size: auto 100%;
+        border-radius: 0 13px 13px 0;
+        display: flex;
+        align-items: flex-start;
+        padding: 90px 45px 25px 90px;
+
+        .text {
+            min-width: 420px;
+            padding-right: 90px;
+    
+            h2 {
+                font-size: 40px;
+                line-height: 40px;
+                max-width: 170px;
+                color: white;
+                font-weight: bold;
+                margin-bottom: 30px;
+            }
+    
+            button {
+                width: 145px;
+                margin-top: 40px;
+                border-radius: 18px;
+                border: none;
+                color: white;
+                font-size: 13px;
+                line-height: 17px;
+                font-weight: bold;
+                padding: 6px 20px;
+                background-color: transparent;
+                cursor: pointer;
+                transition: .3s ease all;
+
+                &:hover {
+                    background-color: $success;
+                    color: white;
+                    transition: .3s ease all;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        .image-text {
+            margin-top: -135px;
+
+            .eclipse {
+                max-width: 370px;
+                max-height: 270px;
+                background-image: url('../images/Photo/krishtalevi-djerela-1.jpg');
+                background-repeat: no-repeat;
+                background-position: -50px 0px;
+                background-size: 475px 270px;
+
+                img {
+                    max-width: 370px;
+                    max-height: 270px;
+                }
+
+            }
+
+            p {
+                max-width: 280px;
+                font-size: 20px;
+                line-height: 23px;
+                color: white;
+                font-weight: bold;
+                margin: 20px 0;
+            }
+
+            button {
+                width: 145px;
+
+                img {
+                    max-width: 15px;
+                    max-height: 15px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    & > div:last-child {
+        margin-left: 50px;
+        max-width: 370px;
+        margin-bottom: -45px;
+
+        h4 {
+            font-size: 30px;
+            line-height: 30px;
+            color: red;
+            font-weight: bold;
+        }
+
+        p {
+            max-width: 290px;
+            font-size: 20px;
+            line-height: 25px;
+            color: $secondary;
+            font-weight: bold;
+        }
+
+        button {
+            margin-bottom: 20px;
+            width: 150px;
+
+            img {
+                max-width: 15px;
+                max-height: 15px;
+                margin: 0 0 5px 5px;
+            }
+        }
+
+        .eclipse {
+            max-height: 270px;
+            background-image: url('../images/Photo/001.jpg');
+            background-repeat: no-repeat;
+            background-position: -260px 0px;
+            background-size: 889px 275px;
+
+            img {
+                max-height: 270px;
+            }
+        }
+    }
+}
+// end promotions section
+
+// reviews
+.reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 200px 50px 90px;
+
+    & > div:first-child {
+        padding: 0 0 80px 100px;
+        width: 100%;
+        background-image: url('../images/Rectangle279.png'), url('../images/Rectangle302.png');
+        background-repeat: no-repeat;
+        background-position: 58% 41%, 24% 100%;
+        background-size: auto, auto;
+        
+        & > div {
+            max-height: 280px;
+            max-width: 530px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid $mainBackgrondColor;
+            width: 100%;
+            padding: 60px 30px 50px 50px;
+            position: relative;
+
+            img.quotes {
+                position: absolute;
+                right: 40px;
+                top: -40px;
+            }
+
+            .review-slider {
+                max-width: 370px;
+                width: 100%;
+
+                .slide {
+                    img {
+                        max-width: 40px;
+                        max-height: 40px;
+                    }
+
+                    .name {
+                        padding-top: 20px;
+                        font-size: 18px;
+                        line-height: 18px;
+                        color: $primary;
+                        font-weight: bold;
+                    }
+
+                    .comment {
+                        font-size: 12px;
+                        max-width: 350px;
+                        line-height: 18px;
+                        color: $secondary;
+                    }
+                }
+            }   
+            
+            .arrows {
+
+                .slick-new-prev, .slick-new-next {
+                    position: absolute;
+                    background-color: $mainBackgrondColor;
+                    border: none;
+                    display: flex;
+                    padding: 0;
+                    height: 25px;
+                    width: 30px;
+                    right: 0;
+                    
+                    &:focus {
+                        outline: none;
+                    }
+                }
+        
+                .slick-new-prev {
+                    transform: rotate(180deg);
+                    top: calc(50% - 27px);
+                    img {
+                        margin: 8px auto 0 auto;
+                    }
+                }
+        
+                .slick-new-next {
+                    top: 50%;
+                    border-radius: 0 0 5px 5px;
+
+                    img {
+                        margin: 8px auto 0 auto;
+                    }
+                }
+            }
+        }
+    }
+
+    & > div:last-child {
+        max-width: 420px;
+
+        h2 {
+            font-size: 40px;
+            line-height: 40px;
+            max-width: 290px;
+            color: $primary;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        button {
+            width: 145px;
+            margin-top: 40px;
+    }
+    }
+}
+// end reviews
+
+// page article
+.page-article {
+    padding: 70px 90px;
+
+    h3 {
+        font-size: 25px;
+        line-height: 25px;
+        color: $secondary-2;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    p {
+        max-width: 845px;
+        font-size: 12px;
+        line-height: 18px;
+        color: $secondary-2;
+        margin: 0 auto;
+    }
+
+    div {
+        margin-top: 25px;
+
+        img {
+            max-width: 20px;
+            max-height: 20px;
+            cursor: pointer;
+        }
+    }
+}
+// end page article
+
+// feedback
+.feedback {
+    padding: 110px 90px;
+    background-image: url('../images/Group228.png'), url('../images/Rectangle283.png');
+    background-repeat: no-repeat;
+    background-position: 0 center, center 0;
+    background-size: 100% auto, 88% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-size: 30px;
+        line-height: 30px;
+        color: white;
+        font-weight: bold;
+        margin-right: 85px;
+    }
+
+    form {
+        display: flex;
+
+        label {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+            margin-bottom: 0;
+        }
+
+        input {
+            background-color: transparent;
+            padding-bottom: 4px;
+            border: 0;
+            border-bottom: 1px solid white;
+            width: 100%;
+            min-width: 150px;
+            color: white;
+            font-weight: 400;
+            font-size: 15px;
+            outline: none;
+
+            &::placeholder {
+                line-height: 18px;
+                font-size: 13px;
+                line-height: 22px;
+                color: white;
+                font-weight: 100;
+                -webkit-text-fill-color: white;
+                transition: .5s ease font-size;
+            }
+
+            &:focus {
+                &::placeholder {
+                    font-size: 9px;
+                    transition: .5s ease font-size;
+                }
+            }
+        }
+
+        button {
+            width: 150px;
+            margin-left: 85px;
+        }
+    }
+
+}
+// end feedback

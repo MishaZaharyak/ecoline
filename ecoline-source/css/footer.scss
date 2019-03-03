@@ -1,0 +1,112 @@
+@import './vars.scss';
+
+.footer {
+    padding: 70px 90px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    & > div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .footer-logo {
+            p {
+                max-width: 170px;
+                margin-top: 40px;
+            }
+        }
+
+        .socials {
+            margin: 90px 0 20px 0;
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+
+                li {
+                    &:not(:last-child) {
+                        margin-right: 12px;
+                    }
+                    
+                    img {
+                        max-width: 30px;
+                        max-height: 30px;
+                    }
+                }
+
+            }
+        }
+
+        .copyright {
+            font-size: 11px;
+            line-height: 17px;
+            color: $primary;
+            font-weight: bold;
+        }
+    }
+
+    & > div:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        nav {
+            margin-bottom: 50px;
+
+            .navigation {
+                display: flex;
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+    
+                li {
+                    a {
+                        padding: 15px;
+                        color: $primary;
+                        font-size: 13px;
+                        line-height: 17px;
+                        font-weight: bold;
+                    }
+    
+                    &:last-child a {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        .contacts {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            &:first-of-type {
+                margin-bottom: 30px;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            & > p {
+                margin-right: 50px;
+            }
+
+            div {
+                p {
+                    font-weight: bold;
+                }
+            }            
+        }
+
+        button {
+            width: 160px;
+            margin-top: 55px;
+            align-self: flex-end;
+        }
+    }
+}

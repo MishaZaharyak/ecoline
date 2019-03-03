@@ -1,0 +1,163 @@
+@import './vars.scss';
+
+.primary-btn {
+    border-radius: 18px;
+    border: 2px solid $primary;
+    color: $primary;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: bold;
+    padding: 6px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s ease all;
+
+    &:hover {
+        background-color: $primary;
+        color: white;
+        transition: .3s ease all;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.success-btn {
+    border-radius: 18px;
+    border: 2px solid $success;
+    color: $success;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: bold;
+    padding: 6px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s ease all;
+
+    &:hover {
+        background-color: $success;
+        color: white;
+        transition: .3s ease all;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.light-btn {
+    border-radius: 18px;
+    border: 2px solid white;
+    color: white;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: bold;
+    padding: 6px 20px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s ease all;
+
+    &:hover {
+        background-color: $success;
+        border-color: $success;
+        transition: .3s ease all;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.secondary-paragraph {
+    font-size: 13px;
+    line-height: 17px;
+    color: $secondary;
+}
+
+.success-paragraph {
+    font-size: 13px;
+    line-height: 17px;
+    color: $success;
+}
+
+.light-paragraph {
+    font-size: 13px;
+    line-height: 17px;
+    color: white;
+}
+
+ul.slider-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        cursor: pointer;
+
+        &.big-text {
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: bold;
+            padding: 7px 0;
+            transition: .5s ease all;
+
+            &:hover, &.active {
+                position: relative;
+                text-indent: 20px;
+                transition: .5s ease all;                        
+            }
+
+            &.active {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background-repeat: no-repeat;
+                }
+            }
+        }          
+    }
+}
+
+@media (max-width: 1000px) {
+    ul.slider-list li.big-text {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: bold;
+        padding: 2px 0;
+    }
+}
+
+@media (min-width: 320px) {
+    ul.slider-list li.big-text {
+        transition: .5s ease all;
+    }
+}
+
+.slick-dots {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 25px 0 0;
+    margin: 0;
+
+    li {
+        margin: 0 5px;
+
+        button {
+            font-size: 0px;
+            width: 25px;
+            height: 4px;
+            border: none;
+            transition: .5s ease background-color;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &.slick-active button {
+            transition: .5s ease background-color;
+        }
+    }
+}

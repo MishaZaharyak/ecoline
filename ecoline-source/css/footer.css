@@ -1,0 +1,85 @@
+.footer {
+  padding: 70px 90px 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer > div:first-child .footer-logo p {
+  max-width: 170px;
+  margin-top: 40px;
+}
+.footer > div:first-child .socials {
+  margin: 90px 0 20px 0;
+}
+.footer > div:first-child .socials ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.footer > div:first-child .socials ul li:not(:last-child) {
+  margin-right: 12px;
+}
+.footer > div:first-child .socials ul li img {
+  max-width: 30px;
+  max-height: 30px;
+}
+.footer > div:first-child .copyright {
+  font-size: 11px;
+  line-height: 17px;
+  color: #003de8;
+  font-weight: bold;
+}
+.footer > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer > div:last-child nav {
+  margin-bottom: 50px;
+}
+.footer > div:last-child nav .navigation {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer > div:last-child nav .navigation li a {
+  padding: 15px;
+  color: #003de8;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: bold;
+}
+.footer > div:last-child nav .navigation li:last-child a {
+  padding-right: 0;
+}
+.footer > div:last-child .contacts {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footer > div:last-child .contacts:first-of-type {
+  margin-bottom: 30px;
+}
+.footer > div:last-child .contacts p {
+  margin: 0;
+}
+.footer > div:last-child .contacts > p {
+  margin-right: 50px;
+}
+.footer > div:last-child .contacts div p {
+  font-weight: bold;
+}
+.footer > div:last-child button {
+  width: 160px;
+  margin-top: 55px;
+  align-self: flex-end;
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -1,0 +1,145 @@
+.primary-btn {
+  border-radius: 18px;
+  border: 2px solid #003de8;
+  color: #003de8;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: bold;
+  padding: 6px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.primary-btn:hover {
+  background-color: #003de8;
+  color: white;
+  transition: 0.3s ease all;
+}
+.primary-btn:focus {
+  outline: none;
+}
+
+.success-btn {
+  border-radius: 18px;
+  border: 2px solid #62c622;
+  color: #62c622;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: bold;
+  padding: 6px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.success-btn:hover {
+  background-color: #62c622;
+  color: white;
+  transition: 0.3s ease all;
+}
+.success-btn:focus {
+  outline: none;
+}
+
+.light-btn {
+  border-radius: 18px;
+  border: 2px solid white;
+  color: white;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: bold;
+  padding: 6px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.light-btn:hover {
+  background-color: #62c622;
+  border-color: #62c622;
+  transition: 0.3s ease all;
+}
+.light-btn:focus {
+  outline: none;
+}
+
+.secondary-paragraph {
+  font-size: 13px;
+  line-height: 17px;
+  color: #333333;
+}
+
+.success-paragraph {
+  font-size: 13px;
+  line-height: 17px;
+  color: #62c622;
+}
+
+.light-paragraph {
+  font-size: 13px;
+  line-height: 17px;
+  color: white;
+}
+
+ul.slider-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul.slider-list li {
+  cursor: pointer;
+}
+ul.slider-list li.big-text {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  padding: 7px 0;
+  transition: 0.5s ease all;
+}
+ul.slider-list li.big-text:hover, ul.slider-list li.big-text.active {
+  position: relative;
+  text-indent: 20px;
+  transition: 0.5s ease all;
+}
+ul.slider-list li.big-text.active::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1000px) {
+  ul.slider-list li.big-text {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: bold;
+    padding: 2px 0;
+  }
+}
+@media (min-width: 320px) {
+  ul.slider-list li.big-text {
+    transition: 0.5s ease all;
+  }
+}
+.slick-dots {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 25px 0 0;
+  margin: 0;
+}
+.slick-dots li {
+  margin: 0 5px;
+}
+.slick-dots li button {
+  font-size: 0px;
+  width: 25px;
+  height: 4px;
+  border: none;
+  transition: 0.5s ease background-color;
+}
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li.slick-active button {
+  transition: 0.5s ease background-color;
+}
+
+/*# sourceMappingURL=commonClasses.css.map */
