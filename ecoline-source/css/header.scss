@@ -1,5 +1,25 @@
 @import './vars.scss';
 
+.goDown {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+
+    img {
+        transform: translateY(0);
+        transition: .3s ease transform;
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        img {
+            transform: translateY(10px);
+            transition: .3s ease transform;
+        }
+    }
+}
+
 .header {
     padding: 270px 90px 90px 90px;
     font-family: $S-FPro-Display;
@@ -104,6 +124,11 @@
 }
 
 @media (max-width: 700px) {
+
+    .goDown {
+        order: 1;
+    }
+
     .header {
         background-position: 0 0, -166px -133px;
         background-size: 0, calc(100% + 209px) 819px;
@@ -123,7 +148,6 @@
             img {
                 width: 15px;
                 height: 36px;
-                order: 1;
                 margin-top: 40px;
             }
         }

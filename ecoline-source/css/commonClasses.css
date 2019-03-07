@@ -134,6 +134,7 @@ ul.slider-list li.big-text.active::before {
   height: 4px;
   border: none;
   transition: 0.5s ease background-color;
+  cursor: pointer;
 }
 .slick-dots li button:focus {
   outline: none;

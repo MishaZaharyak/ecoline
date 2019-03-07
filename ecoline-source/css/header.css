@@ -1,3 +1,20 @@
+.goDown {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.goDown img {
+  transform: translateY(0);
+  transition: 0.3s ease transform;
+}
+.goDown:hover {
+  text-decoration: none;
+}
+.goDown:hover img {
+  transform: translateY(10px);
+  transition: 0.3s ease transform;
+}
+
 .header {
   padding: 270px 90px 90px 90px;
   font-family: "SFPro";
@@ -84,6 +101,10 @@
   }
 }
 @media (max-width: 700px) {
+  .goDown {
+    order: 1;
+  }
+
   .header {
     background-position: 0 0, -166px -133px;
     background-size: 0, calc(100% + 209px) 819px;
@@ -102,7 +123,6 @@
   .header > div:last-child img {
     width: 15px;
     height: 36px;
-    order: 1;
     margin-top: 40px;
   }
 }

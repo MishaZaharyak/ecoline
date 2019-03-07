@@ -150,6 +150,7 @@ ul.slider-list {
             height: 4px;
             border: none;
             transition: .5s ease background-color;
+            cursor: pointer;
 
             &:focus {
                 outline: none;
