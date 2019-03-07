@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "SFPro";
+  src: url("../fonts/SF-Pro-Display-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "SFPro";
+  src: url("../fonts/SF-Pro-Display-Medium.otf");
+  font-weight: normal;
+}
 .primary-btn {
   border-radius: 18px;
   border: 2px solid #003de8;

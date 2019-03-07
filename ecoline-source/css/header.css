@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "SFPro";
+  src: url("../fonts/SF-Pro-Display-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "SFPro";
+  src: url("../fonts/SF-Pro-Display-Medium.otf");
+  font-weight: normal;
+}
 .goDown {
   text-decoration: none;
   margin: 0;
@@ -66,7 +76,7 @@
 }
 .header > div:last-child button {
   margin-left: 35px;
-  width: 200px;
+  width: 205px;
 }
 
 @media (max-width: 1250px) {

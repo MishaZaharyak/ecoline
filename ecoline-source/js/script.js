@@ -53,6 +53,12 @@ $(document).ready(function() {
   // fixed menu 
   fixedMenu();
 
+  // menu humburger button amination handler
+  $('#nav-icon3').on('click', function(e){
+    e.preventDefault();
+    $(this).toggleClass('open');
+  });
+
   // hide slider arrows
   $('.arrows').each(function() {
     const slider =$(this).siblings('.slider, .clients-slider, .image-slider');
@@ -221,6 +227,7 @@ $(document).ready(function() {
         draggable: false,
         swipe: false,
         touchMove: false,
+        initialSlide: 1,
     })
   });  
 
@@ -243,3 +250,42 @@ $(document).ready(function() {
     })
   })
 });
+
+
+// "read more" seo article
+readMore( $('.page-article'), 5);
+
+function readMore(jObj, lineNum) {
+  if ( isNaN(lineNum) ) {
+    lineNum = 5;
+  }
+  var go = new ReadMore (jObj, lineNum);
+}
+
+function ReadMore(_jObj, lineNum) { 
+  // var READ_MORE_LABEL = 'i want read more';
+  // var HIDE_LABEL = 'minimize it';
+
+  var jObj = _jObj;
+  var textMinHeight = ''+ (parseInt(jObj.children('.hidden-text').css('line-height'),10)*lineNum) +'px';
+  var textMaxHeight = ''+jObj.children('.hidden-text').css('height');
+
+  jObj.children('.hidden-text').css('height', ''+ textMaxHeight);
+  jObj.children('.hidden-text').css( 'transition', 'height .5s');
+  jObj.children('.hidden-text').css('height', ''+ textMinHeight);
+
+  // jObj.append ('<button class="read-more">'+READ_MORE_LABEL+'</button>');
+
+  jObj.find('.read-more').click ( function() {
+    if (jObj.children('.hidden-text').css('height') === textMinHeight) {
+      jObj.children('.hidden-text').css('height', ''+textMaxHeight);
+      // jObj.children('.read-more').html(HIDE_LABEL).addClass('active');
+      jObj.find('.read-more').addClass('active');
+    } else {
+      jObj.children('.hidden-text').css('height', ''+textMinHeight);
+      // jObj.children('.read-more').html(READ_MORE_LABEL).removeClass('active');
+      jObj.find('.read-more').removeClass('active');
+    }
+  });
+
+}

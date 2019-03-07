@@ -94,6 +94,10 @@
 
                 p {
                     margin: 0;
+
+                    a {
+                        color: inherit;
+                    }
                 }
 
                 & > p {
@@ -237,7 +241,7 @@
                 }
     
                 button {
-                    transition: .5s ease margin;
+                    transition: .5s ease all;
                 }
             }
     

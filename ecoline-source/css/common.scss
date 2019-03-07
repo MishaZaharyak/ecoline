@@ -1,5 +1,4 @@
 @import './vars.scss';
-
 // section with slider right
 .section-with-slider.right {
     display: flex;
@@ -14,9 +13,17 @@
             li {
                 &.big-text {
                     color: $success-alpha;
+                    
 
                     &:hover, &.active {
                         color: $success;
+                    }
+
+                    &::before {
+                        content: '';
+                        left: -25px;
+                        opacity: 0;
+                        transition: .5s ease left, .5s ease opacity;
                     }
 
                     &.active {
@@ -24,6 +31,8 @@
                             width: 36px;
                             top: 42%;
                             left: -36px;
+                            opacity: 1;
+                            transition: .5s ease left, .5s ease opacity;
                             height: 15px;
                             background-image: url('../images/Group181.png');
                         }
@@ -529,7 +538,7 @@
             }
 
             button {
-                transition: .5s ease margin;
+                transition: .5s ease all;
             }
         }
     }
@@ -581,25 +590,34 @@
                 transition: .5s ease all;
                 cursor: pointer;
 
-                    &:hover, &.active {
-                        color: $success;
-                        position: relative;
-                        text-indent: 20px;
-                        transition: .5s ease all;                        
-                    }
+                &:hover, &.active {
+                    color: $success;
+                    position: relative;
+                    text-indent: 20px;
+                    transition: .5s ease all;                        
+                }
 
-                    &.active {
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            width: 36px;
-                            top: 42%;
-                            left: -36px;
-                            height: 15px;
-                            background-image: url('../images/Group181.png');
-                            background-repeat: no-repeat;
-                        }
+                &::before {
+                    content: '';
+                    left: -25px;
+                    opacity: 0;
+                    transition: .5s ease left, .5s ease opacity;
+                }
+
+                &.active {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 36px;
+                        top: 42%;
+                        left: -36px;
+                        opacity: 1;
+                        transition: .5s ease left, .5s ease opacity;
+                        height: 15px;
+                        background-image: url('../images/Group181.png');
+                        background-repeat: no-repeat;
                     }
+                }
 
                 img {
                     max-width: 35px;
@@ -801,7 +819,7 @@
             }
 
             button {
-                transition: .5s ease margin;
+                transition: .5s ease all;
             }
         }
     }
@@ -817,9 +835,10 @@
     padding: 90px 90px 100px 0;
     
     & > div:last-child {
-        ul {
-            min-width: 315px;
+        max-width: 400px;
+        width: 100%;
 
+        ul {
             li {
                 &.big-text {
                     color: $primary-alpha;
@@ -828,12 +847,21 @@
                         color: $primary;
                     }
 
+                    &::before {
+                        content: '';
+                        left: -25px;
+                        opacity: 0;
+                        transition: .5s ease left, .5s ease opacity;
+                    }
+
                     &.active {
                         &::before {
                             width: 15px;
                             height: 36px;
                             top: 20%;
                             left: -36px;
+                            opacity: 1;
+                            transition: .5s ease left, .5s ease opacity;
                             background-image: url('../images/Group176.png');
                             transform: rotate(-90deg);
                         }
@@ -956,12 +984,12 @@
 
             .slick-new-prev {
                 transform: rotate(90deg);
-                left: 8px;
+                left: 12px;
             }
     
             .slick-new-next {
                 transform: rotate(-90deg);
-                right: 8px;
+                right: 12px;
             }
         }
     }
@@ -981,10 +1009,6 @@
 
         & > div:last-child {
             padding-left: 70px;
-
-            ul {
-                max-width: 280px;
-            }
         }
 
         & > div:first-child {
@@ -1000,6 +1024,7 @@
 
         & > div:last-child {
             padding: 0 90px 30px;
+            max-width: none;
             width: 100%;
 
             ul {
@@ -1114,7 +1139,7 @@
             }
 
             button {
-                transition: .5s ease margin;
+                transition: .5s ease all;
             }
         }
 
@@ -1318,7 +1343,7 @@
             }
 
             button {
-                transition: .5s ease margin;
+                transition: .5s ease all;
             }
         }
     }
@@ -1671,7 +1696,7 @@
                     }
 
                     button {
-                        transition: .5s ease margin;
+                        transition: .5s ease all;
                     }
                 }
             }            
@@ -1689,7 +1714,7 @@
             }
 
             button {
-                transition: .5s ease margin;
+                transition: .5s ease all;
             }
         }
     }
@@ -1750,7 +1775,22 @@
                         font-size: 12px;
                         max-width: 350px;
                         line-height: 18px;
+                        overflow-y: auto;
+                        padding-right: 5px;
+                        max-height: 72px;
                         color: $secondary;
+
+                        &::-webkit-scrollbar {
+                            width: 2px;
+                        }
+                         
+                        &::-webkit-scrollbar-track {
+                            background-color: #a79f9f;
+                        }
+                         
+                        &::-webkit-scrollbar-thumb {
+                            background-color: $secondary;
+                        }
                     }
                 }
             }   
@@ -1767,9 +1807,15 @@
                     width: 30px;
                     right: 0;
                     cursor: pointer;
+                    transition: .3s ease background-color;
                     
                     &:focus {
                         outline: none;
+                    }
+
+                    &:hover {
+                        background-color: darken($mainBackgrondColor, 5);
+                        transition: .3s ease background-color;
                     }
                 }
         
@@ -1941,7 +1987,7 @@
             }
 
             button {
-                transition: .5s ease margin;
+                transition: .5s ease all;
             }
         }
     }
@@ -1963,25 +2009,11 @@
 
     p {
         max-width: 845px;
-        max-height: 250px;
-        overflow-y: auto;
         font-size: 12px;
         line-height: 18px;
         color: $secondary-2;
         margin: 0 auto;
-        padding-right: 20px;
-    }
-
-    p::-webkit-scrollbar {
-        width: 2px;
-    }
-     
-    p::-webkit-scrollbar-track {
-        background-color: #a79f9f;
-    }
-     
-    p::-webkit-scrollbar-thumb {
-        background-color: $secondary;
+        overflow: hidden;
     }
 
     div {
@@ -2160,7 +2192,7 @@
             }
     
             button {
-                transition: .5s ease margin;
+                transition: .5s ease all;
             }
         }
     }

@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "SFPro";
+  src: url("../fonts/SF-Pro-Display-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "SFPro";
+  src: url("../fonts/SF-Pro-Display-Medium.otf");
+  font-weight: normal;
+}
 .section-with-slider.right {
   display: flex;
   align-items: center;
@@ -14,10 +24,18 @@
 .section-with-slider.right > div:first-child ul li.big-text:hover, .section-with-slider.right > div:first-child ul li.big-text.active {
   color: #62c622;
 }
+.section-with-slider.right > div:first-child ul li.big-text::before {
+  content: "";
+  left: -25px;
+  opacity: 0;
+  transition: 0.5s ease left, 0.5s ease opacity;
+}
 .section-with-slider.right > div:first-child ul li.big-text.active::before {
   width: 36px;
   top: 42%;
   left: -36px;
+  opacity: 1;
+  transition: 0.5s ease left, 0.5s ease opacity;
   height: 15px;
   background-image: url("../images/Group181.png");
 }
@@ -393,7 +411,7 @@
     transition: 0.5s ease all;
   }
   .clients > div:last-child button {
-    transition: 0.5s ease margin;
+    transition: 0.5s ease all;
   }
 }
 .image-slider-section {
@@ -441,12 +459,20 @@
   text-indent: 20px;
   transition: 0.5s ease all;
 }
+.image-slider-section .navigation-menu ul li::before {
+  content: "";
+  left: -25px;
+  opacity: 0;
+  transition: 0.5s ease left, 0.5s ease opacity;
+}
 .image-slider-section .navigation-menu ul li.active::before {
   content: "";
   position: absolute;
   width: 36px;
   top: 42%;
   left: -36px;
+  opacity: 1;
+  transition: 0.5s ease left, 0.5s ease opacity;
   height: 15px;
   background-image: url("../images/Group181.png");
   background-repeat: no-repeat;
@@ -602,7 +628,7 @@
     transition: 0.5s ease width;
   }
   .image-slider-section .img-slider-cont button {
-    transition: 0.5s ease margin;
+    transition: 0.5s ease all;
   }
 }
 .section-with-slider.left {
@@ -612,8 +638,9 @@
   font-family: "SFPro";
   padding: 90px 90px 100px 0;
 }
-.section-with-slider.left > div:last-child ul {
-  min-width: 315px;
+.section-with-slider.left > div:last-child {
+  max-width: 400px;
+  width: 100%;
 }
 .section-with-slider.left > div:last-child ul li.big-text {
   color: rgba(0, 61, 232, 0.5);
@@ -621,11 +648,19 @@
 .section-with-slider.left > div:last-child ul li.big-text:hover, .section-with-slider.left > div:last-child ul li.big-text.active {
   color: #003de8;
 }
+.section-with-slider.left > div:last-child ul li.big-text::before {
+  content: "";
+  left: -25px;
+  opacity: 0;
+  transition: 0.5s ease left, 0.5s ease opacity;
+}
 .section-with-slider.left > div:last-child ul li.big-text.active::before {
   width: 15px;
   height: 36px;
   top: 20%;
   left: -36px;
+  opacity: 1;
+  transition: 0.5s ease left, 0.5s ease opacity;
   background-image: url("../images/Group176.png");
   transform: rotate(-90deg);
 }
@@ -721,11 +756,11 @@
 }
 .section-with-slider.left > div:first-child .arrows .slick-new-prev {
   transform: rotate(90deg);
-  left: 8px;
+  left: 12px;
 }
 .section-with-slider.left > div:first-child .arrows .slick-new-next {
   transform: rotate(-90deg);
-  right: 8px;
+  right: 12px;
 }
 
 @media (max-width: 1400px) {
@@ -740,9 +775,6 @@
   .section-with-slider.left > div:last-child {
     padding-left: 70px;
   }
-  .section-with-slider.left > div:last-child ul {
-    max-width: 280px;
-  }
   .section-with-slider.left > div:first-child {
     padding-right: 50px;
   }
@@ -754,6 +786,7 @@
   }
   .section-with-slider.left > div:last-child {
     padding: 0 90px 30px;
+    max-width: none;
     width: 100%;
   }
   .section-with-slider.left > div:last-child ul {
@@ -841,7 +874,7 @@
     transition: 0.5s ease width;
   }
   .section-with-slider.left > div:last-child button {
-    transition: 0.5s ease margin;
+    transition: 0.5s ease all;
   }
   .section-with-slider.left > div:first-child {
     transition: 0.5s ease padding, 0.5s ease width;
@@ -993,7 +1026,7 @@
     transition: 0.5s ease width;
   }
   .preference > div:first-child button {
-    transition: 0.5s ease margin;
+    transition: 0.5s ease all;
   }
 }
 .promotions {
@@ -1273,7 +1306,7 @@
     transition: 0.5s ease all;
   }
   .promotions > div:first-child .image-text .eclipse button {
-    transition: 0.5s ease margin;
+    transition: 0.5s ease all;
   }
   .promotions > div:last-child {
     transition: 0.5s ease all;
@@ -1285,7 +1318,7 @@
     transition: 0.5s ease width, 0.5s ease font-size;
   }
   .promotions > div:last-child button {
-    transition: 0.5s ease margin;
+    transition: 0.5s ease all;
   }
 }
 .reviews {
@@ -1337,7 +1370,19 @@
   font-size: 12px;
   max-width: 350px;
   line-height: 18px;
+  overflow-y: auto;
+  padding-right: 5px;
+  max-height: 72px;
   color: #333333;
+}
+.reviews > div:first-child > div .review-slider .slide .comment::-webkit-scrollbar {
+  width: 2px;
+}
+.reviews > div:first-child > div .review-slider .slide .comment::-webkit-scrollbar-track {
+  background-color: #a79f9f;
+}
+.reviews > div:first-child > div .review-slider .slide .comment::-webkit-scrollbar-thumb {
+  background-color: #333333;
 }
 .reviews > div:first-child > div .arrows .slick-new-prev, .reviews > div:first-child > div .arrows .slick-new-next {
   position: absolute;
@@ -1349,9 +1394,14 @@
   width: 30px;
   right: 0;
   cursor: pointer;
+  transition: 0.3s ease background-color;
 }
 .reviews > div:first-child > div .arrows .slick-new-prev:focus, .reviews > div:first-child > div .arrows .slick-new-next:focus {
   outline: none;
+}
+.reviews > div:first-child > div .arrows .slick-new-prev:hover, .reviews > div:first-child > div .arrows .slick-new-next:hover {
+  background-color: #d7e4ef;
+  transition: 0.3s ease background-color;
 }
 .reviews > div:first-child > div .arrows .slick-new-next {
   transform: rotate(180deg);
@@ -1482,7 +1532,7 @@
     transition: 0.5s ease width;
   }
   .reviews > div:last-child button {
-    transition: 0.5s ease margin;
+    transition: 0.5s ease all;
   }
 }
 .page-article {
@@ -1498,22 +1548,11 @@
 }
 .page-article p {
   max-width: 845px;
-  max-height: 250px;
-  overflow-y: auto;
   font-size: 12px;
   line-height: 18px;
   color: #666666;
   margin: 0 auto;
-  padding-right: 20px;
-}
-.page-article p::-webkit-scrollbar {
-  width: 2px;
-}
-.page-article p::-webkit-scrollbar-track {
-  background-color: #a79f9f;
-}
-.page-article p::-webkit-scrollbar-thumb {
-  background-color: #333333;
+  overflow: hidden;
 }
 .page-article div {
   margin-top: 25px;
@@ -1659,7 +1698,7 @@
     transition: 0.5s ease width;
   }
   .feedback form button {
-    transition: 0.5s ease margin;
+    transition: 0.5s ease all;
   }
 }
 

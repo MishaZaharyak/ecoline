@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "SFPro";
+  src: url("../fonts/SF-Pro-Display-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "SFPro";
+  src: url("../fonts/SF-Pro-Display-Medium.otf");
+  font-weight: normal;
+}
 .footer .footerContent {
   padding: 70px 90px 0;
   display: flex;
@@ -70,6 +80,9 @@
 }
 .footer .footerContent > div:last-child .contacts p {
   margin: 0;
+}
+.footer .footerContent > div:last-child .contacts p a {
+  color: inherit;
 }
 .footer .footerContent > div:last-child .contacts > p {
   margin-right: 50px;
@@ -178,7 +191,7 @@
     transition: 0.5s ease margin, 0.5s ease padding;
   }
   .footer .footerContent > div:last-child button {
-    transition: 0.5s ease margin;
+    transition: 0.5s ease all;
   }
   .footer .footerContent > div:first-child {
     transition: 0.5s ease all;
