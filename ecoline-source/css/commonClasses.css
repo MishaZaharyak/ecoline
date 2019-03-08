@@ -89,6 +89,18 @@
   color: white;
 }
 
+.a-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+.a-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 ul.slider-list {
   list-style-type: none;
   padding: 0;

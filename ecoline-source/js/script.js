@@ -57,6 +57,40 @@ $(document).ready(function() {
   $('#nav-icon3').on('click', function(e){
     e.preventDefault();
     $(this).toggleClass('open');
+
+    const fullWidthMenu = $('.fullWidthMneu');
+    const menu = $('.topMenu');
+    const topmenuNav = $(menu).find('.navigation');
+    const header = $('.header');
+
+    if ($(this).hasClass('open')) {
+      $(menu).addClass('white');
+      
+      if ($(topmenuNav).length) $(topmenuNav).addClass('hide');
+
+      $(fullWidthMenu).removeClass('hide').addClass('show');
+
+      setTimeout(function() {
+
+        if ($(fullWidthMenu).hasClass('show')) {
+          $(fullWidthMenu).addClass('show-active');
+        }
+      }, 100)
+
+    } else if (!$(this).hasClass('open')) {
+      $(menu).removeClass('white');
+      if ($(topmenuNav).length) $(topmenuNav).removeClass('hide');
+
+      $(fullWidthMenu).removeClass('show-active');
+
+      setTimeout(function() {
+
+        if (!$(fullWidthMenu).hasClass('show-active')) {
+          $(fullWidthMenu).removeClass('show').addClass('hide');
+        }
+        
+      }, 500)
+    }
   });
 
   // hide slider arrows
