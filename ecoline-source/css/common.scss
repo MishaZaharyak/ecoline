@@ -2019,6 +2019,43 @@
     div {
         margin-top: 25px;
 
+        span {
+            background: #2064d3; /* Old browsers */
+            background: -moz-linear-gradient(-45deg, #2064d3 0%, #2989d8 30%, #5fc326 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(-45deg, #2064d3 0%,#2989d8 30%,#5fc326 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(135deg, #2064d3 0%,#2989d8 30%,#5fc326 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            height: 21px;
+            width: 21px;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 9px;
+                height: 2px;
+                width: 10px;
+                background-color: white;
+                left: 5px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 5px;
+                height: 10px;
+                width: 2px;
+                background-color: white;
+                left: 9px;
+            }
+
+            &.active::after {
+                height: 0;
+            }
+        }
+
         img {
             max-width: 20px;
             max-height: 20px;
