@@ -116,11 +116,17 @@
         }
 
         li {
+            padding: .5rem 1rem;
+
+            &.active a {
+                border-bottom: 1px solid $primary;
+            }
+
             a {
                 font-size: 13px;
                 color: $primary;
                 font-weight: bold;
-                padding: .5rem 1rem;
+                padding: 0 0 3px 0;
                 transition: .5s ease color;
             }
 
@@ -201,7 +207,7 @@
 }
 
 // full width menu 
-.fullWidthMneu {
+.fullWidthMenu {
     font-family: $S-FPro-Display;
     padding: 95px 90px;
     top: 100px;
@@ -230,6 +236,16 @@
      
     &::-webkit-scrollbar-thumb {
         background-color: $primary;
+    }
+
+    .mainNav li {
+        &.active a {
+            border-bottom: 1px solid $primary;
+        }
+
+        a {
+            padding-bottom: 3px;
+        }
     }
 
     &.hide {
@@ -295,7 +311,7 @@
     
                     &::before {
                         content: '';
-                        left: -25px;
+                        left: -35px;
                         opacity: 0;
                         transition: .5s ease left, .5s ease opacity;
                     }
@@ -303,8 +319,7 @@
                     &.active {
                         &::before {
                             width: 36px;
-                            top: 42%;
-                            left: -36px;
+                            left: -45px;
                             opacity: 1;
                             transition: .5s ease left, .5s ease opacity;
                             height: 15px;
@@ -364,7 +379,7 @@
 }
 
 @media (max-width: 1400px) {
-    .fullWidthMneu {
+    .fullWidthMenu {
         padding: 50px 90px;
 
         & > div:first-child {
@@ -374,7 +389,7 @@
 }
 
 @media (max-width: 992px) {
-    .fullWidthMneu {
+    .fullWidthMenu {
         & > div:first-child ul.bigTextUl {
                 margin-right: 0;
                 min-width: 270px;
@@ -383,7 +398,7 @@
 }
 
 @media (max-width: 850px) {
-    .fullWidthMneu {
+    .fullWidthMenu {
         padding: 50px 90px;
 
         & > div:first-child {
@@ -415,7 +430,7 @@
 }
 
 @media (max-width: 700px) {
-    .fullWidthMneu {
+    .fullWidthMenu {
         padding: 50px 90px;
         background-image: url('../images/Path300-white.png'), none;
 
@@ -450,13 +465,13 @@
 }
 
 @media (max-width: 520px) {
-    .fullWidthMneu {
+    .fullWidthMenu {
         padding: 50px 40px;
     }
 }
 
 @media (max-width: 430px) {
-    .fullWidthMneu {
+    .fullWidthMenu {
 
         & > div:first-child {
             margin-bottom: 50px;
@@ -487,7 +502,7 @@
 }
 
 @media (min-width: 320px) {
-    .fullWidthMneu {
+    .fullWidthMenu {
         transition: .5s ease all;
     
         & > div:first-child {

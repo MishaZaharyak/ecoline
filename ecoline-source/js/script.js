@@ -44,8 +44,8 @@ $(document).on("click","a[target=_self]", function(event) {
     }
 });
 
-// fixed menu 
 $(window).scroll(function() {
+  // fixed menu 
   fixedMenu();
 })
 
@@ -58,7 +58,7 @@ $(document).ready(function() {
     e.preventDefault();
     $(this).toggleClass('open');
 
-    const fullWidthMenu = $('.fullWidthMneu');
+    const fullWidthMenu = $('.fullWidthMenu');
     const menu = $('.topMenu');
     const topmenuNav = $(menu).find('.navigation');
     const header = $('.header');
@@ -283,11 +283,10 @@ $(document).ready(function() {
         nextArrow: $(this).parent().find('.slick-new-next'), 
     })
   })
+
+  // "read more" seo article
+  readMore( $('.page-article'), 5);
 });
-
-
-// "read more" seo article
-readMore( $('.page-article'), 5);
 
 function readMore(jObj, lineNum) {
   if ( isNaN(lineNum) ) {
@@ -297,9 +296,6 @@ function readMore(jObj, lineNum) {
 }
 
 function ReadMore(_jObj, lineNum) { 
-  // var READ_MORE_LABEL = 'i want read more';
-  // var HIDE_LABEL = 'minimize it';
-
   var jObj = _jObj;
   var textMinHeight = ''+ (parseInt(jObj.children('.hidden-text').css('line-height'),10)*lineNum) +'px';
   var textMaxHeight = ''+jObj.children('.hidden-text').css('height');
@@ -308,18 +304,33 @@ function ReadMore(_jObj, lineNum) {
   jObj.children('.hidden-text').css( 'transition', 'height .5s');
   jObj.children('.hidden-text').css('height', ''+ textMinHeight);
 
-  // jObj.append ('<button class="read-more">'+READ_MORE_LABEL+'</button>');
-
   jObj.find('.read-more').click ( function() {
+
     if (jObj.children('.hidden-text').css('height') === textMinHeight) {
       jObj.children('.hidden-text').css('height', ''+textMaxHeight);
-      // jObj.children('.read-more').html(HIDE_LABEL).addClass('active');
       jObj.find('.read-more').addClass('active');
+
     } else {
       jObj.children('.hidden-text').css('height', ''+textMinHeight);
-      // jObj.children('.read-more').html(READ_MORE_LABEL).removeClass('active');
       jObj.find('.read-more').removeClass('active');
     }
   });
 
 }
+
+// navigation menu toggle active class
+$(document).on('click', '.navigation a', e => {
+  $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
+  $(e.target).parent().addClass('active')
+});
+
+// toggle active class in full width menu
+$(document).on('click', '.fullWidthMenu .mainNav a', e => {
+  $('.fullWidthMenu .mainNav a').each((i, el) => $(el).parent().removeClass('active'))
+  $(e.target).parent().addClass('active')
+});
+
+// reset active link when click on brand
+$('.navbar-brand').on('click', function(e) {
+  $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
+})

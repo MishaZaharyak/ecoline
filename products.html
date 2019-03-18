@@ -8,19 +8,18 @@
 <link rel="stylesheet" href="./ecoline-source/css/slick.css">
 <link rel="stylesheet" href="./ecoline-source/css/commonClasses.css">
 <link rel="stylesheet" href="./ecoline-source/css/menu.css">
-<link rel="stylesheet" href="./ecoline-source/css/header.css">
 <link rel="stylesheet" href="./ecoline-source/css/common.css">
 <link rel="stylesheet" href="./ecoline-source/css/footer.css">
 <head>
     <meta charset="UTF-8">
-    <title>Main Page</title>
+    <title>Продукция</title>
 </head>
-<body>
+<body class="products-page">
     <nav class="navbar topMenu">
         <a class="navbar-brand" href="./index.html"><img src="./ecoline-source/images/logo-11.png" alt="ecoline"></a>
         
         <ul class="navbar-nav text-center navigation">
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="./products.html">Продукция</a>
             </li>
             <li class="nav-item">
@@ -48,7 +47,7 @@
                 <nav>
                     <ul class="list-unstyled mainNav">
                         <li><a href="./index.html" class="a-link">Главная</a></li>
-                        <li><a href="./products.html" class="a-link">Продукция</a></li>
+                        <li class="active"><a href="./products.html" class="a-link">Продукция</a></li>
                         <li><a href="javascript:void(0);" class="a-link">Цены</a></li>
                         <li><a href="javascript:void(0);" class="a-link">Контакты</a></li>
                     </ul>
@@ -113,32 +112,6 @@
         </div>
     </nav>
 
-    <header class="header">
-        <div>
-            <div class="baner-text">
-                <h1>Очисные  системы</h1>
-                <div>
-                    <a href="javascript:void(0);">Септики</a>
-                    <a href="javascript:void(0);">Сепараторы</a>
-                    <a href="javascript:void(0);">Биопрепараты</a>
-                </div>
-            </div>
-            <div class="baner-paragraph">
-                <span class="line"></span>
-                <p>Компания основана в 1996 году и имеет более 20 лет опыта строительства 
-                    систем автономной канализации. Количество реализованных компанией 
-                    превышает 3500 объектов!</p>
-            </div>
-        </div>
-
-        <div>
-            <a href="#footer" class="goDown" target="_self">
-                <img src="./ecoline-source/images/Group176.png" alt="">
-            </a>
-            <button class="primary-btn">Просмотреть продукцию</button>
-        </div>
-    </header>
-
     <div class="section-with-slider right">
         <div>
             <ul class="slider-list animate-li sliderNav">
@@ -151,15 +124,28 @@
                 <li data-index="3" class="big-text">
                     <a href="javascript:void(0);" class="a-link">Биопрепараты</a>
                 </li>
+                <li data-index="4" class="big-text">
+                    <a href="javascript:void(0);" class="a-link">Сточные воды</a>
+                </li>
+                <li data-index="5" class="big-text">
+                    <a href="javascript:void(0);" class="a-link">Обслуживание</a>
+                </li>
             </ul>
             <div class="text-button-cont">
-                <div>
-                    <p class="small-text first">Станции биологической очистки «Эко»</p>
-                    <p class="small-text">Очистные сооружения Delfin</p>
-                </div>
-                <button class="success-btn">Открыть всю продукцию</button>
+                <button class="success-btn">Просмотреть все</button>
             </div>
         </div>
+
+        <div class="breadCrumb">
+            <span><a href="./index.html" class="a-link">Главная</a></span>
+            <span class="angle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+                </svg>
+            </span>
+            <span><a href="javascript:void(0);" class="a-link">Продукция</a></span>
+        </div>
+
         <div>
             <div class="slider-top-img"><img src="./ecoline-source/images/002.png" alt=""></div>
             <div class="outerSlider">
@@ -183,6 +169,7 @@
                         </div>
                         <div class="slide">
                             <div class="content">
+                                <h2>Очистные  сооружения  Delfin</h2>
                                 <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptatibus temporibus
                                         quidem laborum alias dicta quia minima, distinctio mollitia dolorem.</p>
                             </div>
@@ -277,110 +264,82 @@
                         <button class="slick-new-next"><img src="./ecoline-source/images/Group181.png" alt=""></button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="clients">
-        <div>
-            <div class="clients-slider">
-                <div class="item">
-                    <img src="./ecoline-source/images/l1.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="./ecoline-source/images/l2.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="./ecoline-source/images/l3.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="./ecoline-source/images/l4.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="./ecoline-source/images/l5.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="./ecoline-source/images/l6.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="./ecoline-source/images/l7.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="./ecoline-source/images/l8.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="./ecoline-source/images/l9.png" alt="">
-                </div>
-                <div class="item">
-                    <img src="./ecoline-source/images/l10.png" alt="">
-                </div>
-            </div>
-            <div class="arrows position-relative">
-                <button class="slick-new-prev"><img src="./ecoline-source/images/Group176.png" alt=""></button>
-                <button class="slick-new-next"><img src="./ecoline-source/images/Group176.png" alt=""></button>
-            </div>
-        </div>
-        <div>
-            <h2>Наши клиенты</h2>
-            <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Nemo voluptatibus temporibus quidem.</p>
-            <button class="primary-btn">Где купить</button>
-        </div>
-    </div>
-
-    <div class="image-slider-section">
-        <div>
-            <div class="navigation-menu">
-                <h2>Области применения</h2>
-                <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Nemo voluptatibus temporibus quidem.</p>
-                <ul class="animate-li">
-                    <li data-index="1">
-                        <a href="javascript:void(0);" class="a-link">
-                            <img src="./ecoline-source/images/house-2.png" alt="">Дачи, садовые домики
-                        </a>
-                    </li>
-                    <li class="active" data-index="2">
-                        <a href="javascript:void(0);" class="a-link">
-                            <img src="./ecoline-source/images/english-cottage.png" alt="">Коттеджи, частный сектор
-                        </a>
-                    </li>
-                    <li data-index="3">
-                        <a href="javascript:void(0);" class="a-link">
-                            <img src="./ecoline-source/images/town-hall.png" alt="">Школы, гостиницы, отели
-                        </a>
-                    </li>
-                    <li data-index="4">
-                        <a href="javascript:void(0);" class="a-link">
-                            <img src="./ecoline-source/images/gas-station.png" alt="">АЗС, нефтибазы
-                        </a>
-                    </li>
-                    <li data-index="5">
-                        <a href="javascript:void(0);" class="a-link">
-                            <img src="./ecoline-source/images/bistro.png" alt="">Кафе, рестораы
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="img-slider-cont">
-                <div class="image-slider">
-                    <div class="item" >
-                        <img src="./ecoline-source/images/cottage.png" alt="">
+                <div>
+                    <div class="slider">
+                        <div class="slide">
+                            <div class="content">
+                                <h2>Септик и  дренажное поле 4</h2>
+                                <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptatibus temporibus
+                                        quidem laborum alias dicta quia minima, distinctio mollitia dolorem.</p>
+                            </div>
+                            <button class="success-btn">Перейти</button>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <h2>Септик и  биофильтр САД</h2>
+                                <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptatibus temporibus
+                                        quidem laborum alias dicta quia minima, distinctio mollitia dolorem.</p>
+                            </div>
+                            <button class="success-btn">Перейти</button>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptatibus temporibus
+                                        quidem laborum alias dicta quia minima, distinctio mollitia dolorem.</p>
+                            </div>
+                            <button class="success-btn">Перейти</button>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptatibus temporibus
+                                        quidem laborum alias dicta quia minima, distinctio mollitia dolorem.</p>
+                            </div>
+                            <button class="success-btn">Перейти</button>
+                        </div>
                     </div>
-                    <div class="item">
-                        <img src="./ecoline-source/images/cottage.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./ecoline-source/images/cottage.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./ecoline-source/images/cottage.png" alt="">
-                    </div>
-                    <div class="item">
-                        <img src="./ecoline-source/images/cottage.png" alt="">
+                    <div class="arrows position-relative">
+                        <button class="slick-new-prev"><img src="./ecoline-source/images/Group181.png" alt=""></button>
+                        <button class="slick-new-next"><img src="./ecoline-source/images/Group181.png" alt=""></button>
                     </div>
                 </div>
-                <button class="success-btn">Перейти</button>
+                <div>
+                    <div class="slider">
+                        <div class="slide">
+                            <div class="content">
+                                <h2>Септик и  дренажное поле 5</h2>
+                                <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptatibus temporibus
+                                        quidem laborum alias dicta quia minima, distinctio mollitia dolorem.</p>
+                            </div>
+                            <button class="success-btn">Перейти</button>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <h2>Септик и  биофильтр САД</h2>
+                                <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptatibus temporibus
+                                        quidem laborum alias dicta quia minima, distinctio mollitia dolorem.</p>
+                            </div>
+                            <button class="success-btn">Перейти</button>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptatibus temporibus
+                                        quidem laborum alias dicta quia minima, distinctio mollitia dolorem.</p>
+                            </div>
+                            <button class="success-btn">Перейти</button>
+                        </div>
+                        <div class="slide">
+                            <div class="content">
+                                <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptatibus temporibus
+                                        quidem laborum alias dicta quia minima, distinctio mollitia dolorem.</p>
+                            </div>
+                            <button class="success-btn">Перейти</button>
+                        </div>
+                    </div>
+                    <div class="arrows position-relative">
+                        <button class="slick-new-prev"><img src="./ecoline-source/images/Group181.png" alt=""></button>
+                        <button class="slick-new-next"><img src="./ecoline-source/images/Group181.png" alt=""></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -618,133 +577,60 @@
         </div>
     </div>
 
-    <div class="preference">
+    <div class="image-slider-section">
         <div>
-            <h2>Наши преимущества</h2>
-            <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Nemo voluptatibus temporibus quidem.</p>
-            <button class="success-btn">О компании</button>
-        </div>
-        <div>
-            <div class="clients-slider">
-                <div class="slide">
-                    <img src="./ecoline-source/images/first-place.png" alt="">
-                    <p class="success-paragraph">Мы первые на рынке  Украины</p>
-                    <p class="secondary-paragraph">За 20 лет работы нами реализовано 
-                        свыше 3500 проектов автономных очистных сооружений</p>
-                </div>
-                <div class="slide">
-                    <img src="./ecoline-source/images/shield.png" alt="">
-                    <p class="success-paragraph">Только  высококачественное  обородувание</p>
-                    <p class="secondary-paragraph">Продукция польского и отечественного производства</p>
-                </div>
-                <div class="slide">
-                    <img src="./ecoline-source/images/repairing.png" alt="">
-                    <p class="success-paragraph">Качественный  профессиональный  монтаж</p>
-                    <p class="secondary-paragraph">Над Вашим объктом будет работать 
-                        команда опытных специалистов</p>
-                </div>
-                <div class="slide">
-                    <img src="./ecoline-source/images/eco.png" alt="">
-                    <p class="success-paragraph">Экологичность и  безопасность</p>
-                    <p class="secondary-paragraph">Наша цель - сохранение природных ресурсов 
-                        и экологичность!</p>
-                </div>
-                <div class="slide">
-                    <img src="./ecoline-source/images/first-place.png" alt="">
-                    <p class="success-paragraph">Мы первые на рынке  Украины</p>
-                    <p class="secondary-paragraph">За 20 лет работы нами реализовано 
-                        свыше 3500 проектов автономных очистных сооружений</p>
-                </div>
-                <div class="slide">
-                    <img src="./ecoline-source/images/shield.png" alt="">
-                    <p class="success-paragraph">Только  высококачественное  обородувание</p>
-                    <p class="secondary-paragraph">Продукция польского и отечественного производства</p>
-                </div>
-                <div class="slide">
-                    <img src="./ecoline-source/images/repairing.png" alt="">
-                    <p class="success-paragraph">Качественный  профессиональный  монтаж</p>
-                    <p class="secondary-paragraph">Над Вашим объктом будет работать 
-                        команда опытных специалистов</p>
-                </div>
-                <div class="slide">
-                    <img src="./ecoline-source/images/eco.png" alt="">
-                    <p class="success-paragraph">Экологичность и  безопасность</p>
-                    <p class="secondary-paragraph">Наша цель - сохранение природных ресурсов 
-                        и экологичность!</p>
-                </div>
-            </div>
-            <div class="arrows position-relative">
-                <button class="slick-new-prev"><img src="./ecoline-source/images/Group181.png" alt=""></button>
-                <button class="slick-new-next"><img src="./ecoline-source/images/Group181.png" alt=""></button>
-            </div>
-        </div>
-    </div>
-
-    <div class="promotions">
-        <div>
-            <div class="text">
-                <h2>Новости  и акции</h2>
-                <p class="light-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            <div class="navigation-menu">
+                <h2>Области применения</h2>
+                <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                         Nemo voluptatibus temporibus quidem.</p>
-                <button>Открыть все</button>
+                <ul class="animate-li">
+                    <li data-index="1">
+                        <a href="javascript:void(0);" class="a-link">
+                            <img src="./ecoline-source/images/house-2.png" alt="">Дачи, садовые домики
+                        </a>
+                    </li>
+                    <li class="active" data-index="2">
+                        <a href="javascript:void(0);" class="a-link">
+                            <img src="./ecoline-source/images/english-cottage.png" alt="">Коттеджи, частный сектор
+                        </a>
+                    </li>
+                    <li data-index="3">
+                        <a href="javascript:void(0);" class="a-link">
+                            <img src="./ecoline-source/images/town-hall.png" alt="">Школы, гостиницы, отели
+                        </a>
+                    </li>
+                    <li data-index="4">
+                        <a href="javascript:void(0);" class="a-link">
+                            <img src="./ecoline-source/images/gas-station.png" alt="">АЗС, нефтибазы
+                        </a>
+                    </li>
+                    <li data-index="5">
+                        <a href="javascript:void(0);" class="a-link">
+                            <img src="./ecoline-source/images/bistro.png" alt="">Кафе, рестораы
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="image-text">
-                <div class="eclipse">
-                    <img src="./ecoline-source/images/krishtalevi-djerela-1.png" alt="">
-                </div>
-                <p>Cтроительство локальных 
-                        очистных сооружений ЖК 
-                        «Кришталеві джерела»</p>
-                <button class="light-btn">Читать <img src="./ecoline-source/images/bookmark2.png" alt=""></button>
-            </div>
-        </div>
-        <div>
-            <div class="content">
-                <h4>Акция</h4>
-                <p>Скидка на монтаж автономной канализации</p>
-                <button class="success-btn">Подробнее <img src="./ecoline-source/images/giftbox-2.png" alt=""></button>
-            </div>
-            <div class="eclipse">
-                <img src="./ecoline-source/images/001.png" alt="">
-            </div>
-        </div>
-    </div>
-
-    <div class="reviews">
-        <div>
-            <div>
-                <img class="quotes" src="./ecoline-source/images/quotes.png" alt="">
-                <div class="review-slider">
-                    <div class="slide">
-                        <img src="./ecoline-source/images/user.png" alt="">
-                        <p class="name">Анатолий Евгеньевич</p>
-                        <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit quos 
-                            amet neque, voluptatibus dignissimos at temporibus quis saepe dolores 
-                            sit voluptate cumque a illum quidem incidunt nam ducimus accusantium,
-                             fuga aperiam id ab odio recusandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                             Dolor necessitatibus sequi molestias atque  a nobis sapiente soluta odio dolorum ab!</p>
+            <div class="img-slider-cont">
+                <div class="image-slider">
+                    <div class="item" >
+                        <img src="./ecoline-source/images/cottage.png" alt="">
                     </div>
-                    <div class="slide">
-                        <img src="./ecoline-source/images/user.png" alt="">
-                        <p class="name">Анатолий Евгеньевич</p>
-                        <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit quos 
-                            amet neque, voluptatibus dignissimos at temporibus quis saepe dolores 
-                            sit voluptate cumque a illum quidem incidunt nam ducimus accusantium,
-                                fuga aperiam id ab odio recusandae!</p>
+                    <div class="item">
+                        <img src="./ecoline-source/images/cottage.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./ecoline-source/images/cottage.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./ecoline-source/images/cottage.png" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="./ecoline-source/images/cottage.png" alt="">
                     </div>
                 </div>
-                <div class="arrows position-relative">
-                    <button class="slick-new-prev"><img src="./ecoline-source/images/Group176.png" alt=""></button>
-                    <button class="slick-new-next"><img src="./ecoline-source/images/Group176.png" alt=""></button>
-                </div>
+                <button class="success-btn">Перейти</button>
             </div>
-        </div>
-        <div>
-            <h2>Отзывы о компаиии</h2>
-            <p class="secondary-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Nemo voluptatibus temporibus quidem.</p>
-            <button class="primary-btn">Перейти</button>
         </div>
     </div>
 
@@ -814,7 +700,7 @@
                 <nav>
                     <ul class="navigation">
                         <li><a href="javascript:void(0);">Цены</a></li>
-                        <li><a href="./products.html">Продукция</a></li>
+                        <li><a href="javascript:void(0);">Продукция</a></li>
                         <li><a href="javascript:void(0);">Блог</a></li>
                         <li><a href="javascript:void(0);">О нас</a></li>
                         <li><a href="javascript:void(0);">Галерея</a></li>

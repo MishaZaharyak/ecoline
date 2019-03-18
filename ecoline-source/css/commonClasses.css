@@ -1,13 +1,32 @@
 @font-face {
-  font-family: "SFPro";
-  src: url("../fonts/SF-Pro-Display-Bold.otf");
+  font-family: 'SFPro';
+  src: url("../fonts/formats/SFProDisplay-Bold.eot");
+  /* IE9+ Compat Modes */
+  src: url("../fonts/formats/SFProDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFProDisplay-Bold.woff2") format("woff2"), url("../fonts/formats/SFProDisplay-Bold.woff") format("woff"), url("../fonts/formats/SFProDisplay-Bold.ttf") format("truetype"), url("../fonts/formats/SFProDisplay-Bold.svg#SFPro") format("svg"), url("../fonts/SF-Pro-Display-Bold.otf");
   font-weight: bold;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: "SFPro";
+  font-family: 'SFPro';
   src: url("../fonts/SF-Pro-Display-Medium.otf");
-  font-weight: normal;
+  src: url("../fonts/formats/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/formats/SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
+
+body::-webkit-scrollbar {
+  width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #a79f9f;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #003de8;
+}
+
 .primary-btn {
   border-radius: 18px;
   border: 2px solid #003de8;
@@ -18,13 +37,17 @@
   padding: 6px 20px;
   background-color: transparent;
   cursor: pointer;
-  transition: 0.3s ease all;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
+
 .primary-btn:hover {
   background-color: #003de8;
   color: white;
-  transition: 0.3s ease all;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
+
 .primary-btn:focus {
   outline: none;
 }
@@ -39,13 +62,17 @@
   padding: 6px 20px;
   background-color: transparent;
   cursor: pointer;
-  transition: 0.3s ease all;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
+
 .success-btn:hover {
   background-color: #62c622;
   color: white;
-  transition: 0.3s ease all;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
+
 .success-btn:focus {
   outline: none;
 }
@@ -60,13 +87,17 @@
   padding: 6px 20px;
   background-color: transparent;
   cursor: pointer;
-  transition: 0.3s ease all;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
+
 .light-btn:hover {
   background-color: #62c622;
   border-color: #62c622;
-  transition: 0.3s ease all;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
+
 .light-btn:focus {
   outline: none;
 }
@@ -96,6 +127,7 @@
   padding: 0;
   margin: 0;
 }
+
 .a-link:hover {
   text-decoration: none;
   color: inherit;
@@ -106,63 +138,123 @@ ul.slider-list {
   padding: 0;
   margin: 0;
 }
+
 ul.slider-list li {
   cursor: pointer;
 }
+
 ul.slider-list li.big-text {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 2.5rem;
+  line-height: 1;
   font-weight: bold;
   padding: 7px 0;
-  transition: 0.5s ease all;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
 }
+
+@media (max-width: 1440px) {
+  ul.slider-list li.big-text {
+    font-size: calc(0.88rem + 1.8vw) ;
+  }
+}
+
 ul.slider-list li.big-text:hover, ul.slider-list li.big-text.active {
   position: relative;
-  text-indent: 20px;
-  transition: 0.5s ease all;
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  -webkit-transition: .5s ease all;
+  transition: .5s ease all;
 }
+
 ul.slider-list li.big-text.active::before {
-  content: "";
+  content: '';
   position: absolute;
+  top: 50%;
+  margin-top: -7.5px;
   background-repeat: no-repeat;
 }
 
 @media (max-width: 1000px) {
   ul.slider-list li.big-text {
-    font-size: 30px;
-    line-height: 40px;
     font-weight: bold;
     padding: 2px 0;
   }
 }
+
 @media (min-width: 320px) {
   ul.slider-list li.big-text {
-    transition: 0.5s ease all;
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
   }
 }
+
 .slick-dots {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 25px 0 0;
   margin: 0;
 }
+
 .slick-dots li {
   margin: 0 5px;
 }
+
 .slick-dots li button {
   font-size: 0px;
   width: 25px;
   height: 4px;
   border: none;
-  transition: 0.5s ease background-color;
+  -webkit-transition: .5s ease background-color;
+  transition: .5s ease background-color;
   cursor: pointer;
 }
+
 .slick-dots li button:focus {
   outline: none;
 }
+
 .slick-dots li.slick-active button {
-  transition: 0.5s ease background-color;
+  -webkit-transition: .5s ease background-color;
+  transition: .5s ease background-color;
 }
 
+.breadCrumb {
+  font-family: "SFPro";
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.breadCrumb span {
+  font-size: 0.6875rem;
+  letter-spacing: 0px;
+  line-height: 1;
+  color: #333333;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+}
+
+.breadCrumb span a {
+  color: #333333;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+}
+
+.breadCrumb span a:hover {
+  color: #003de8;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+}
+
+.breadCrumb span.angle svg {
+  height: 7px;
+  width: 10px;
+  fill: #333333;
+}
 /*# sourceMappingURL=commonClasses.css.map */

@@ -1,28 +1,42 @@
 @font-face {
-  font-family: "SFPro";
-  src: url("../fonts/SF-Pro-Display-Bold.otf");
+  font-family: 'SFPro';
+  src: url("../fonts/formats/SFProDisplay-Bold.eot");
+  /* IE9+ Compat Modes */
+  src: url("../fonts/formats/SFProDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFProDisplay-Bold.woff2") format("woff2"), url("../fonts/formats/SFProDisplay-Bold.woff") format("woff"), url("../fonts/formats/SFProDisplay-Bold.ttf") format("truetype"), url("../fonts/formats/SFProDisplay-Bold.svg#SFPro") format("svg"), url("../fonts/SF-Pro-Display-Bold.otf");
   font-weight: bold;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: "SFPro";
+  font-family: 'SFPro';
   src: url("../fonts/SF-Pro-Display-Medium.otf");
-  font-weight: normal;
+  src: url("../fonts/formats/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/formats/SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
+
 .goDown {
   text-decoration: none;
   margin: 0;
   padding: 0;
 }
+
 .goDown img {
-  transform: translateY(0);
-  transition: 0.3s ease transform;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: .3s ease transform;
+  transition: .3s ease transform;
 }
+
 .goDown:hover {
   text-decoration: none;
 }
+
 .goDown:hover img {
-  transform: translateY(10px);
-  transition: 0.3s ease transform;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: .3s ease transform;
+  transition: .3s ease transform;
 }
 
 .header {
@@ -33,12 +47,17 @@
   background-position: 127% 19%, -216px -43px;
   background-size: 68% auto, calc(100% + 337px) 866px;
 }
+
 .header > div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 .header > div:first-child .baner-text {
   max-width: 280px;
 }
+
 .header > div:first-child .baner-text h1 {
   font-size: 60px;
   line-height: 60px;
@@ -46,18 +65,22 @@
   font-weight: bold;
   margin-bottom: 30px;
 }
+
 .header > div:first-child .baner-text a {
   font-size: 13px;
   line-height: 17px;
   color: #003de8;
   font-weight: bold;
 }
+
 .header > div:first-child .baner-text a:not(:last-child) {
   margin-right: 20px;
 }
+
 .header > div:first-child .baner-paragraph {
   padding-left: 20px;
 }
+
 .header > div:first-child .baner-paragraph span {
   width: 25px;
   height: 3px;
@@ -65,15 +88,18 @@
   background-color: #003de8;
   margin: 8px 0 20px 0;
 }
+
 .header > div:first-child .baner-paragraph p {
   max-width: 312px;
   font-size: 13px;
   line-height: 17px;
   color: #333333;
 }
+
 .header > div:last-child {
   margin-top: 270px;
 }
+
 .header > div:last-child button {
   margin-left: 35px;
   width: 205px;
@@ -85,6 +111,7 @@
     background-size: 60% auto, calc(100% + 337px) 866px;
   }
 }
+
 @media (max-width: 800px) {
   .header {
     padding-top: 170px;
@@ -92,8 +119,13 @@
     background-size: 60% auto, calc(100% + 337px) 866px;
   }
   .header > div:first-child {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .header > div:first-child .baner-text h1, .header > div:first-child .baner-text div {
     text-align: center;
@@ -110,11 +142,13 @@
     margin-top: 175px;
   }
 }
+
 @media (max-width: 700px) {
   .goDown {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
-
   .header {
     background-position: 0 0, -166px -133px;
     background-size: 0, calc(100% + 209px) 819px;
@@ -122,9 +156,16 @@
   }
   .header > div:last-child {
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 60px;
   }
   .header > div:last-child button {
@@ -136,6 +177,7 @@
     margin-top: 40px;
   }
 }
+
 @media (max-width: 520px) {
   .header {
     padding: 170px 30px 60px;
@@ -148,23 +190,29 @@
     line-height: 40px;
   }
 }
+
 @media (min-width: 320px) {
   .header {
-    transition: 0.5s ease all;
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
   }
   .header > div:first-child .baner-text {
-    transition: 0.5s ease width;
+    -webkit-transition: .5s ease width;
+    transition: .5s ease width;
   }
   .header > div:first-child .baner-text h1 {
-    transition: 0.5s ease text-align;
-    transition: 0.5s ease font-size;
+    -webkit-transition: .5s ease text-align;
+    transition: .5s ease text-align;
+    -webkit-transition: .5s ease font-size;
+    transition: .5s ease font-size;
   }
   .header > div:first-child .baner-paragraph {
-    transition: 0.5s ease all;
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
   }
   .header > div:last-child {
-    transition: 0.5s ease margin;
+    -webkit-transition: .5s ease margin;
+    transition: .5s ease margin;
   }
 }
-
 /*# sourceMappingURL=header.css.map */

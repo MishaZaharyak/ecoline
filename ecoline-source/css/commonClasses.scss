@@ -1,4 +1,19 @@
 @import './vars.scss';
+@import './font-size.scss';
+
+body {
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+     
+    &::-webkit-scrollbar-track {
+        background-color: #a79f9f;
+    }
+     
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+    }
+}
 
 .primary-btn {
     border-radius: 18px;
@@ -109,15 +124,17 @@ ul.slider-list {
         cursor: pointer;
 
         &.big-text {
-            font-size: 40px;
-            line-height: 40px;
+            // font-size: 40px;
+            @include font-size(40px);
+            line-height: 1;
             font-weight: bold;
             padding: 7px 0;
+            transform: translateX(0);
             transition: .5s ease all;
 
             &:hover, &.active {
                 position: relative;
-                text-indent: 20px;
+                transform: translateX(20px);
                 transition: .5s ease all;                        
             }
 
@@ -125,6 +142,8 @@ ul.slider-list {
                 &::before {
                     content: '';
                     position: absolute;
+                    top: 50%;
+                    margin-top: -7.5px;
                     background-repeat: no-repeat;
                 }
             }
@@ -134,8 +153,6 @@ ul.slider-list {
 
 @media (max-width: 1000px) {
     ul.slider-list li.big-text {
-        font-size: 30px;
-        line-height: 40px;
         font-weight: bold;
         padding: 2px 0;
     }
@@ -173,5 +190,34 @@ ul.slider-list {
         &.slick-active button {
             transition: .5s ease background-color;
         }
+    }
+}
+
+.breadCrumb {
+    font-family: $S-FPro-Display;
+    transition: all .5s ease;
+
+    span {
+        @include font-size(11px);
+        letter-spacing: 0px;
+        line-height: 1;
+        color: $secondary;
+        transition: color .5s ease;
+
+        a {
+            color: $secondary;
+            transition: color .5s ease;
+        }
+
+        a:hover {
+            color: $primary;
+            transition: color .5s ease;
+        }
+    }
+
+    span.angle svg {
+        height: 7px;
+        width: 10px;
+        fill: $secondary;
     }
 }

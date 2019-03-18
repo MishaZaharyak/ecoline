@@ -1,4 +1,7 @@
 @import './vars.scss';
+@import './font-size.scss';
+
+// main page
 // section with slider right
 .section-with-slider.right {
     display: flex;
@@ -6,6 +9,14 @@
     justify-content: space-between;
     font-family: $S-FPro-Display;
     padding: 90px 0 100px 90px;
+    position: relative;
+
+    .breadCrumb {
+        position: absolute;
+        left: 90px;
+        top: 90px;
+        z-index: 101; // more than navbar by 1px
+    }
     
     & > div:first-child {
         ul {
@@ -21,7 +32,7 @@
 
                     &::before {
                         content: '';
-                        left: -25px;
+                        left: -35px;
                         opacity: 0;
                         transition: .5s ease left, .5s ease opacity;
                     }
@@ -29,8 +40,7 @@
                     &.active {
                         &::before {
                             width: 36px;
-                            top: 42%;
-                            left: -36px;
+                            left: -56px;
                             opacity: 1;
                             transition: .5s ease left, .5s ease opacity;
                             height: 15px;
@@ -60,6 +70,7 @@
         button {
             margin-top: 70px;
             max-width: 200px;
+            width: 100%;
         }
     }
 
@@ -82,8 +93,8 @@
                 min-height: 290px;
 
                 h2 {
-                    font-size: 25px;
-                    line-height: 25px;
+                    @include font-size(25px);
+                    line-height: 1;
                     color: $secondary;
                     font-weight: bold;
                     margin-bottom: 0;
@@ -193,12 +204,21 @@
         padding: 90px 0 100px 0;
         display: block;
 
+        .breadCrumb {
+            top: 50px;
+        }
+
         & > div:first-child {
             padding: 30px 90px;
 
             ul {
                 display: flex;
                 justify-content: space-between;
+                flex-wrap: wrap;
+
+                li.big-text {
+                    margin: 0 20px;
+                }
             }
 
             .text-button-cont {
@@ -217,7 +237,7 @@
             }
 
             button {
-                margin-top: 0;
+                margin-top: 20px;
             }
             
         }
@@ -241,7 +261,7 @@
 
 @media (max-width: 800px) {
     .section-with-slider.right > div:first-child ul li.big-text.active::before {
-        left: -25px;
+        left: -42px;
     }
 }
 
@@ -249,15 +269,6 @@
     .section-with-slider.right {
         & > div:first-child {
             padding: 30px 50px;
-
-            ul li.big-text {
-                font-size: 26px;
-
-                &.active::before {
-                    left: -25px;
-                    top: 35%;
-                }
-            }
         }
 
         & > div:last-child {
@@ -278,8 +289,12 @@
                 justify-content: center;
                 align-items: center;
 
-                li.big-text.active::before {
-                    left: -36px;
+                li.big-text {
+                    margin: 0;
+
+                    .active::before {
+                        left: -50px;
+                    }
                 }
             }
 
@@ -296,11 +311,6 @@
 
         & > div:last-child {
             padding: 0px 30px 50px;
-
-            .slider .slide h2 {
-                font-size: 20px;
-                line-height: 20px;
-            }
         }
     }
 }
@@ -308,6 +318,12 @@
 @media (max-width: 580px) {
     .section-with-slider.right > div:last-child .arrows {
         display: none !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .section-with-slider.right .breadCrumb {
+        left: 40px;
     }
 }
 
@@ -2235,3 +2251,16 @@
     }
 }
 // end feedback
+// end main page
+
+// products page
+body.products-page {
+    padding-top: 50px;
+
+    @media (max-width: 650px) {
+        .section-with-slider.right {
+            padding-top: 90px;
+        }
+    }
+}
+// end products page
