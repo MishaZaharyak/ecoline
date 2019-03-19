@@ -1,4 +1,5 @@
 @import './vars.scss';
+@import './font-size.scss';
 
 .goDown {
     text-decoration: none;
@@ -20,7 +21,7 @@
     }
 }
 
-.header {
+header.header {
     padding: 270px 90px 90px 90px;
     font-family: $S-FPro-Display;
     background-image: url('../images/30-perspective.86.png'), url('../images/Path285.png');
@@ -84,14 +85,14 @@
 }
 
 @media (max-width: 1250px) {
-    .header {
+    header.header {
         background-position: 121% 74%, -216px -43px;
         background-size: 60% auto, calc(100% + 337px) 866px;
     }
 }
 
 @media (max-width: 800px) {
-    .header {
+    header.header {
         padding-top: 170px;
         background-position: 110% 111%, -216px -43px;
         background-size: 60% auto, calc(100% + 337px) 866px;
@@ -129,7 +130,7 @@
         order: 1;
     }
 
-    .header {
+    header.header {
         background-position: 0 0, -166px -133px;
         background-size: 0, calc(100% + 209px) 819px;
         padding-bottom: 60px;
@@ -156,7 +157,7 @@
 }
 
 @media (max-width: 520px) {
-    .header {
+    header.header {
         padding: 170px 30px 60px;
 
         & > div:first-child {
@@ -178,7 +179,7 @@
 
 
 @media (min-width: 320px) {
-    .header {
+    header.header {
         transition: .5s ease all;
 
         & > div:first-child {
@@ -202,3 +203,106 @@
         }
     }
 }
+
+// all products page
+header.all-products-page {
+    padding: 150px 90px 50px;
+    display: flex;
+    align-items: flex-end;
+    font-family: $S-FPro-Display;
+
+    h1 {
+        max-width: 150px;
+        @include font-size(35px);
+        color: $success;
+        font-weight: bold;
+        line-height: 1.1;
+        text-align: left;
+        margin: 0; 
+    }
+
+    .breadcrum-cont {
+        margin-left: 150px;
+
+        span.line {
+            display: inline-block;
+            height: 2px;
+            width: 25px;
+            background-color: $success;
+            margin: 15px 0 13px 0;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .buttonsGroupe {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+
+        button:first-child {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    header.all-products-page .breadcrum-cont {
+        margin-left: 90px;
+    }  
+}
+
+@media (max-width: 991px) {
+    header.all-products-page {
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            max-width: none;
+        }
+    
+        .breadcrum-cont {
+            margin: 20px 0;
+            text-align: center;
+        }
+    
+        .buttonsGroupe {
+            margin: 0;
+        }
+    }  
+}
+
+@media (max-width: 520px) {
+    header.all-products-page {
+        padding: 150px 30px 50px;
+
+        h1 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    header.all-products-page {
+        transition: padding .5s ease;
+
+        h1 {
+            transition: all .5s ease;
+        }
+    
+        .breadcrum-cont {
+            transition: all .5s ease;
+        }
+    
+        .buttonsGroupe {
+            transition: all .5s ease;
+    
+            button:first-child {
+                transition: margin .5s ease;
+            }
+        }
+    }  
+}
+// end all products page

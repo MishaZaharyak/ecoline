@@ -2,6 +2,8 @@
 @import './font-size.scss';
 
 body {
+    font-family: $S-FPro-Display;
+
     &::-webkit-scrollbar {
         width: 4px;
     }

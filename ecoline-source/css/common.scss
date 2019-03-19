@@ -2264,3 +2264,198 @@ body.products-page {
     }
 }
 // end products page
+
+// all product page
+// products groupe
+.products-groups-cont {
+    padding: 50px 90px;
+    font-family: $S-FPro-Display;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .product-group {
+        max-width: max-content;
+        padding-right: 10px;
+        margin-bottom: 25px;
+
+        .header {
+            display: flex;
+            align-items: flex-end;
+            max-width: max-content;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+
+            &:hover {
+                h3 {
+                    color: $success-alpha;
+                }
+
+                img {
+                    transform: translateY(10px);
+                }
+            }
+
+            h3 {
+                @include font-size(20px);
+                color: $success;
+                font-weight: bold;
+                line-height: 1;
+                margin-left: 10px;
+                transition: all .5s ease;
+            }
+
+            span {
+                width: 50px;
+                height: 50px;
+                margin-left: 25px;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: -25px;
+                border-radius: 5px;
+
+                img {
+                    transition: all .5s ease;
+                }
+            }
+        }
+
+        .group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            & > div {
+                background-color: $mainBackgrondColor;
+                padding: 60px 50px 40px;
+                border-radius: 10px;
+                max-width: 302px;
+                max-height: 450px;
+                height: 100vh;
+                flex-direction: column;
+                display: flex;
+                justify-content: space-between;
+
+                img {
+                    max-width: 75px;
+                    max-height: 75px;
+                }
+
+                h5 {
+                    @include font-size(25px);
+                    line-height: 1;
+                    color: $secondary;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                    max-width: 232px;
+                    width: 100vw;
+                }
+
+                p {
+                    max-width: 213px;
+                    margin-bottom: 0;
+                    margin-top: 20px;
+                }
+
+                button {
+                    width: 130px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .products-groups-cont {
+        padding: 50px 90px 0;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .products-groups-cont {
+        padding: 50px 30px 0;
+        justify-content: center;
+    
+        .product-group {
+    
+            .header {
+                margin: auto;
+                max-width: 302px;
+            }
+    
+            .group {
+                justify-content: center;
+
+                & > div {
+                    padding: 35px;
+                    max-height: 385px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .products-groups-cont {
+    
+        .product-group {
+            padding: 0;
+            }
+    
+            .group {
+                justify-content: center;
+
+                & > div {
+                    padding: 35px;
+                    max-height: 385px;
+                    max-width: 280px;
+    
+                    h5 {
+                        max-width: 210px
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .products-groups-cont {
+        transition: all .5s ease;
+    
+        .product-group {
+            transition: all .5s ease;
+    
+            .header {
+                transition: all .5s ease;
+    
+                h3 {
+                    transition: all .5s ease;
+                }
+    
+                span {
+                    transition: all .5s ease;
+                }
+            }
+    
+            .group {
+                transition: all .5s ease;
+
+                & > div {
+                    transition: all .5s ease;
+    
+                    h5 {
+                        transition: all .5s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+//end products groupe
+// end all product page

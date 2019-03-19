@@ -27,6 +27,8 @@
 
 .topMenu.fixedNav {
   background-color: white;
+  -webkit-box-shadow: -1px -6px 17px #333333;
+          box-shadow: -1px -6px 17px #333333;
 }
 
 .topMenu.white {
@@ -197,8 +199,8 @@
 
 @media (min-width: 320px) {
   .topMenu {
-    -webkit-transition: .5s ease padding, .3s ease background-color;
-    transition: .5s ease padding, .3s ease background-color;
+    -webkit-transition: .5s ease padding, .3s ease background-color, .3s ease box-shadow;
+    transition: .5s ease padding, .3s ease background-color, .3s ease box-shadow;
   }
   .topMenu .navbar-brand {
     -webkit-transition: .5s ease margin;

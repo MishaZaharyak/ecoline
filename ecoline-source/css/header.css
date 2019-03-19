@@ -39,7 +39,7 @@
   transition: .3s ease transform;
 }
 
-.header {
+header.header {
   padding: 270px 90px 90px 90px;
   font-family: "SFPro";
   background-image: url("../images/30-perspective.86.png"), url("../images/Path285.png");
@@ -48,17 +48,17 @@
   background-size: 68% auto, calc(100% + 337px) 866px;
 }
 
-.header > div:first-child {
+header.header > div:first-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.header > div:first-child .baner-text {
+header.header > div:first-child .baner-text {
   max-width: 280px;
 }
 
-.header > div:first-child .baner-text h1 {
+header.header > div:first-child .baner-text h1 {
   font-size: 60px;
   line-height: 60px;
   color: #003de8;
@@ -66,22 +66,22 @@
   margin-bottom: 30px;
 }
 
-.header > div:first-child .baner-text a {
+header.header > div:first-child .baner-text a {
   font-size: 13px;
   line-height: 17px;
   color: #003de8;
   font-weight: bold;
 }
 
-.header > div:first-child .baner-text a:not(:last-child) {
+header.header > div:first-child .baner-text a:not(:last-child) {
   margin-right: 20px;
 }
 
-.header > div:first-child .baner-paragraph {
+header.header > div:first-child .baner-paragraph {
   padding-left: 20px;
 }
 
-.header > div:first-child .baner-paragraph span {
+header.header > div:first-child .baner-paragraph span {
   width: 25px;
   height: 3px;
   display: block;
@@ -89,36 +89,36 @@
   margin: 8px 0 20px 0;
 }
 
-.header > div:first-child .baner-paragraph p {
+header.header > div:first-child .baner-paragraph p {
   max-width: 312px;
   font-size: 13px;
   line-height: 17px;
   color: #333333;
 }
 
-.header > div:last-child {
+header.header > div:last-child {
   margin-top: 270px;
 }
 
-.header > div:last-child button {
+header.header > div:last-child button {
   margin-left: 35px;
   width: 205px;
 }
 
 @media (max-width: 1250px) {
-  .header {
+  header.header {
     background-position: 121% 74%, -216px -43px;
     background-size: 60% auto, calc(100% + 337px) 866px;
   }
 }
 
 @media (max-width: 800px) {
-  .header {
+  header.header {
     padding-top: 170px;
     background-position: 110% 111%, -216px -43px;
     background-size: 60% auto, calc(100% + 337px) 866px;
   }
-  .header > div:first-child {
+  header.header > div:first-child {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -127,18 +127,18 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .header > div:first-child .baner-text h1, .header > div:first-child .baner-text div {
+  header.header > div:first-child .baner-text h1, header.header > div:first-child .baner-text div {
     text-align: center;
   }
-  .header > div:first-child .baner-text h1 {
+  header.header > div:first-child .baner-text h1 {
     font-size: 50px;
     line-height: 50px;
   }
-  .header > div:first-child .baner-paragraph {
+  header.header > div:first-child .baner-paragraph {
     margin-top: 20px;
     padding-left: 0;
   }
-  .header > div:last-child {
+  header.header > div:last-child {
     margin-top: 175px;
   }
 }
@@ -149,12 +149,12 @@
         -ms-flex-order: 1;
             order: 1;
   }
-  .header {
+  header.header {
     background-position: 0 0, -166px -133px;
     background-size: 0, calc(100% + 209px) 819px;
     padding-bottom: 60px;
   }
-  .header > div:last-child {
+  header.header > div:last-child {
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -168,10 +168,10 @@
             align-items: center;
     margin-top: 60px;
   }
-  .header > div:last-child button {
+  header.header > div:last-child button {
     margin: 0;
   }
-  .header > div:last-child img {
+  header.header > div:last-child img {
     width: 15px;
     height: 36px;
     margin-top: 40px;
@@ -179,40 +179,158 @@
 }
 
 @media (max-width: 520px) {
-  .header {
+  header.header {
     padding: 170px 30px 60px;
   }
-  .header > div:first-child .baner-text {
+  header.header > div:first-child .baner-text {
     max-width: 320px;
   }
-  .header > div:first-child .baner-text h1 {
+  header.header > div:first-child .baner-text h1 {
     font-size: 40px;
     line-height: 40px;
   }
 }
 
 @media (min-width: 320px) {
-  .header {
+  header.header {
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
   }
-  .header > div:first-child .baner-text {
+  header.header > div:first-child .baner-text {
     -webkit-transition: .5s ease width;
     transition: .5s ease width;
   }
-  .header > div:first-child .baner-text h1 {
+  header.header > div:first-child .baner-text h1 {
     -webkit-transition: .5s ease text-align;
     transition: .5s ease text-align;
     -webkit-transition: .5s ease font-size;
     transition: .5s ease font-size;
   }
-  .header > div:first-child .baner-paragraph {
+  header.header > div:first-child .baner-paragraph {
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
   }
-  .header > div:last-child {
+  header.header > div:last-child {
     -webkit-transition: .5s ease margin;
     transition: .5s ease margin;
+  }
+}
+
+header.all-products-page {
+  padding: 150px 90px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-family: "SFPro";
+}
+
+header.all-products-page h1 {
+  max-width: 150px;
+  font-size: 2.1875rem;
+  color: #62c622;
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: left;
+  margin: 0;
+}
+
+@media (max-width: 1440px) {
+  header.all-products-page h1 {
+    font-size: calc(1.02875rem + 1.2875vw) ;
+  }
+}
+
+header.all-products-page .breadcrum-cont {
+  margin-left: 150px;
+}
+
+header.all-products-page .breadcrum-cont span.line {
+  display: inline-block;
+  height: 2px;
+  width: 25px;
+  background-color: #62c622;
+  margin: 15px 0 13px 0;
+}
+
+header.all-products-page .breadcrum-cont p {
+  margin-bottom: 0;
+}
+
+header.all-products-page .buttonsGroupe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+}
+
+header.all-products-page .buttonsGroupe button:first-child {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1100px) {
+  header.all-products-page .breadcrum-cont {
+    margin-left: 90px;
+  }
+}
+
+@media (max-width: 991px) {
+  header.all-products-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header.all-products-page h1 {
+    max-width: none;
+  }
+  header.all-products-page .breadcrum-cont {
+    margin: 20px 0;
+    text-align: center;
+  }
+  header.all-products-page .buttonsGroupe {
+    margin: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  header.all-products-page {
+    padding: 150px 30px 50px;
+  }
+  header.all-products-page h1 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 320px) {
+  header.all-products-page {
+    -webkit-transition: padding .5s ease;
+    transition: padding .5s ease;
+  }
+  header.all-products-page h1 {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.all-products-page .breadcrum-cont {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.all-products-page .buttonsGroupe {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.all-products-page .buttonsGroupe button:first-child {
+    -webkit-transition: margin .5s ease;
+    transition: margin .5s ease;
   }
 }
 /*# sourceMappingURL=header.css.map */
