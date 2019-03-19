@@ -15,7 +15,6 @@
         position: absolute;
         left: 90px;
         top: 90px;
-        z-index: 101; // more than navbar by 1px
     }
     
     & > div:first-child {
@@ -2405,7 +2404,6 @@ body.products-page {
     
         .product-group {
             padding: 0;
-            }
     
             .group {
                 justify-content: center;
