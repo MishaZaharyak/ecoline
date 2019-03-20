@@ -119,7 +119,7 @@ $(document).ready(function() {
   }) 
 
   // sliders sections list animatins
-  $('.animate-li').each(function() {
+  $('.fullWidthMenu .animate-li').each(function() {
     let liList = $(this).find('.big-text');
 
     if (liList.length <= 0) liList = $(this).find('li');
@@ -185,6 +185,13 @@ $(document).ready(function() {
 
   if (outerSlider.length) {
     $(outerSlider).each(function() {
+      let liList;
+
+      $(this).on('init', function(e, slick) {
+        e.preventDefault();
+        liList = $(slick.$slider).closest('.main-parent').find('.sliderNav li[data-index]');
+      })
+
       $(this).slick({
           ...slickOptions,
           dots: false,
@@ -196,9 +203,16 @@ $(document).ready(function() {
           draggable: false,
           swipe: false,
           touchMove: false,
-      }).on('beforeChange', function(e, slick, cur) {
-        
-      });;
+      }).on('beforeChange', function(e, slick, cur, next) {
+        e.preventDefault();
+        if ($(slick.$slider).hasClass('outerSlider')) {
+          liList.each(function() {
+            $(this).removeClass('active')
+          });
+  
+          $(liList[next]).addClass('active');
+        }
+      });
     });
 
     $('.sliderNav li[data-index]').each(function() {
@@ -269,6 +283,13 @@ $(document).ready(function() {
 
   if (imageSlider.length) {
     $(imageSlider).each(function() {
+      let liList;
+
+      $(this).on('init', function(e, slick) {
+        e.preventDefault();
+        liList = $(slick.$slider).closest('.main-parent').find('.animate-li li[data-index]');
+      })
+
       $(this).slick({
           ...slickOptions,
           slidesToShow: 1,
@@ -281,7 +302,16 @@ $(document).ready(function() {
           swipe: false,
           touchMove: false,
           initialSlide: 1,
-      })
+      }).on('beforeChange', function(e, slick, cur, next) {
+        e.preventDefault();
+        if ($(slick.$slider).hasClass('image-slider')) {
+          liList.each(function() {
+            $(this).removeClass('active')
+          });
+  
+          $(liList[next]).addClass('active');
+        }
+      });
     });  
 
     $('.image-slider-section li[data-index]').click(function(e) {

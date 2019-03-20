@@ -889,7 +889,7 @@
   margin-top: 30px;
 }
 
-.section-with-slider.left > div:last-child .button-text-cont a {
+.section-with-slider.left > div:last-child .button-text-cont div a {
   font-size: 13px;
   line-height: 17px;
   color: rgba(0, 61, 232, 0.5);
@@ -898,11 +898,11 @@
   transition: .5s ease color;
 }
 
-.section-with-slider.left > div:last-child .button-text-cont a:not(:last-child) {
+.section-with-slider.left > div:last-child .button-text-cont div a:not(:last-child) {
   margin-right: 20px;
 }
 
-.section-with-slider.left > div:last-child .button-text-cont a:hover {
+.section-with-slider.left > div:last-child .button-text-cont div a:hover {
   color: #003de8;
   -webkit-transition: .5s ease color;
   transition: .5s ease color;
@@ -1415,7 +1415,6 @@
   font-size: 13px;
   line-height: 17px;
   font-weight: bold;
-  padding: 6px 20px;
   background-color: transparent;
   cursor: pointer;
   -webkit-transition: .3s ease all;
@@ -1431,6 +1430,11 @@
 
 .promotions > div:first-child .text button:focus {
   outline: none;
+}
+
+.promotions > div:first-child .text button a {
+  padding: 6px 20px;
+  display: block;
 }
 
 .promotions > div:first-child .image-text {

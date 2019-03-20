@@ -38,6 +38,15 @@ body {
     &:focus {
         outline: none;
     }
+
+    &.has-link {
+        padding: 0;
+
+        a {
+            padding: 6px 20px;
+            display: block;
+        }
+    }
 }
 
 .success-btn {
@@ -61,6 +70,15 @@ body {
     &:focus {
         outline: none;
     }
+
+    &.has-link {
+        padding: 0;
+        
+        a {
+            padding: 6px 20px;
+            display: block;
+        }
+    }
 }
 
 .light-btn {
@@ -83,6 +101,15 @@ body {
 
     &:focus {
         outline: none;
+    }
+
+    &.has-link {
+        padding: 0;
+        
+        a {
+            padding: 6px 20px;
+            display: block;
+        }
     }
 }
 

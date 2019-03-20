@@ -889,7 +889,7 @@
             max-width: 300px;
             margin-top: 30px;
 
-            a {
+            div a {
                 font-size: 13px;
                 line-height: 17px;
                 color: $primary-alpha;
@@ -1403,7 +1403,6 @@
                 font-size: 13px;
                 line-height: 17px;
                 font-weight: bold;
-                padding: 6px 20px;
                 background-color: transparent;
                 cursor: pointer;
                 transition: .3s ease all;
@@ -1416,6 +1415,11 @@
 
                 &:focus {
                     outline: none;
+                }
+
+                a {
+                    padding: 6px 20px;
+                    display: block;
                 }
             }
         }

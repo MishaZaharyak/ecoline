@@ -56,6 +56,15 @@ body::-webkit-scrollbar-thumb {
   outline: none;
 }
 
+.primary-btn.has-link {
+  padding: 0;
+}
+
+.primary-btn.has-link a {
+  padding: 6px 20px;
+  display: block;
+}
+
 .success-btn {
   border-radius: 18px;
   border: 2px solid #62c622;
@@ -81,6 +90,15 @@ body::-webkit-scrollbar-thumb {
   outline: none;
 }
 
+.success-btn.has-link {
+  padding: 0;
+}
+
+.success-btn.has-link a {
+  padding: 6px 20px;
+  display: block;
+}
+
 .light-btn {
   border-radius: 18px;
   border: 2px solid white;
@@ -104,6 +122,15 @@ body::-webkit-scrollbar-thumb {
 
 .light-btn:focus {
   outline: none;
+}
+
+.light-btn.has-link {
+  padding: 0;
+}
+
+.light-btn.has-link a {
+  padding: 6px 20px;
+  display: block;
 }
 
 .secondary-paragraph {
