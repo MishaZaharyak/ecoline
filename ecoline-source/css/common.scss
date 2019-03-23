@@ -579,8 +579,8 @@
         max-width: 330px;
 
         h2 {
-            font-size: 40px;
-            line-height: 40px;
+            @include font-size(40px);
+            line-height: 1;
             color: $success;
             font-weight: bold;
             margin: 50px 0 20px 0;
@@ -799,11 +799,6 @@
 @media (max-width: 580px) {
     .image-slider-section .navigation-menu {
         padding: 0 30px;
-
-        h2 {
-            font-size: 30px;
-            line-height: 30px;
-        }
     }
 }
 
@@ -2461,3 +2456,12 @@ body.products-page {
 }
 //end products groupe
 // end all product page
+
+
+// application-area-page
+body.application-area-page {
+    .image-slider-section {
+        padding-top: 150px;
+    }
+}
+// end application-area-page
