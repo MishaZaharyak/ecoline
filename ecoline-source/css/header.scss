@@ -2,10 +2,6 @@
 @import './font-size.scss';
 
 .goDown {
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-
     img {
         transform: translateY(0);
         transition: .3s ease transform;
@@ -35,8 +31,8 @@ header.header {
         .baner-text {
             max-width: 280px;
             h1 {
-                font-size: 60px;
-                line-height: 60px;
+                @include font-size(60px);
+                line-height: 1;
                 color: $primary;
                 font-weight: bold;
                 margin-bottom: 30px;
@@ -105,11 +101,6 @@ header.header {
                 h1, div {
                     text-align: center;
                 }
-
-                h1 {
-                    font-size: 50px;
-                    line-height: 50px;
-                }
             }
 
             .baner-paragraph {
@@ -144,9 +135,13 @@ header.header {
 
             button {
                 margin: 0;
+
+                &:last-child {
+                    margin-top: 20px;
+                }
             }
 
-            img {
+            & > a img {
                 width: 15px;
                 height: 36px;
                 margin-top: 40px;
@@ -163,17 +158,8 @@ header.header {
         & > div:first-child {
             .baner-text {
                 max-width: 320px;
-
-                h1 {
-                    font-size: 40px;
-                    line-height: 40px;
-                }
             }
         }
-
-        & > div:last-child {
-        }
-
     }
 }
 
@@ -188,7 +174,6 @@ header.header {
                 transition: .5s ease width;
 
                 h1 {
-                    transition: .5s ease text-align;
                     transition: .5s ease font-size;
                  }
             }
@@ -286,8 +271,6 @@ header.all-products-page {
 
 @media (min-width: 320px) {
     header.all-products-page {
-        transition: padding .5s ease;
-
         h1 {
             transition: all .5s ease;
         }
@@ -306,3 +289,195 @@ header.all-products-page {
     }  
 }
 // end all products page
+
+
+//product-assortment-page
+body.product-assortment-page {
+    header.header {
+        background-image: url('../images/Group5861.png'), url('../images/Path295.png');
+        background-repeat: no-repeat;
+        background-position: 80% 32%, 108% 33%;
+        background-size: 42% auto, 59% auto;
+        padding: 290px 190px 50px;
+
+        & > div:first-child {
+            flex-direction: column;
+
+            .baner-text {
+                h1 {
+                    color: $success;
+                    @include font-size(30px);
+                }
+
+                a {
+                    color: $secondary;
+
+                    &:hover {
+                        color: $success;
+                    }
+                }
+            }
+
+            .baner-paragraph {
+                padding-left: 0;
+
+                span {
+                    background-color: $success;
+                }
+            }
+        }
+
+        & > div:last-child {
+            display: flex;
+            justify-content: space-between;
+
+            .download-licks {
+                display: flex;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0 15px 10px;
+
+                    a {
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 2px solid $success;
+                        border-radius: 50%;
+                    }
+    
+                    p {
+                        font-size: 11px;
+                        color: $secondary-alpha;
+                        line-height: 1;
+                        text-align: center;
+                        max-width: 90px;
+                        margin: 10px auto 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1441px) {
+    body.product-assortment-page {
+        header.header {
+            background-size: 580px 420px, 65% auto;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    body.product-assortment-page {
+        header.header {
+            & > div:last-child {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 180px;
+
+                .buttons {
+                    order: 1;
+                }
+
+                .download-licks {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    body.product-assortment-page {
+        header.header {
+            padding: 200px 90px 50px;
+            background-position: 80% 33%, 108% 34%;
+
+            & > div:last-child {
+                margin-top: 90px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    body.product-assortment-page {
+        header.header {
+            padding: 145px 90px 50px;
+            background-size: 0,  100% auto;
+            background-position: 0, 40px 28%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    body.product-assortment-page {
+        header.header {
+            padding: 145px 30px 50px;
+
+            & > div:last-child {
+                .buttons {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+        
+                    img {
+                        width: 15px;
+                        height: 36px;
+                        margin-top: 40px;
+                    }
+                }
+    
+                .download-licks  div {
+                    margin: 0 10px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    body.product-assortment-page {
+        header.header {
+            background-image: none;
+
+            & > div:last-child {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    body.product-assortment-page {
+        header.header > div:last-child {
+            .buttons {
+                transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
+
+                img {
+                    transition: .5s ease all;
+                }
+            }
+
+            .download-licks {
+                transition: .5s ease all;
+
+                div {
+                    transition: .5s ease all;
+                }
+            }
+        }
+    }
+}
+//end product-assortment-page

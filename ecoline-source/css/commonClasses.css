@@ -287,5 +287,6 @@ ul.slider-list li.big-text.active::before {
   height: 7px;
   width: 10px;
   fill: #333333;
+  margin-bottom: 1px;
 }
 /*# sourceMappingURL=commonClasses.css.map */

@@ -15,12 +15,6 @@
   font-style: normal;
 }
 
-.goDown {
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-}
-
 .goDown img {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -59,11 +53,17 @@ header.header > div:first-child .baner-text {
 }
 
 header.header > div:first-child .baner-text h1 {
-  font-size: 60px;
-  line-height: 60px;
+  font-size: 3.75rem;
+  line-height: 1;
   color: #003de8;
   font-weight: bold;
   margin-bottom: 30px;
+}
+
+@media (max-width: 1440px) {
+  header.header > div:first-child .baner-text h1 {
+    font-size: calc(1.185rem + 2.85vw) ;
+  }
 }
 
 header.header > div:first-child .baner-text a {
@@ -130,10 +130,6 @@ header.header > div:last-child button {
   header.header > div:first-child .baner-text h1, header.header > div:first-child .baner-text div {
     text-align: center;
   }
-  header.header > div:first-child .baner-text h1 {
-    font-size: 50px;
-    line-height: 50px;
-  }
   header.header > div:first-child .baner-paragraph {
     margin-top: 20px;
     padding-left: 0;
@@ -171,7 +167,10 @@ header.header > div:last-child button {
   header.header > div:last-child button {
     margin: 0;
   }
-  header.header > div:last-child img {
+  header.header > div:last-child button:last-child {
+    margin-top: 20px;
+  }
+  header.header > div:last-child > a img {
     width: 15px;
     height: 36px;
     margin-top: 40px;
@@ -185,10 +184,6 @@ header.header > div:last-child button {
   header.header > div:first-child .baner-text {
     max-width: 320px;
   }
-  header.header > div:first-child .baner-text h1 {
-    font-size: 40px;
-    line-height: 40px;
-  }
 }
 
 @media (min-width: 320px) {
@@ -201,8 +196,6 @@ header.header > div:last-child button {
     transition: .5s ease width;
   }
   header.header > div:first-child .baner-text h1 {
-    -webkit-transition: .5s ease text-align;
-    transition: .5s ease text-align;
     -webkit-transition: .5s ease font-size;
     transition: .5s ease font-size;
   }
@@ -312,10 +305,6 @@ header.all-products-page .buttonsGroupe button:first-child {
 }
 
 @media (min-width: 320px) {
-  header.all-products-page {
-    -webkit-transition: padding .5s ease;
-    transition: padding .5s ease;
-  }
   header.all-products-page h1 {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
@@ -331,6 +320,214 @@ header.all-products-page .buttonsGroupe button:first-child {
   header.all-products-page .buttonsGroupe button:first-child {
     -webkit-transition: margin .5s ease;
     transition: margin .5s ease;
+  }
+}
+
+body.product-assortment-page header.header {
+  background-image: url("../images/Group5861.png"), url("../images/Path295.png");
+  background-repeat: no-repeat;
+  background-position: 80% 32%, 108% 33%;
+  background-size: 42% auto, 59% auto;
+  padding: 290px 190px 50px;
+}
+
+body.product-assortment-page header.header > div:first-child {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body.product-assortment-page header.header > div:first-child .baner-text h1 {
+  color: #62c622;
+  font-size: 1.875rem;
+}
+
+@media (max-width: 1440px) {
+  body.product-assortment-page header.header > div:first-child .baner-text h1 {
+    font-size: calc(0.9975rem + 0.975vw) ;
+  }
+}
+
+body.product-assortment-page header.header > div:first-child .baner-text a {
+  color: #333333;
+}
+
+body.product-assortment-page header.header > div:first-child .baner-text a:hover {
+  color: #62c622;
+}
+
+body.product-assortment-page header.header > div:first-child .baner-paragraph {
+  padding-left: 0;
+}
+
+body.product-assortment-page header.header > div:first-child .baner-paragraph span {
+  background-color: #62c622;
+}
+
+body.product-assortment-page header.header > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body.product-assortment-page header.header > div:last-child .download-licks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body.product-assortment-page header.header > div:last-child .download-licks div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 15px 10px;
+}
+
+body.product-assortment-page header.header > div:last-child .download-licks div a {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #62c622;
+  border-radius: 50%;
+}
+
+body.product-assortment-page header.header > div:last-child .download-licks div p {
+  font-size: 11px;
+  color: rgba(51, 51, 51, 0.5);
+  line-height: 1;
+  text-align: center;
+  max-width: 90px;
+  margin: 10px auto 0;
+}
+
+@media (min-width: 1441px) {
+  body.product-assortment-page header.header {
+    background-size: 580px 420px, 65% auto;
+  }
+}
+
+@media (max-width: 1300px) {
+  body.product-assortment-page header.header > div:last-child {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 180px;
+  }
+  body.product-assortment-page header.header > div:last-child .buttons {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  body.product-assortment-page header.header > div:last-child .download-licks {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  body.product-assortment-page header.header {
+    padding: 200px 90px 50px;
+    background-position: 80% 33%, 108% 34%;
+  }
+  body.product-assortment-page header.header > div:last-child {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 800px) {
+  body.product-assortment-page header.header {
+    padding: 145px 90px 50px;
+    background-size: 0,  100% auto;
+    background-position: 0, 40px 28%;
+  }
+}
+
+@media (max-width: 700px) {
+  body.product-assortment-page header.header {
+    padding: 145px 30px 50px;
+  }
+  body.product-assortment-page header.header > div:last-child .buttons {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body.product-assortment-page header.header > div:last-child .buttons img {
+    width: 15px;
+    height: 36px;
+    margin-top: 40px;
+  }
+  body.product-assortment-page header.header > div:last-child .download-licks div {
+    margin: 0 10px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  body.product-assortment-page header.header {
+    background-image: none;
+  }
+  body.product-assortment-page header.header > div:last-child {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 320px) {
+  body.product-assortment-page header.header > div:last-child .buttons {
+    -webkit-transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
+    transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
+  }
+  body.product-assortment-page header.header > div:last-child .buttons img {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  body.product-assortment-page header.header > div:last-child .download-licks {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  body.product-assortment-page header.header > div:last-child .download-licks div {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
   }
 }
 /*# sourceMappingURL=header.css.map */
