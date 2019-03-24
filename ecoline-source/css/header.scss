@@ -27,6 +27,13 @@ header.header {
 
     & > div:first-child {
         display: flex;
+        position: relative;
+
+        .go-back {
+            position: absolute;
+            left: 0;
+            top: -100px;
+        }
 
         .baner-text {
             max-width: 280px;
@@ -87,6 +94,12 @@ header.header {
     }
 }
 
+@media (max-width: 991px) {
+    header.header > div:first-child .go-back {
+        top: -60px;
+    }
+}
+
 @media (max-width: 800px) {
     header.header {
         padding-top: 170px;
@@ -96,6 +109,10 @@ header.header {
         & > div:first-child {
             flex-direction: column;
             align-items: center;
+
+            .go-back {
+                top: -40px;
+            }
 
             .baner-text {
                 h1, div {
@@ -125,6 +142,10 @@ header.header {
         background-position: 0 0, -166px -133px;
         background-size: 0, calc(100% + 209px) 819px;
         padding-bottom: 60px;
+
+        & > div:first-child .go-back {
+            left: 60px;
+        }
 
         & > div:last-child {
             text-align: center;
@@ -156,6 +177,11 @@ header.header {
         padding: 170px 30px 60px;
 
         & > div:first-child {
+
+            .go-back {
+                left: 10px;
+            }
+
             .baner-text {
                 max-width: 320px;
             }

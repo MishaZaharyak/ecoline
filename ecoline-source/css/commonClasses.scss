@@ -251,3 +251,28 @@ ul.slider-list {
         margin-bottom: 1px;
     }
 }
+
+.go-back {
+    font-size: 13px;
+    color: $success-alpha;
+    line-height: 1;
+    transition: all .3s ease;
+    cursor: pointer;
+
+    img {
+        transform: rotate(180deg);
+        margin-right: 10px;
+        opacity: .5;
+        margin-bottom: 3px;
+        transition: all .3s ease;
+    }
+
+    &:hover {
+        color: $success;
+
+        img {
+            opacity: 1;
+            transform: translateX(-5px) rotate(180deg);
+        }
+    }
+}
