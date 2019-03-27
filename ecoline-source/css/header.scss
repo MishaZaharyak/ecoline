@@ -367,7 +367,7 @@ body.product-assortment-page {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    margin: 0 15px 10px;
+                    margin: 0 0 10px;
 
                     a {
                         width: 40px;
@@ -507,3 +507,400 @@ body.product-assortment-page {
     }
 }
 //end product-assortment-page
+
+
+// internal-transitions-page
+body.internal-transitions-page {
+    header.header {
+        background-image: url('../images/Photo/delfin.png'), url('../images/Photo/delfin-1.png'), url('../images/Group380.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 203px) 82px, calc(100% - 456px) 87px, 108% 33%;
+        background-size: auto 61%, auto 51%, 59% auto;
+        padding: 290px 190px 50px;
+
+        & > div:first-child {
+            flex-direction: column;
+
+            .baner-text {
+                max-width: 310px;
+
+                h1 {
+                    color: $success;
+                    @include font-size(30px);
+                }
+
+                a {
+                    color: $secondary;
+
+                    &:hover {
+                        color: $success;
+                    }
+                }
+            }
+
+            .baner-paragraph {
+                padding-left: 0;
+
+                span {
+                    background-color: $success;
+                }
+            }
+        }
+
+        & > div:last-child {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 170px;
+
+            .download-licks {
+                display: flex;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0 0 10px;
+
+                    a {
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 2px solid $success;
+                        border-radius: 50%;
+                    }
+    
+                    p {
+                        font-size: 11px;
+                        color: $secondary-alpha;
+                        line-height: 1;
+                        text-align: center;
+                        max-width: 90px;
+                        margin: 10px auto 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    body.internal-transitions-page {
+        header.header {
+            background-position: calc(100% - 103px) 142px, calc(100% - 301px) 155px, 108% 34%;
+            background-size: auto 46%, auto 36%, 59% auto;
+
+            & > div:last-child {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 90px;
+
+                .buttons {
+                    order: 1;
+                }
+
+                .download-licks {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    body.internal-transitions-page {
+        header.header {
+            background-position: calc(100% - 90px) 200px, calc(100% - 226px) 203px, 108% 38%;
+            background-size: auto 33%, auto 26%, 59% auto;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    body.internal-transitions-page {
+        header.header {
+            padding: 200px 90px 50px;
+            background-position: calc(100% - 90px) 153px, calc(100% - 214px) 160px, 108% 29%;
+            background-size: auto 33%, auto 26%, 59% auto;
+
+            & > div:last-child {
+                margin-top: 90px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    body.internal-transitions-page {
+        header.header {
+            padding: 145px 90px 50px;
+            background-size: 0, 0,  100% auto;
+            background-position: 0, 0, 40px 28%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    body.internal-transitions-page {
+        header.header {
+            padding: 145px 30px 50px;
+
+            & > div:last-child {
+                .buttons {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+        
+                    img {
+                        width: 15px;
+                        height: 36px;
+                        margin-top: 40px;
+                    }
+                }
+    
+                .download-licks  div {
+                    margin: 0 10px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    body.internal-transitions-page {
+        header.header {
+            background-image: none;
+
+            & > div:last-child {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    body.internal-transitions-page {
+        header.header > div:last-child {
+            .buttons {
+                transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
+
+                img {
+                    transition: .5s ease all;
+                }
+            }
+
+            .download-licks {
+                transition: .5s ease all;
+
+                div {
+                    transition: .5s ease all;
+                }
+            }
+        }
+    }
+}
+// end internal-transitions-page
+
+
+// internal page
+body.internal-page {
+    header.header {
+        background-image: url('../images/PREMIUM_2000_home.png'), url('../images/pole_filtr_5.png'), url('../images/Path295.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 38px) 30%, calc(100% - 382px) 35%, 108% 33%;
+        background-size: auto, 25% auto, 59% auto;
+        padding: 290px 190px 50px;
+
+        & > div:first-child {
+            flex-direction: column;
+
+            .baner-text {
+                h1 {
+                    color: $success;
+                    @include font-size(30px);
+                }
+
+                a {
+                    color: $secondary;
+
+                    &:hover {
+                        color: $success;
+                    }
+                }
+            }
+
+            .baner-paragraph {
+                padding-left: 0;
+
+                span {
+                    background-color: $success;
+                }
+            }
+        }
+
+        & > div:last-child {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 200px;
+
+            .download-licks {
+                display: flex;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0 0 10px;
+
+                    a {
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border: 2px solid $success;
+                        border-radius: 50%;
+                    }
+    
+                    p {
+                        font-size: 11px;
+                        color: $secondary-alpha;
+                        line-height: 1;
+                        text-align: center;
+                        max-width: 90px;
+                        margin: 10px auto 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1441px) {
+    body.internal-page {
+        header.header {
+            background-size: auto, 25% auto, 59% auto;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    body.internal-page {
+        header.header {
+            background-position: calc(100% - 66px) 35%, calc(100% - 287px) 39%, 108% 33%;
+            background-size: 28% auto, 25% auto, 59% auto;
+
+            & > div:last-child {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 180px;
+
+                .buttons {
+                    order: 1;
+                }
+
+                .download-licks {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    body.internal-page {
+        header.header {
+            padding: 200px 90px 50px;
+            background-position: calc(100% - 66px) 35%, calc(100% - 226px) 39%, 108% 33%;
+            background-size: 25% auto, 22% auto, 59% auto;
+
+            & > div:last-child {
+                margin-top: 90px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    body.internal-page {
+        header.header {
+            padding: 145px 90px 50px;
+            background-size: 0, 0,  100% auto;
+            background-position: 0, 0, 40px 28%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    body.internal-page {
+        header.header {
+            padding: 145px 30px 50px;
+
+            & > div:last-child {
+                .buttons {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+        
+                    img {
+                        width: 15px;
+                        height: 36px;
+                        margin-top: 40px;
+                    }
+                }
+    
+                .download-licks  div {
+                    margin: 0 10px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    body.internal-page {
+        header.header {
+            background-image: none;
+
+            & > div:last-child {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    body.internal-page {
+        header.header > div:last-child {
+            .buttons {
+                transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
+
+                img {
+                    transition: .5s ease all;
+                }
+            }
+
+            .download-licks {
+                transition: .5s ease all;
+
+                div {
+                    transition: .5s ease all;
+                }
+            }
+        }
+    }
+}
+// end internal page

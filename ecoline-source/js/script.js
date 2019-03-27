@@ -108,9 +108,11 @@ $(document).ready(function() {
 
       if (slideCount <= slideToshow) {
         $(arrows).css('display', 'none')
+
       } else {
         if (windowWidth > 580) {
           $(arrows).css('display', 'block')
+
         } else {
           $(arrows).css('display', 'none')
         }
@@ -321,11 +323,10 @@ $(document).ready(function() {
     });
   }
 
-  
   const reviewSlider = $('.review-slider');
 
   if (reviewSlider.length) {
-    $('.review-slider').each(function() {
+    $(reviewSlider).each(function() {
       $(this).slick({
         ...slickOptions,
           slidesToShow: 1,
@@ -339,6 +340,35 @@ $(document).ready(function() {
     })
   }
 
+  const textImageSlider = $('.text-image-slider');
+
+  if (textImageSlider.length) {
+    $(textImageSlider).each(function() {
+      $(this).slick({
+        ...slickOptions,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow: $(this).parent().find('.slick-new-prev'),
+          nextArrow: $(this).parent().find('.slick-new-next'), 
+          appendDots: $(this).parent().find('.dots-cont'),
+          responsive: [
+            {
+              breakpoint: 769,
+              settings: {
+                appendDots: $(this)
+              }
+            },
+            {
+              breakpoint: 601,
+              settings: {
+                appendDots: $(this),
+                arrows: false
+              }
+            }
+          ]
+      })
+    })
+  }
 
   // "read more" seo article
   readMore( $('.page-article'), 5);

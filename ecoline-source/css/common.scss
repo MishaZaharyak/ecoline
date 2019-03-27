@@ -2813,7 +2813,6 @@ body.application-area-page {
     padding-bottom: 50px;
 
     h4 {
-        max-width: 480px;
         margin: 20px 0;
         @include font-size(20px);
         color: $success;
@@ -2962,10 +2961,388 @@ body.application-area-page {
     }
 }
 
-@media (max-width: 500px) {
+@media (min-width: 320) {
     .social-section {
         transition: padding .5s ease;
     }
 }
 // end social section
 // end product assortment page
+
+// internal transition page
+// product line section
+.product-line {
+    padding: 0 190px 50px;
+    font-family: $S-FPro-Display;
+
+    & > div {
+        display: flex;
+        padding: 0 50px 50px;
+        align-items: center;
+        justify-content: center;
+        background-color: $mainBackgrondColor;
+        border-radius: 10px;
+        flex-wrap: wrap;
+        max-width: 1050px;
+        margin: auto;
+
+        div {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            margin: 35px auto 0;
+            
+            img {
+                max-width: 202px;
+                max-height: 202px;
+            }
+
+            h4 {
+                @include font-size(20px);
+                color: $secondary;
+                line-height: 1;
+                text-align: center;
+
+                .red {
+                    font-weight: bold;
+                    color: red;
+                    font-size: inherit;
+                }
+            }
+
+            span {
+                font-size: 13px;
+                color: $secondary;
+                line-height: 1;
+            }
+
+            button {
+                width: 150px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .product-line {
+        padding: 0 90px 50px;
+    }
+}
+
+@media (max-width: 991px) {
+    .product-line {
+        padding: 0 30px 50px;
+    }
+}
+
+@media (min-width: 320px) {
+    .product-line {
+        transition: padding .5s ease;
+    }
+}
+// end product line section
+
+// text section image slider
+.slider-section {
+    padding: 20px 0 30px;
+    background-image: url('../images/text-image-slider-rect.png'), 
+    url('../images/rect-grad-big.png');
+    background-repeat: no-repeat;
+    background-position: 0 35%, 83% 56%;
+    background-size: auto, auto;
+
+    .text-image-slider {
+        max-width: 700px;
+        max-height: 385px;
+        margin-left: auto;
+    }
+
+    .slick-dots {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        padding: 85px 0 0;
+        margin: 0;
+
+        li {
+            font-size: unset;
+            line-height: unset; 
+            padding: 0; 
+
+            &::before {
+                content: '';
+            }
+
+            button {
+                background-color: $success-alpha;
+            }
+
+            &.slick-active button {
+                background-color: $success;
+            }
+        }
+    }
+
+    .arrows {
+        .slick-new-prev, .slick-new-next {
+            position: absolute;
+            background-color: transparent;
+            border: none;
+            display: flex;
+            padding: 0;
+            top: -15px;
+            cursor: pointer;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .slick-new-prev {
+            transform: rotate(180deg);
+            left: 0;
+        }
+
+        .slick-new-next {
+            right: 0;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .slider-section {
+        background-size: 83% 70%, auto;
+        background-position: 0 38%, 83% 38%;
+    
+        .text-image-slider {
+            max-width: 640px;
+            max-height: 340px;   
+        }
+    }
+}
+
+@media (max-width: 880px) {
+    .slider-section {
+        background-size: 83% 70%, 0;
+        background-position: 0 57%, 0;
+    
+        .text-image-slider {
+            max-width: 640px;
+            max-height: 340px;   
+        }
+
+        .slick-dots {
+            padding: 50px 0 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-section {
+        background-image: none;
+    
+        .text-image-slider {
+            max-width: 100%;
+            max-height: 100%;  
+        }
+
+        .slick-dots {
+            padding: 20px 0 0;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .slider-section {
+        margin: 0 -30px;
+
+        .arrows {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .slider-section {
+        transition: all .5s ease;
+        
+        .text-image-slider {
+            transition: all .5s ease;
+        }
+    }
+}
+// end text section image slider
+
+// video sectio
+.video-section {
+    display: flex;
+    justify-content: flex-start;
+    font-family: $S-FPro-Display;
+    max-width: 1050px;
+    margin: 0 auto 40px;
+
+    & > div:first-child {
+        padding: 30px 0 30px 100px;
+        background-image: url('../images/Rectangle279.png');
+        background-repeat: no-repeat;
+        background-size: 85% 100%;
+        background-position: 0 0;
+
+        div {
+            border-radius: 10px 10px 20px 20px;
+            overflow: hidden;
+            width: max-content;
+            margin: 0 auto;
+        }
+    }
+
+    & > div:last-child {
+        display: flex;
+        flex-direction: column;
+        padding: 80px 0 0 80px;
+
+        p, a {
+            font-size: 15px;
+            color: $secondary;
+            line-height: 1;
+        }
+
+        p {
+            max-width: 410px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .video-section {
+        max-width: none;
+        margin: 0;
+        padding: 0 30px 40px;
+        flex-direction: column;
+        align-items: center;
+
+        & > div:last-child {
+            padding-top: 50px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .video-section {
+        & > div:first-child {
+            padding: 30px;
+            background-size: 100% 100%;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .video-section {
+        & > div:first-child {
+            background-image: none;
+            padding: 0 0 30px;
+            
+            div {
+                overflow: visible;
+                max-height: 315px;
+                height: 100vh;
+                width: 100vw;
+                margin: 0 -30px;
+
+                iframe {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .video-section {
+        transition: all .5s ease;
+    
+        & > div:first-child {
+            transition: all .5s ease;
+    
+            div {
+                transition: all .5s ease;
+            }
+        }
+    
+        & > div:last-child {
+            transition: all .5s ease;
+        }
+    }
+}
+// end video section
+// end internal transition page
+
+
+// internal page
+.text-bg-section {
+    padding: 0 190px 50px;
+    font-family: $S-FPro-Display;
+
+    & > div {
+        padding: 30px 50px;
+        background-color: $mainBackgrondColor;
+        border-radius: 10px;
+        max-width: 1050px;
+        margin: auto;
+
+        p {
+            font-size: 13px;
+            color: $secondary;
+            line-height: 1.3;
+            margin: 20px 0;          
+        }
+    
+        ul {
+            list-style-type: none;
+            padding: 0 0 0 15px;
+            margin: 20px 0;
+    
+            li {
+                font-size: 13px;
+                color: $secondary;
+                line-height: 1.3;
+                padding: 5px 0;
+    
+                &::before {
+                    content: '—';
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .text-bg-section {
+        padding: 0 90px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-bg-section {
+        padding: 0 0 50px;
+
+        & > div {
+            padding: 10px 30px;
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .text-bg-section {
+        transition: all .5s ease;
+
+        & > div {
+            transition: all .5s ease;
+        }
+    }
+}
+// end internal page

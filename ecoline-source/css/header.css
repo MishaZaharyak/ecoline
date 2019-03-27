@@ -421,7 +421,7 @@ body.product-assortment-page header.header > div:last-child .download-licks div 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 15px 10px;
+  margin: 0 0 10px;
 }
 
 body.product-assortment-page header.header > div:last-child .download-licks div a {
@@ -548,6 +548,439 @@ body.product-assortment-page header.header > div:last-child .download-licks div 
     transition: .5s ease all;
   }
   body.product-assortment-page header.header > div:last-child .download-licks div {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+}
+
+body.internal-transitions-page header.header {
+  background-image: url("../images/Photo/delfin.png"), url("../images/Photo/delfin-1.png"), url("../images/Group380.png");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 203px) 82px, calc(100% - 456px) 87px, 108% 33%;
+  background-size: auto 61%, auto 51%, 59% auto;
+  padding: 290px 190px 50px;
+}
+
+body.internal-transitions-page header.header > div:first-child {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body.internal-transitions-page header.header > div:first-child .baner-text {
+  max-width: 310px;
+}
+
+body.internal-transitions-page header.header > div:first-child .baner-text h1 {
+  color: #62c622;
+  font-size: 1.875rem;
+}
+
+@media (max-width: 1440px) {
+  body.internal-transitions-page header.header > div:first-child .baner-text h1 {
+    font-size: calc(0.9975rem + 0.975vw) ;
+  }
+}
+
+body.internal-transitions-page header.header > div:first-child .baner-text a {
+  color: #333333;
+}
+
+body.internal-transitions-page header.header > div:first-child .baner-text a:hover {
+  color: #62c622;
+}
+
+body.internal-transitions-page header.header > div:first-child .baner-paragraph {
+  padding-left: 0;
+}
+
+body.internal-transitions-page header.header > div:first-child .baner-paragraph span {
+  background-color: #62c622;
+}
+
+body.internal-transitions-page header.header > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 170px;
+}
+
+body.internal-transitions-page header.header > div:last-child .download-licks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body.internal-transitions-page header.header > div:last-child .download-licks div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 10px;
+}
+
+body.internal-transitions-page header.header > div:last-child .download-licks div a {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #62c622;
+  border-radius: 50%;
+}
+
+body.internal-transitions-page header.header > div:last-child .download-licks div p {
+  font-size: 11px;
+  color: rgba(51, 51, 51, 0.5);
+  line-height: 1;
+  text-align: center;
+  max-width: 90px;
+  margin: 10px auto 0;
+}
+
+@media (max-width: 1300px) {
+  body.internal-transitions-page header.header {
+    background-position: calc(100% - 103px) 142px, calc(100% - 301px) 155px, 108% 34%;
+    background-size: auto 46%, auto 36%, 59% auto;
+  }
+  body.internal-transitions-page header.header > div:last-child {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 90px;
+  }
+  body.internal-transitions-page header.header > div:last-child .buttons {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  body.internal-transitions-page header.header > div:last-child .download-licks {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1100px) {
+  body.internal-transitions-page header.header {
+    background-position: calc(100% - 90px) 200px, calc(100% - 226px) 203px, 108% 38%;
+    background-size: auto 33%, auto 26%, 59% auto;
+  }
+}
+
+@media (max-width: 991px) {
+  body.internal-transitions-page header.header {
+    padding: 200px 90px 50px;
+    background-position: calc(100% - 90px) 153px, calc(100% - 214px) 160px, 108% 29%;
+    background-size: auto 33%, auto 26%, 59% auto;
+  }
+  body.internal-transitions-page header.header > div:last-child {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 800px) {
+  body.internal-transitions-page header.header {
+    padding: 145px 90px 50px;
+    background-size: 0, 0,  100% auto;
+    background-position: 0, 0, 40px 28%;
+  }
+}
+
+@media (max-width: 700px) {
+  body.internal-transitions-page header.header {
+    padding: 145px 30px 50px;
+  }
+  body.internal-transitions-page header.header > div:last-child .buttons {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body.internal-transitions-page header.header > div:last-child .buttons img {
+    width: 15px;
+    height: 36px;
+    margin-top: 40px;
+  }
+  body.internal-transitions-page header.header > div:last-child .download-licks div {
+    margin: 0 10px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  body.internal-transitions-page header.header {
+    background-image: none;
+  }
+  body.internal-transitions-page header.header > div:last-child {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 320px) {
+  body.internal-transitions-page header.header > div:last-child .buttons {
+    -webkit-transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
+    transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
+  }
+  body.internal-transitions-page header.header > div:last-child .buttons img {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  body.internal-transitions-page header.header > div:last-child .download-licks {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  body.internal-transitions-page header.header > div:last-child .download-licks div {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+}
+
+body.internal-page header.header {
+  background-image: url("../images/PREMIUM_2000_home.png"), url("../images/pole_filtr_5.png"), url("../images/Path295.png");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 38px) 30%, calc(100% - 382px) 35%, 108% 33%;
+  background-size: auto, 25% auto, 59% auto;
+  padding: 290px 190px 50px;
+}
+
+body.internal-page header.header > div:first-child {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body.internal-page header.header > div:first-child .baner-text h1 {
+  color: #62c622;
+  font-size: 1.875rem;
+}
+
+@media (max-width: 1440px) {
+  body.internal-page header.header > div:first-child .baner-text h1 {
+    font-size: calc(0.9975rem + 0.975vw) ;
+  }
+}
+
+body.internal-page header.header > div:first-child .baner-text a {
+  color: #333333;
+}
+
+body.internal-page header.header > div:first-child .baner-text a:hover {
+  color: #62c622;
+}
+
+body.internal-page header.header > div:first-child .baner-paragraph {
+  padding-left: 0;
+}
+
+body.internal-page header.header > div:first-child .baner-paragraph span {
+  background-color: #62c622;
+}
+
+body.internal-page header.header > div:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 200px;
+}
+
+body.internal-page header.header > div:last-child .download-licks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body.internal-page header.header > div:last-child .download-licks div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 10px;
+}
+
+body.internal-page header.header > div:last-child .download-licks div a {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #62c622;
+  border-radius: 50%;
+}
+
+body.internal-page header.header > div:last-child .download-licks div p {
+  font-size: 11px;
+  color: rgba(51, 51, 51, 0.5);
+  line-height: 1;
+  text-align: center;
+  max-width: 90px;
+  margin: 10px auto 0;
+}
+
+@media (min-width: 1441px) {
+  body.internal-page header.header {
+    background-size: auto, 25% auto, 59% auto;
+  }
+}
+
+@media (max-width: 1300px) {
+  body.internal-page header.header {
+    background-position: calc(100% - 66px) 35%, calc(100% - 287px) 39%, 108% 33%;
+    background-size: 28% auto, 25% auto, 59% auto;
+  }
+  body.internal-page header.header > div:last-child {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 180px;
+  }
+  body.internal-page header.header > div:last-child .buttons {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  body.internal-page header.header > div:last-child .download-licks {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  body.internal-page header.header {
+    padding: 200px 90px 50px;
+    background-position: calc(100% - 66px) 35%, calc(100% - 226px) 39%, 108% 33%;
+    background-size: 25% auto, 22% auto, 59% auto;
+  }
+  body.internal-page header.header > div:last-child {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 800px) {
+  body.internal-page header.header {
+    padding: 145px 90px 50px;
+    background-size: 0, 0,  100% auto;
+    background-position: 0, 0, 40px 28%;
+  }
+}
+
+@media (max-width: 700px) {
+  body.internal-page header.header {
+    padding: 145px 30px 50px;
+  }
+  body.internal-page header.header > div:last-child .buttons {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body.internal-page header.header > div:last-child .buttons img {
+    width: 15px;
+    height: 36px;
+    margin-top: 40px;
+  }
+  body.internal-page header.header > div:last-child .download-licks div {
+    margin: 0 10px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  body.internal-page header.header {
+    background-image: none;
+  }
+  body.internal-page header.header > div:last-child {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 320px) {
+  body.internal-page header.header > div:last-child .buttons {
+    -webkit-transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
+    transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
+  }
+  body.internal-page header.header > div:last-child .buttons img {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  body.internal-page header.header > div:last-child .download-licks {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  body.internal-page header.header > div:last-child .download-licks div {
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
   }
