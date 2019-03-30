@@ -236,6 +236,7 @@ ul.slider-list {
         a {
             color: $secondary;
             transition: color .5s ease;
+            white-space: pre;
         }
 
         a:hover {

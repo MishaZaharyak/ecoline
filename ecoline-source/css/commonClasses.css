@@ -275,6 +275,7 @@ ul.slider-list li.big-text.active::before {
   color: #333333;
   -webkit-transition: color .5s ease;
   transition: color .5s ease;
+  white-space: pre;
 }
 
 .breadCrumb span a:hover {

@@ -94,31 +94,33 @@ $(document).ready(function() {
   });
 
   // hide slider arrows
-  $('.arrows').each(function() {
-    const slider =$(this).siblings('.slider, .clients-slider, .image-slider');
-    const arrows = $(this);
+  var arrows = $('.arrows');
 
-    const windowWidth = window.innerWidth;
-
-    $(slider).on('init', function(e, slick) {
-
-      setItemHeight(this);
-      const slideToshow = slick.options.slidesToShow;
-      const slideCount = slick.slideCount;
-
-      if (slideCount <= slideToshow) {
-        $(arrows).css('display', 'none')
-
-      } else {
-        if (windowWidth > 580) {
-          $(arrows).css('display', 'block')
-
-        } else {
+  if (arrows) {
+    $('.arrows').each(function() {
+      const slider =$(this).siblings('.slider, .clients-slider, .image-slider');
+      const arrows = $(this);
+  
+      const windowWidth = window.innerWidth;
+  
+      $(slider).on('init', function(e, slick) {
+  
+        setItemHeight(this);
+        const slideToshow = slick.options.slidesToShow;
+        const slideCount = slick.slideCount;
+  
+        if (slideCount <= slideToshow) {
           $(arrows).css('display', 'none')
+  
+        } else if (slideCount > slideToshow && windowWidth < 581) {
+          $(arrows).css('display', 'none')
+  
+        } else {
+          $(arrows).css('display', 'block')
         }
-      }
-    })
-  }) 
+      })
+    }) 
+  }
 
   // sliders sections list animatins
   $('.fullWidthMenu .animate-li').each(function() {

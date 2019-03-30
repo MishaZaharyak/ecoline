@@ -3466,6 +3466,7 @@ body.application-area-page .image-slider-section {
   }
   .text-bg-section > div {
     padding: 10px 30px;
+    border-radius: 0;
   }
 }
 
@@ -3478,5 +3479,77 @@ body.application-area-page .image-slider-section {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
+}
+
+.image-section {
+  padding: 20px 0 130px;
+  background-image: url("../images/text-image-slider-rect.png"), url("../images/rect-grad-big.png");
+  background-repeat: no-repeat;
+  background-position: 0 35%, 83% 56%;
+  background-size: auto, auto;
+}
+
+.image-section .img_cont {
+  max-width: 700px;
+  max-height: 385px;
+  margin-left: auto;
+}
+
+.image-section .img_cont img {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .image-section {
+    background-size: 83% 70%, auto;
+    background-position: 0 38%, 83% 38%;
+  }
+  .image-section .img_cont {
+    max-width: 640px;
+    max-height: 340px;
+  }
+}
+
+@media (max-width: 880px) {
+  .image-section {
+    background-size: 83% 70%, 0;
+    background-position: 0 57%, 0;
+  }
+  .image-section .img_cont {
+    max-width: 640px;
+    max-height: 340px;
+  }
+}
+
+@media (max-width: 820px) {
+  .image-section {
+    background-image: none;
+    padding-bottom: 50px;
+  }
+  .image-section .img_cont {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-section {
+    margin: 0 -30px;
+  }
+}
+
+@media (min-width: 320px) {
+  .image-section {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .image-section .img_cont {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+}
+
+body.product_under_the_direction .text-section {
+  padding-bottom: 0;
 }
 /*# sourceMappingURL=common.css.map */
