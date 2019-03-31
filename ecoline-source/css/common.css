@@ -3646,6 +3646,9 @@ body.product_under_the_direction .text-section {
   color: #333333;
   font-weight: bold;
   line-height: 1.2;
+  -webkit-transition: color .5s ease;
+  transition: color .5s ease;
+  display: inline;
 }
 
 @media (max-width: 1440px) {
@@ -3664,5 +3667,6 @@ body.product_under_the_direction .text-section {
 
 .articles-line > div button {
   width: 150px;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=common.css.map */

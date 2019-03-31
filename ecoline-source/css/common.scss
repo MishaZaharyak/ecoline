@@ -3505,6 +3505,8 @@ body.product_under_the_direction {
             color: $secondary;
             font-weight: bold;
             line-height: 1.2;
+            transition: color .5s ease;
+            display: inline;
         }
 
         img {
@@ -3517,6 +3519,7 @@ body.product_under_the_direction {
 
         button {
             width: 150px;
+            margin-top: 10px;
         }
     }
 }
