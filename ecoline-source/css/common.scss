@@ -2859,6 +2859,12 @@ body.application-area-page {
         padding: 0 30px 50px;
     }
 }
+
+@media (min-width: 320) {
+    .text-section {
+       transition: all .5s ease;
+    }
+}
 // end text section 
 
 // social section
@@ -3286,12 +3292,29 @@ body.application-area-page {
     padding: 0 190px 50px;
     font-family: $S-FPro-Display;
 
-    & > div {
+    & > div {   
         padding: 30px 50px;
         background-color: $mainBackgrondColor;
         border-radius: 10px;
         max-width: 1050px;
         margin: auto;
+
+        h4 {
+            margin: 20px 0;
+            @include font-size(20px);
+            color: $success;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+
+        h5 {
+            font-size: 13px;
+            color: $secondary;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1;
+            margin: 0;
+        }
 
         p {
             font-size: 13px;
@@ -3318,6 +3341,13 @@ body.application-area-page {
             }
         }
     }
+
+    button {
+        img {
+            max-width: 16px;
+            margin-left: 5px;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
@@ -3333,6 +3363,11 @@ body.application-area-page {
         & > div {
             padding: 10px 30px;
             border-radius: 0;
+
+            & > div {
+                margin-bottom: 20px;
+                text-align: center;
+            }
         }
     }
 }
@@ -3343,6 +3378,10 @@ body.application-area-page {
 
         & > div {
             transition: all .5s ease;
+
+            & > div {
+                transition: all .5s ease;
+            }
         }
     }
 }
@@ -3427,3 +3466,58 @@ body.product_under_the_direction {
     }
 }
 // end products_under_the_direction page
+
+// service page
+.articles-line {
+    font-family: $S-FPro-Display;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    // max-width: 1260px;
+    flex-wrap: wrap;
+
+    & > div {
+        max-width: 375px;
+        margin: 30px 30px 0;
+        position: relative;
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+
+        &::after {
+            content: '';
+            max-width: 375px;
+            max-height: 175px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url('../images/black-eclipse.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 0;
+            z-index: 2;
+            top: 0;
+            left: 0;
+        }
+
+        h4 {
+            @include font-size(20px);
+            color: $secondary;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        img {
+            max-width: 375px;
+            max-height: 175px;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        button {
+            width: 150px;
+        }
+    }
+}
+// end service page

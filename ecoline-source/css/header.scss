@@ -1220,3 +1220,78 @@ body.product_under_the_direction {
     }
 }
 // end products_under_the_direction page
+
+
+// service page
+header.service {
+    padding: 140px 90px 70px;
+    display: flex;
+
+    h1 {
+        color: $success;
+        @include font-size(30px);
+        max-width: 250px;
+        font-weight: bold;
+    }
+
+    .breadcrumb-cont {
+        padding-left: 60px;
+
+        & > span {
+            width: 25px;
+            height: 3px;
+            display: block;
+            background-color: $success;
+            margin: 8px 0 20px 0;
+        }
+        
+        & > p {
+            font-size: 13px;
+            line-height: 17px;
+        }
+    }
+
+    .phones-cont {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1100px) {
+    header.service .breadcrumb-cont {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    header.service {
+        flex-direction: column;
+        align-items: center;
+        padding: 140px 30px 70px;
+    
+        h1 {
+            max-width: none;
+            text-align: center;
+        }
+    
+        .phones-cont {
+            margin: 20px 0 0;
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    header.service {
+        transition: all .5s ease;
+    
+        .breadcrumb-cont {
+            transition: all .5s ease;
+        }
+    
+        .phones-cont {
+            transition: all .5s ease;
+        }
+    }
+}
+// end service page
