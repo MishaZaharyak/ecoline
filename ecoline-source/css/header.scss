@@ -1,22 +1,6 @@
 @import './vars.scss';
 @import './font-size.scss';
 
-.goDown {
-    img {
-        transform: translateY(0);
-        transition: .3s ease transform;
-    }
-
-    &:hover {
-        text-decoration: none;
-
-        img {
-            transform: translateY(10px);
-            transition: .3s ease transform;
-        }
-    }
-}
-
 header.header {
     padding: 270px 90px 90px 90px;
     font-family: $S-FPro-Display;
@@ -29,51 +13,12 @@ header.header {
         display: flex;
         position: relative;
 
-        .go-back {
-            position: absolute;
-            left: 0;
-            top: -100px;
-        }
-
         .baner-text {
             max-width: 280px;
-            h1 {
-                @include font-size(60px);
-                line-height: 1;
-                color: $primary;
-                font-weight: bold;
-                margin-bottom: 30px;
-            }
-
-            a {
-                font-size: 13px;
-                line-height: 17px;
-                color: $primary;
-                font-weight: bold;
-
-                &:not(:last-child) {
-                    margin-right: 20px;
-                }
-            }
         }
 
         .baner-paragraph {
             padding-left: 20px;
-
-            span {
-                width: 25px;
-                height: 3px;
-                display: block;
-                background-color: $primary;
-                margin: 8px 0 20px 0;
-            }
-            
-            p {
-                max-width: 312px;
-                font-size: 13px;
-                line-height: 17px;
-                color: $secondary;
-            }
         }
     }
 
@@ -94,12 +39,6 @@ header.header {
     }
 }
 
-@media (max-width: 991px) {
-    header.header > div:first-child .go-back {
-        top: -60px;
-    }
-}
-
 @media (max-width: 800px) {
     header.header {
         padding-top: 170px;
@@ -109,10 +48,6 @@ header.header {
         & > div:first-child {
             flex-direction: column;
             align-items: center;
-
-            .go-back {
-                top: -40px;
-            }
 
             .baner-text {
                 h1, div {
@@ -142,10 +77,6 @@ header.header {
         background-position: 0 0, -166px -133px;
         background-size: 0, calc(100% + 209px) 819px;
         padding-bottom: 60px;
-
-        & > div:first-child .go-back {
-            left: 60px;
-        }
 
         & > div:last-child {
             text-align: center;
@@ -177,10 +108,6 @@ header.header {
         padding: 170px 30px 60px;
 
         & > div:first-child {
-
-            .go-back {
-                left: 10px;
-            }
 
             .baner-text {
                 max-width: 320px;
@@ -217,35 +144,15 @@ header.header {
 
 // all products page
 header.all-products-page {
-    padding: 150px 90px 50px;
-    display: flex;
-    align-items: flex-end;
-    font-family: $S-FPro-Display;
 
     h1 {
         max-width: 150px;
         @include font-size(35px);
-        color: $success;
-        font-weight: bold;
-        line-height: 1.1;
-        text-align: left;
         margin: 0; 
     }
 
-    .breadcrum-cont {
-        margin-left: 150px;
-
-        span.line {
-            display: inline-block;
-            height: 2px;
-            width: 25px;
-            background-color: $success;
-            margin: 15px 0 13px 0;
-        }
-
-        p {
-            margin-bottom: 0;
-        }
+    .breadcrumb-cont {
+        padding-left: 120px;
     }
 
     .buttonsGroupe {
@@ -260,23 +167,17 @@ header.all-products-page {
 }
 
 @media (max-width: 1100px) {
-    header.all-products-page .breadcrum-cont {
-        margin-left: 90px;
+    header.all-products-page .breadcrumb-cont {
+        padding-left: 75px;
     }  
 }
 
 @media (max-width: 991px) {
     header.all-products-page {
-        flex-direction: column;
-        align-items: center;
-
-        h1 {
-            max-width: none;
-        }
     
-        .breadcrum-cont {
+        .breadcrumb-cont {
             margin: 20px 0;
-            text-align: center;
+            padding-left: 0;
         }
     
         .buttonsGroupe {
@@ -285,32 +186,12 @@ header.all-products-page {
     }  
 }
 
-@media (max-width: 520px) {
-    header.all-products-page {
-        padding: 150px 30px 50px;
-
-        h1 {
-            font-size: 20px;
-        }
-    }
-}
-
 @media (min-width: 320px) {
-    header.all-products-page {
-        h1 {
-            transition: all .5s ease;
-        }
-    
-        .breadcrum-cont {
-            transition: all .5s ease;
-        }
-    
-        .buttonsGroupe {
-            transition: all .5s ease;
-    
-            button:first-child {
-                transition: margin .5s ease;
-            }
+    header.all-products-page .buttonsGroupe {
+        transition: all .5s ease;
+
+        button:first-child {
+            transition: margin .5s ease;
         }
     }  
 }
@@ -329,27 +210,8 @@ body.product-assortment-page {
         & > div:first-child {
             flex-direction: column;
 
-            .baner-text {
-                h1 {
-                    color: $success;
-                    @include font-size(30px);
-                }
-
-                a {
-                    color: $secondary;
-
-                    &:hover {
-                        color: $success;
-                    }
-                }
-            }
-
             .baner-paragraph {
                 padding-left: 0;
-
-                span {
-                    background-color: $success;
-                }
             }
         }
 
@@ -523,27 +385,10 @@ body.internal-transitions-page {
 
             .baner-text {
                 max-width: 310px;
-
-                h1 {
-                    color: $success;
-                    @include font-size(30px);
-                }
-
-                a {
-                    color: $secondary;
-
-                    &:hover {
-                        color: $success;
-                    }
-                }
             }
 
             .baner-paragraph {
                 padding-left: 0;
-
-                span {
-                    background-color: $success;
-                }
             }
         }
 
@@ -721,27 +566,8 @@ body.internal-page {
         & > div:first-child {
             flex-direction: column;
 
-            .baner-text {
-                h1 {
-                    color: $success;
-                    @include font-size(30px);
-                }
-
-                a {
-                    color: $secondary;
-
-                    &:hover {
-                        color: $success;
-                    }
-                }
-            }
-
             .baner-paragraph {
                 padding-left: 0;
-
-                span {
-                    background-color: $success;
-                }
             }
         }
 
@@ -925,26 +751,12 @@ body.product_under_the_direction {
                     max-width: none;
 
                     h1 {
-                        color: $success;
-                        @include font-size(30px);
                         max-width: 250px;
-                    }
-    
-                    a {
-                        color: $secondary;
-    
-                        &:hover {
-                            color: $success;
-                        }
                     }
                 }
     
                 .baner-paragraph {
                     padding-left: 0;
-    
-                    span {
-                        background-color: $success;
-                    }
                 }
             }
     
@@ -1224,37 +1036,9 @@ body.product_under_the_direction {
 
 // service page
 header.service {
-    padding: 140px 90px 70px;
-    display: flex;
-
     h1 {
-        color: $success;
         @include font-size(30px);
         max-width: 250px;
-        font-weight: bold;
-    }
-
-    .breadcrumb-cont {
-        padding-left: 60px;
-
-        .breadCrumb {
-            a:hover {
-                color: $success;
-            }
-        }
-
-        & > span {
-            width: 25px;
-            height: 3px;
-            display: block;
-            background-color: $success;
-            margin: 8px 0 20px 0;
-        }
-        
-        & > p {
-            font-size: 13px;
-            line-height: 17px;
-        }
     }
 
     .phones-cont {
@@ -1264,40 +1048,104 @@ header.service {
     }
 }
 
+@media (max-width: 991px) {
+    header.service .phones-cont {
+        margin: 20px 0 0;
+    }
+}
+
+@media (min-width: 320px) {
+    header.service .phones-cont {
+        transition: all .5s ease;
+    }
+}
+// end service page
+
+// blog promotions page
+header.blog-promotions {
+    h1 .red {
+        color: red;
+    }
+
+    .breadcrumb-cont {
+        padding-left: 175px;
+    }
+}
+
+@media (max-width: 991px) {
+    header.blog-promotions .breadcrumb-cont {
+        padding-left: 0;
+    }
+}
+// end blog promotions page
+
+
+// common headers class
+.simple-header {
+    padding: 150px 90px 50px;
+    display: flex;
+    font-family: $S-FPro-Display;
+
+    &.simple-header-primary {
+        h1 {
+            color: $primary;
+        }
+
+        .breadcrum-cont span.line {
+            background-color: $primary;
+        }
+    }
+    
+    h1 {
+        max-width: 170px;
+        @include font-size(35px);
+        color: $success;
+        font-weight: bold;
+        line-height: 1.1;
+    }
+
+    .breadcrumb-cont {
+        padding-left: 60px;
+
+        span.line {
+            display: block;
+            height: 2px;
+            width: 25px;
+            background-color: $success;
+            margin: 8px 0 20px 0;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
 @media (max-width: 1100px) {
-    header.service .breadcrumb-cont {
+    .simple-header .breadcrumb-cont {
         padding-left: 0;
     }
 }
 
 @media (max-width: 991px) {
-    header.service {
+    .simple-header {
         flex-direction: column;
         align-items: center;
         padding: 140px 30px 70px;
     
         h1 {
-            max-width: none;
+            max-width: none !important;
             text-align: center;
-        }
-    
-        .phones-cont {
-            margin: 20px 0 0;
         }
     }
 }
 
 @media (min-width: 320px) {
-    header.service {
+    .simple-header {
         transition: all .5s ease;
     
         .breadcrumb-cont {
             transition: all .5s ease;
         }
-    
-        .phones-cont {
-            transition: all .5s ease;
-        }
     }
 }
-// end service page

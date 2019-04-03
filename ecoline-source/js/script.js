@@ -422,3 +422,11 @@ $(document).on('click', '.fullWidthMenu .mainNav a', e => {
 $('.navbar-brand').on('click', function(e) {
   $('.navigation a').each((i, el) => $(el).parent().removeClass('active'))
 })
+
+// pagination active page
+$(document).on('click', '.pagination a:not(.nav-arrow)', function(e) {
+  $('.pagination a').each(function(i, el) {
+    $(el).parent().removeClass('active')
+  })
+  $(e.target).parent().addClass('active')
+});
