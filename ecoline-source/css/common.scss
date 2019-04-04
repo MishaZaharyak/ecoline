@@ -3525,6 +3525,251 @@ body.product_under_the_direction {
 // end service page
 
 
-// blog promotions page
+// blog promotions page, news page
+.grid-section {
+    padding: 0 90px 50px;
+    font-family: $S-FPro-Display;
+    margin: 0;
+    max-width: 1440px;
+    margin: 0 auto;
 
-// end blog promotions page
+    & > div:not(.pagginate-cont) {
+        max-width: 375px; 
+        flex-direction: column;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .image {
+        position: relative;
+        margin-bottom: 10px;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url('../images/grid-images/grid-success.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 0;
+            z-index: 2;
+            bottom: -1px;
+            left: 0;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    .image-cont {
+        margin-bottom: 15px;
+
+        p {
+            @include font-size(20px);
+            color: $secondary;
+            line-height: 1.2;
+            margin: 0;
+            font-weight: bold;
+
+            .red {
+                display: block;
+                color: red;
+            }
+        }
+    }
+
+    .button-cont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 375px;
+
+        button {
+            width: 140px;
+
+            a {
+                padding: 3px 20px;
+            }
+            
+            img {
+                max-width: 15px;
+                max-height: 15px;
+                margin: 0 0 5px 5px;
+            }
+        }
+
+        span {
+            font-size: 13px;
+            color: $success;
+            line-height: 1.308;
+        }
+    }
+
+    .pagination {
+        li {
+            .page-link {
+                border: none;
+                border-radius: 50%;
+                color: $success;
+                padding: 6px 12px;
+                margin: 0 5px;
+
+                &:not(.nav-arrow) {
+                    background-color: $mainBackgrondColor;
+                }
+    
+                &:hover {
+                    color: white;
+                    background-color: $success;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+
+            &.active .page-link {
+                background-color: $success;
+                color: white;
+            }
+        }
+
+        * {
+            transition: all .3s ease;
+        }
+    }
+
+    &.grid-primary {
+        & > div:not(.pagginate-cont) {
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .image-cont {
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            
+            .image {
+                order: 1;
+                margin-bottom: 0;
+                margin-top: 10px;
+                max-height: 220px;
+
+                &::after {
+                    background-image: url('../images/grid-images/grid-primary.png');
+                }
+            }
+        }
+
+        .button-cont {
+            position: absolute;
+            bottom: 20px;
+            z-index: 2;
+            flex-direction: column;
+
+            button {
+                width: 160px;
+                margin-top: 10px;
+
+                img {
+                    margin-bottom: 0;
+                }
+            }
+
+            span {
+                order: -1;
+                color: white;
+            }
+        }
+
+        .pagination {
+            li {
+                .page-link {
+                    color: $primary;
+        
+                    &:hover {
+                        background-color: $primary;
+                        color: white;
+                    }
+                }
+    
+                &.active .page-link {
+                    background-color: $primary;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .grid-section {
+        padding: 0 30px 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .grid-section {
+        & > div:not(.pagginate-cont) {
+            max-width: none;
+
+            .image-cont {
+                text-align: center;
+
+                .image {
+                    max-height: none;
+                }
+            }
+
+            .button-cont {
+                flex-direction: column;
+                align-items: center;
+                max-width: none;
+
+                button {
+                    order: 1;
+                    margin-top: 20px;
+                }
+            }
+
+            &:first-child {
+                margin-top: 0 !important;
+            }
+        }
+
+        &.grid-primary {
+            .image-cont {
+                min-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .grid-section {
+        transition: all .5s ease;
+
+        & > div:not(.pagginate-cont) {
+            transition: all .5s ease;
+        }
+    
+        .image-cont {
+            transition: all .5s ease;
+        }
+    
+        .button-cont {
+            transition: all .5s ease;
+            
+            button {
+                transition: all .5s ease;
+            }
+        }
+    }
+}
+// end blog promotions page, news page
