@@ -133,6 +133,41 @@ body::-webkit-scrollbar-thumb {
   display: block;
 }
 
+.danger-btn {
+  border-radius: 18px;
+  border: 2px solid red;
+  color: red;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: bold;
+  padding: 6px 20px;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.danger-btn:hover {
+  background-color: red;
+  border-color: red;
+  color: white;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.danger-btn:focus {
+  outline: none;
+}
+
+.danger-btn.has-link {
+  padding: 0;
+}
+
+.danger-btn.has-link a {
+  padding: 6px 20px;
+  display: block;
+}
+
 .secondary-paragraph {
   font-size: 13px;
   line-height: 17px;
@@ -434,5 +469,9 @@ ul.slider-list li.big-text.active::before {
   font-size: 13px;
   line-height: 17px;
   color: #333333;
+}
+
+.baner-paragraph p.red {
+  color: red;
 }
 /*# sourceMappingURL=commonClasses.css.map */

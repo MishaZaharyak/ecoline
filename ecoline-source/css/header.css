@@ -1133,6 +1133,32 @@ header.blog-promotions .breadcrumb-cont {
   }
 }
 
+body.internal-transitions-page header.internal-promotion {
+  background-image: url("../images/Group360.png"), url("../images/Path293.png"), url("../images/Path294.png");
+  background-repeat: no-repeat;
+  background-position: 78% 55%, 78% 38%, 84% 42%;
+  background-size: 38% auto,40% auto, 51% auto;
+}
+
+body.internal-transitions-page header.internal-promotion > div:last-child {
+  margin-top: 140px;
+}
+
+@media (max-width: 991px) {
+  body.internal-transitions-page header.internal-promotin > div:last-child {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 800px) {
+  body.internal-transitions-page header.internal-promotin {
+    background-image: none;
+  }
+  body.internal-transitions-page header.internal-promotin > div:last-child {
+    margin-top: 50px;
+  }
+}
+
 .simple-header {
   padding: 150px 90px 50px;
   display: -webkit-box;
