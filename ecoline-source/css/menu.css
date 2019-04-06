@@ -27,8 +27,8 @@
 
 .topMenu.fixedNav {
   background-color: white;
-  -webkit-box-shadow: -1px -6px 17px #333333;
-          box-shadow: -1px -6px 17px #333333;
+  -webkit-box-shadow: -1px -6px 10px #333333;
+          box-shadow: -1px -6px 10px #333333;
 }
 
 .topMenu.white {

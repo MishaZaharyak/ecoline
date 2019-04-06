@@ -249,13 +249,6 @@ ul.slider-list li.big-text.active::before {
   }
 }
 
-@media (min-width: 320px) {
-  ul.slider-list li.big-text {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-}
-
 .slick-dots {
   list-style-type: none;
   display: -webkit-box;
@@ -452,12 +445,12 @@ ul.slider-list li.big-text.active::before {
   margin-right: 20px;
 }
 
-.baner-text.primary-baner.main {
+.baner-text.primary-baner.main h1 {
   font-size: 3.75rem;
 }
 
 @media (max-width: 1440px) {
-  .baner-text.primary-baner.main {
+  .baner-text.primary-baner.main h1 {
     font-size: calc(1.185rem + 2.85vw) ;
   }
 }
@@ -515,5 +508,81 @@ ul.slider-list li.big-text.active::before {
 
 .header-image img {
   width: 100%;
+}
+
+.download-licks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.download-licks div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 10px;
+}
+
+.download-licks div a {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #62c622;
+  border-radius: 50%;
+}
+
+.download-licks div p {
+  font-size: 11px;
+  color: rgba(51, 51, 51, 0.5);
+  line-height: 1;
+  text-align: center;
+  max-width: 90px;
+  margin: 10px auto 0;
+}
+
+@media (min-width: 320px) {
+  .download-licks {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  .download-licks div {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  .baner-text {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  .baner-paragraph {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  ul.slider-list li.big-text {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
 }
 /*# sourceMappingURL=commonClasses.css.map */

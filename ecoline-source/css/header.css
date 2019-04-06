@@ -18,7 +18,6 @@
 header.header {
   padding: 270px 90px 90px 90px;
   font-family: "SFPro";
-  background-image: url("../images/30-perspective.86.png"), url("../images/Path285.png");
   background-repeat: no-repeat;
   background-position: 127% 19%, -216px -43px;
   background-size: 68% auto, calc(100% + 337px) 866px;
@@ -31,11 +30,11 @@ header.header > div:first-child {
   position: relative;
 }
 
-header.header > div:first-child .baner-text {
+header.header .baner-text {
   max-width: 280px;
 }
 
-header.header > div:first-child .baner-paragraph {
+header.header .baner-paragraph {
   padding-left: 20px;
 }
 
@@ -70,10 +69,10 @@ header.header > div:last-child button {
         -ms-flex-align: center;
             align-items: center;
   }
-  header.header > div:first-child .baner-text h1, header.header > div:first-child .baner-text div {
+  header.header .baner-text h1, header.header .baner-text div {
     text-align: center;
   }
-  header.header > div:first-child .baner-paragraph {
+  header.header .baner-paragraph {
     margin-top: 20px;
     padding-left: 0;
   }
@@ -124,7 +123,7 @@ header.header > div:last-child button {
   header.header {
     padding: 170px 30px 60px;
   }
-  header.header > div:first-child .baner-text {
+  header.header .baner-text {
     max-width: 320px;
   }
 }
@@ -134,22 +133,14 @@ header.header > div:last-child button {
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
   }
-  header.header > div:first-child .baner-text {
-    -webkit-transition: .5s ease width;
-    transition: .5s ease width;
-  }
-  header.header > div:first-child .baner-text h1 {
-    -webkit-transition: .5s ease font-size;
-    transition: .5s ease font-size;
-  }
-  header.header > div:first-child .baner-paragraph {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
   header.header > div:last-child {
     -webkit-transition: .5s ease margin;
     transition: .5s ease margin;
   }
+}
+
+header.all-products-page {
+  font-family: "SFPro";
 }
 
 header.all-products-page h1 {
@@ -210,407 +201,26 @@ header.all-products-page .buttonsGroupe button:first-child {
   }
 }
 
-body.product-assortment-page header.header {
-  background-image: url("../images/Group5861.png"), url("../images/Path295.png");
+header.product-assortment {
   background-repeat: no-repeat;
   background-position: 80% 32%, 108% 33%;
   background-size: 42% auto, 59% auto;
   padding: 290px 190px 50px;
+  font-family: "SFPro";
 }
 
-body.product-assortment-page header.header > div:first-child {
+header.product-assortment > .first {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-body.product-assortment-page header.header > div:first-child .baner-paragraph {
-  padding-left: 0;
-}
-
-body.product-assortment-page header.header > div:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  position: relative;
 }
 
-body.product-assortment-page header.header > div:last-child .download-licks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body.product-assortment-page header.header > div:last-child .download-licks div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 0 10px;
-}
-
-body.product-assortment-page header.header > div:last-child .download-licks div a {
-  width: 40px;
-  height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 2px solid #62c622;
-  border-radius: 50%;
-}
-
-body.product-assortment-page header.header > div:last-child .download-licks div p {
-  font-size: 11px;
-  color: rgba(51, 51, 51, 0.5);
-  line-height: 1;
-  text-align: center;
-  max-width: 90px;
-  margin: 10px auto 0;
-}
-
-@media (min-width: 1441px) {
-  body.product-assortment-page header.header {
-    background-size: 580px 420px, 65% auto;
-  }
-}
-
-@media (max-width: 1300px) {
-  body.product-assortment-page header.header > div:last-child {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 180px;
-  }
-  body.product-assortment-page header.header > div:last-child .buttons {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  body.product-assortment-page header.header > div:last-child .download-licks {
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 991px) {
-  body.product-assortment-page header.header {
-    padding: 200px 90px 50px;
-    background-position: 80% 33%, 108% 34%;
-  }
-  body.product-assortment-page header.header > div:last-child {
-    margin-top: 90px;
-  }
-}
-
-@media (max-width: 800px) {
-  body.product-assortment-page header.header {
-    padding: 145px 90px 50px;
-    background-size: 0,  100% auto;
-    background-position: 0, 40px 28%;
-  }
-}
-
-@media (max-width: 700px) {
-  body.product-assortment-page header.header {
-    padding: 145px 30px 50px;
-  }
-  body.product-assortment-page header.header > div:last-child .buttons {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  body.product-assortment-page header.header > div:last-child .buttons img {
-    width: 15px;
-    height: 36px;
-    margin-top: 40px;
-  }
-  body.product-assortment-page header.header > div:last-child .download-licks div {
-    margin: 0 10px 10px;
-  }
-}
-
-@media (max-width: 500px) {
-  body.product-assortment-page header.header {
-    background-image: none;
-  }
-  body.product-assortment-page header.header > div:last-child {
-    margin-top: 50px;
-  }
-}
-
-@media (min-width: 320px) {
-  body.product-assortment-page header.header > div:last-child .buttons {
-    -webkit-transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
-    transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
-  }
-  body.product-assortment-page header.header > div:last-child .buttons img {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  body.product-assortment-page header.header > div:last-child .download-licks {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  body.product-assortment-page header.header > div:last-child .download-licks div {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-}
-
-body.internal-transitions-page header.header {
-  background-image: url("../images/Photo/delfin.png"), url("../images/Photo/delfin-1.png"), url("../images/Group380.png");
-  background-repeat: no-repeat;
-  background-position: calc(100% - 203px) 82px, calc(100% - 456px) 87px, 108% 33%;
-  background-size: auto 61%, auto 51%, 59% auto;
-  padding: 290px 190px 50px;
-}
-
-body.internal-transitions-page header.header > div:first-child {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-body.internal-transitions-page header.header > div:first-child .baner-text {
-  max-width: 310px;
-}
-
-body.internal-transitions-page header.header > div:first-child .baner-paragraph {
-  padding-left: 0;
-}
-
-body.internal-transitions-page header.header > div:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 170px;
-}
-
-body.internal-transitions-page header.header > div:last-child .download-licks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body.internal-transitions-page header.header > div:last-child .download-licks div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 0 10px;
-}
-
-body.internal-transitions-page header.header > div:last-child .download-licks div a {
-  width: 40px;
-  height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 2px solid #62c622;
-  border-radius: 50%;
-}
-
-body.internal-transitions-page header.header > div:last-child .download-licks div p {
-  font-size: 11px;
-  color: rgba(51, 51, 51, 0.5);
-  line-height: 1;
-  text-align: center;
-  max-width: 90px;
-  margin: 10px auto 0;
-}
-
-@media (max-width: 1300px) {
-  body.internal-transitions-page header.header {
-    background-position: calc(100% - 103px) 142px, calc(100% - 301px) 155px, 108% 34%;
-    background-size: auto 46%, auto 36%, 59% auto;
-  }
-  body.internal-transitions-page header.header > div:last-child {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 90px;
-  }
-  body.internal-transitions-page header.header > div:last-child .buttons {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  body.internal-transitions-page header.header > div:last-child .download-licks {
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 1100px) {
-  body.internal-transitions-page header.header {
-    background-position: calc(100% - 90px) 200px, calc(100% - 226px) 203px, 108% 38%;
-    background-size: auto 33%, auto 26%, 59% auto;
-  }
-}
-
-@media (max-width: 991px) {
-  body.internal-transitions-page header.header {
-    padding: 200px 90px 50px;
-    background-position: calc(100% - 90px) 153px, calc(100% - 214px) 160px, 108% 29%;
-    background-size: auto 33%, auto 26%, 59% auto;
-  }
-  body.internal-transitions-page header.header > div:last-child {
-    margin-top: 90px;
-  }
-}
-
-@media (max-width: 800px) {
-  body.internal-transitions-page header.header {
-    padding: 145px 90px 50px;
-    background-size: 0, 0,  100% auto;
-    background-position: 0, 0, 40px 28%;
-  }
-}
-
-@media (max-width: 700px) {
-  body.internal-transitions-page header.header {
-    padding: 145px 30px 50px;
-  }
-  body.internal-transitions-page header.header > div:last-child .buttons {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  body.internal-transitions-page header.header > div:last-child .buttons img {
-    width: 15px;
-    height: 36px;
-    margin-top: 40px;
-  }
-  body.internal-transitions-page header.header > div:last-child .download-licks div {
-    margin: 0 10px 10px;
-  }
-}
-
-@media (max-width: 500px) {
-  body.internal-transitions-page header.header {
-    background-image: none;
-  }
-  body.internal-transitions-page header.header > div:last-child {
-    margin-top: 50px;
-  }
-}
-
-@media (min-width: 320px) {
-  body.internal-transitions-page header.header > div:last-child .buttons {
-    -webkit-transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
-    transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
-  }
-  body.internal-transitions-page header.header > div:last-child .buttons img {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  body.internal-transitions-page header.header > div:last-child .download-licks {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  body.internal-transitions-page header.header > div:last-child .download-licks div {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-}
-
-body.internal-page header.header {
-  background-image: url("../images/PREMIUM_2000_home.png"), url("../images/pole_filtr_5.png"), url("../images/Path295.png");
-  background-repeat: no-repeat;
-  background-position: calc(100% - 38px) 30%, calc(100% - 382px) 35%, 108% 33%;
-  background-size: auto, 25% auto, 59% auto;
-  padding: 290px 190px 50px;
-}
-
-body.internal-page header.header > div:first-child {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-body.internal-page header.header > div:first-child .baner-paragraph {
-  padding-left: 0;
-}
-
-body.internal-page header.header > div:last-child {
+header.product-assortment > .last {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -620,75 +230,335 @@ body.internal-page header.header > div:last-child {
   margin-top: 200px;
 }
 
-body.internal-page header.header > div:last-child .download-licks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-body.internal-page header.header > div:last-child .download-licks div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 0 10px;
-}
-
-body.internal-page header.header > div:last-child .download-licks div a {
-  width: 40px;
-  height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 2px solid #62c622;
-  border-radius: 50%;
-}
-
-body.internal-page header.header > div:last-child .download-licks div p {
-  font-size: 11px;
-  color: rgba(51, 51, 51, 0.5);
-  line-height: 1;
-  text-align: center;
-  max-width: 90px;
-  margin: 10px auto 0;
+header.product-assortment > .last button {
+  margin-left: 35px;
+  width: 205px;
 }
 
 @media (min-width: 1441px) {
-  body.internal-page header.header {
+  header.product-assortment {
+    background-size: 580px 420px, 65% auto;
+  }
+}
+
+@media (max-width: 1300px) {
+  header.product-assortment > .last {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 100px;
+  }
+  header.product-assortment .buttons {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  header.product-assortment .download-licks {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  header.product-assortment {
+    padding: 200px 90px 50px;
+    background-position: 80% 33%, 108% 34%;
+  }
+  header.product-assortment > .last {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 800px) {
+  header.product-assortment {
+    padding: 145px 90px 50px;
+    background-size: 0,  100% auto;
+    background-position: 0, 40px 28%;
+  }
+  header.product-assortment > .first {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  header.product-assortment {
+    padding: 145px 30px 50px;
+  }
+  header.product-assortment .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header.product-assortment .buttons button {
+    margin: 0;
+  }
+  header.product-assortment .buttons button:last-child {
+    margin-top: 20px;
+  }
+  header.product-assortment .buttons img {
+    width: 15px;
+    height: 36px;
+    margin-top: 40px;
+  }
+  header.product-assortment .download-licks div {
+    margin: 0 10px 10px;
+  }
+  header.product-assortment > .last {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  header.product-assortment {
+    background-image: none !important;
+  }
+}
+
+@media (min-width: 320px) {
+  header.product-assortment {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.product-assortment .last {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.product-assortment .first {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.product-assortment .buttons {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.product-assortment .buttons img {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+}
+
+header.internal-transitions {
+  font-family: "SFPro";
+  background-repeat: no-repeat;
+  background-position: calc(100% - 203px) 82px, calc(100% - 456px) 87px, 108% 33%;
+  background-size: auto 61%, auto 51%, 59% auto;
+  padding: 290px 190px 50px;
+}
+
+header.internal-transitions > .first {
+  position: relative;
+}
+
+header.internal-transitions .baner-text {
+  max-width: 310px;
+}
+
+header.internal-transitions .baner-paragraph {
+  margin-top: 20px;
+}
+
+header.internal-transitions > .last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 170px;
+}
+
+header.internal-transitions > .last button {
+  margin-left: 35px;
+  width: 205px;
+}
+
+@media (max-width: 1300px) {
+  header.internal-transitions {
+    background-position: calc(100% - 103px) 142px, calc(100% - 301px) 155px, 108% 34%;
+    background-size: auto 46%, auto 36%, 59% auto;
+  }
+  header.internal-transitions > .last {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 90px;
+  }
+  header.internal-transitions .buttons {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  header.internal-transitions .download-licks {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1100px) {
+  header.internal-transitions {
+    background-position: calc(100% - 90px) 200px, calc(100% - 226px) 203px, 108% 38%;
+    background-size: auto 33%, auto 26%, 59% auto;
+  }
+}
+
+@media (max-width: 991px) {
+  header.internal-transitions {
+    padding: 200px 90px 50px;
+    background-position: calc(100% - 90px) 153px, calc(100% - 214px) 160px, 108% 29%;
+    background-size: auto 33%, auto 26%, 59% auto;
+  }
+}
+
+@media (max-width: 800px) {
+  header.internal-transitions {
+    padding: 145px 90px 50px;
+    background-size: 0, 0,  100% auto;
+    background-position: 0, 0, 40px 28%;
+  }
+  header.internal-transitions > .first {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header.internal-transitions .baner-text h1, header.internal-transitions .baner-text div {
+    text-align: center;
+  }
+}
+
+@media (max-width: 700px) {
+  header.internal-transitions {
+    padding: 145px 30px 50px;
+  }
+  header.internal-transitions > .last {
+    margin-top: 50px;
+  }
+  header.internal-transitions .buttons {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header.internal-transitions .buttons button {
+    margin: 0;
+  }
+  header.internal-transitions .buttons button:last-child {
+    margin-top: 20px;
+  }
+  header.internal-transitions .buttons img {
+    width: 15px;
+    height: 36px;
+    margin-top: 40px;
+  }
+  header.internal-transitions .download-licks div {
+    margin: 0 10px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  header.internal-transitions {
+    background-image: none !important;
+  }
+}
+
+@media (min-width: 320px) {
+  header.internal-transitions {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.internal-transitions .last {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.internal-transitions .first {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.internal-transitions .buttons {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.internal-transitions .buttons img {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+}
+
+header.internal {
+  font-family: "SFPro";
+  background-repeat: no-repeat;
+  background-position: calc(100% - 38px) 30%, calc(100% - 382px) 35%, 108% 33%;
+  background-size: auto, 25% auto, 59% auto;
+  padding: 290px 190px 50px;
+}
+
+header.internal > .first {
+  position: relative;
+}
+
+header.internal .baner-text {
+  max-width: 280px;
+}
+
+header.internal .baner-paragraph {
+  margin-top: 20px;
+}
+
+header.internal > .last {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 200px;
+}
+
+header.internal > .last button {
+  margin-left: 35px;
+  width: 205px;
+}
+
+@media (min-width: 1441px) {
+  header.internal {
     background-size: auto, 25% auto, 59% auto;
   }
 }
 
 @media (max-width: 1300px) {
-  body.internal-page header.header {
+  header.internal {
     background-position: calc(100% - 66px) 35%, calc(100% - 287px) 39%, 108% 33%;
     background-size: 28% auto, 25% auto, 59% auto;
   }
-  body.internal-page header.header > div:last-child {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  header.internal > .last {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -698,40 +568,58 @@ body.internal-page header.header > div:last-child .download-licks div p {
             align-items: center;
     margin-top: 180px;
   }
-  body.internal-page header.header > div:last-child .buttons {
+  header.internal .buttons {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
   }
-  body.internal-page header.header > div:last-child .download-licks {
+  header.internal .download-licks {
     margin-bottom: 40px;
   }
 }
 
 @media (max-width: 991px) {
-  body.internal-page header.header {
+  header.internal {
     padding: 200px 90px 50px;
     background-position: calc(100% - 66px) 35%, calc(100% - 226px) 39%, 108% 33%;
     background-size: 25% auto, 22% auto, 59% auto;
   }
-  body.internal-page header.header > div:last-child {
+  header.internal > .last {
     margin-top: 90px;
   }
 }
 
 @media (max-width: 800px) {
-  body.internal-page header.header {
+  header.internal {
     padding: 145px 90px 50px;
     background-size: 0, 0,  100% auto;
     background-position: 0, 0, 40px 28%;
   }
+  header.internal > .first {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header.internal .baner-text h1, header.internal .baner-text div {
+    text-align: center;
+  }
 }
 
 @media (max-width: 700px) {
-  body.internal-page header.header {
+  header.internal {
     padding: 145px 30px 50px;
   }
-  body.internal-page header.header > div:last-child .buttons {
+  header.internal > .last {
+    margin-top: 50px;
+  }
+  header.internal .buttons {
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -744,47 +632,51 @@ body.internal-page header.header > div:last-child .download-licks div p {
         -ms-flex-align: center;
             align-items: center;
   }
-  body.internal-page header.header > div:last-child .buttons img {
+  header.internal .buttons button {
+    margin: 0;
+  }
+  header.internal .buttons img {
     width: 15px;
     height: 36px;
     margin-top: 40px;
   }
-  body.internal-page header.header > div:last-child .download-licks div {
+  header.internal .download-licks div {
     margin: 0 10px 10px;
   }
 }
 
 @media (max-width: 500px) {
-  body.internal-page header.header {
-    background-image: none;
-  }
-  body.internal-page header.header > div:last-child {
-    margin-top: 50px;
+  header.internal {
+    background-image: none !important;
   }
 }
 
 @media (min-width: 320px) {
-  body.internal-page header.header > div:last-child .buttons {
-    -webkit-transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
-    transition: .5s ease text-align, .5s ease flex-direction, .5s ease align-items;
-  }
-  body.internal-page header.header > div:last-child .buttons img {
+  header.internal {
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
   }
-  body.internal-page header.header > div:last-child .download-licks {
+  header.internal .last {
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
   }
-  body.internal-page header.header > div:last-child .download-licks div {
+  header.internal .first {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.internal .buttons {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.internal .buttons img {
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
   }
 }
 
-body.product_under_the_direction header.header {
-  padding: 290px 90px 50px;
-  background-image: none;
+header.product_under_the_direction {
+  font-family: "SFPro";
+  padding: 240px 90px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -793,65 +685,37 @@ body.product_under_the_direction header.header {
           align-items: center;
 }
 
-body.product_under_the_direction header.header > div:first-child {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+header.product_under_the_direction .first {
+  position: relative;
 }
 
-body.product_under_the_direction header.header > div:first-child > div:first-child {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-width: 425px;
-  width: 100%;
-}
-
-body.product_under_the_direction header.header > div:first-child > div:first-child .baner-text {
-  max-width: none;
-}
-
-body.product_under_the_direction header.header > div:first-child > div:first-child .baner-text h1 {
-  max-width: 250px;
-}
-
-body.product_under_the_direction header.header > div:first-child > div:first-child .baner-paragraph {
-  padding-left: 0;
-}
-
-body.product_under_the_direction header.header > div:first-child > div:last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+header.product_under_the_direction .last {
   margin-top: 150px;
 }
 
-body.product_under_the_direction header.header > div:first-child > div:last-child .buttons {
-  margin-right: auto;
+header.product_under_the_direction .last button {
+  width: 205px;
 }
 
-body.product_under_the_direction header.header > div:last-child {
+header.product_under_the_direction .baner-paragraph {
+  margin-top: 20px;
+}
+
+header.product_under_the_direction .baner-text h1 {
+  max-width: 250px;
+}
+
+header.product_under_the_direction > div:last-child {
   min-width: 1px;
-  margin-top: 0;
   margin-left: auto;
   margin-top: -120px;
 }
 
-body.product_under_the_direction header.header > div:last-child button {
-  margin-left: 0;
-  width: 25px;
-}
-
-body.product_under_the_direction header.header > div:last-child .slider {
+header.product_under_the_direction > div:last-child .slider {
   max-width: 735px;
 }
 
-body.product_under_the_direction header.header > div:last-child .slider .slide {
+header.product_under_the_direction > div:last-child .slider .slide {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -867,11 +731,11 @@ body.product_under_the_direction header.header > div:last-child .slider .slide {
   min-height: 290px;
 }
 
-body.product_under_the_direction header.header > div:last-child .slider .slide .slider-top-img {
+header.product_under_the_direction > div:last-child .slider .slide .slider-top-img {
   margin-bottom: 15px;
 }
 
-body.product_under_the_direction header.header > div:last-child .slider .slide h2 {
+header.product_under_the_direction > div:last-child .slider .slide h2 {
   font-size: 1.5625rem;
   line-height: 1;
   color: #333333;
@@ -880,35 +744,35 @@ body.product_under_the_direction header.header > div:last-child .slider .slide h
 }
 
 @media (max-width: 1440px) {
-  body.product_under_the_direction header.header > div:last-child .slider .slide h2 {
+  header.product_under_the_direction > div:last-child .slider .slide h2 {
     font-size: calc(0.96625rem + 0.6625vw) ;
   }
 }
 
-body.product_under_the_direction header.header > div:last-child .slider .slide p {
+header.product_under_the_direction > div:last-child .slider .slide p {
   max-width: 213px;
   margin-bottom: 0;
   margin-top: 20px;
 }
 
-body.product_under_the_direction header.header > div:last-child .slider .slide button {
+header.product_under_the_direction > div:last-child .slider .slide button {
   margin-top: 80px;
   width: 130px;
 }
 
-body.product_under_the_direction header.header > div:last-child .slider .slick-dots li button {
+header.product_under_the_direction > div:last-child .slider .slick-dots li button {
   background-color: rgba(98, 198, 34, 0.5);
 }
 
-body.product_under_the_direction header.header > div:last-child .slider .slick-dots li.slick-active button {
+header.product_under_the_direction > div:last-child .slider .slick-dots li.slick-active button {
   background-color: #62c622;
 }
 
-body.product_under_the_direction header.header > div:last-child .arrows {
+header.product_under_the_direction > div:last-child .arrows {
   width: 100%;
 }
 
-body.product_under_the_direction header.header > div:last-child .arrows .slick-new-prev, body.product_under_the_direction header.header > div:last-child .arrows .slick-new-next {
+header.product_under_the_direction > div:last-child .arrows .slick-new-prev, header.product_under_the_direction > div:last-child .arrows .slick-new-next {
   position: absolute;
   background-color: transparent;
   border: none;
@@ -921,58 +785,35 @@ body.product_under_the_direction header.header > div:last-child .arrows .slick-n
   margin-top: 0;
 }
 
-body.product_under_the_direction header.header > div:last-child .arrows .slick-new-prev:focus, body.product_under_the_direction header.header > div:last-child .arrows .slick-new-next:focus {
+header.product_under_the_direction > div:last-child .arrows .slick-new-prev:focus, header.product_under_the_direction > div:last-child .arrows .slick-new-next:focus {
   outline: none;
 }
 
-body.product_under_the_direction header.header > div:last-child .arrows .slick-new-prev {
+header.product_under_the_direction > div:last-child .arrows .slick-new-prev {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   left: 0;
 }
 
-body.product_under_the_direction header.header > div:last-child .arrows .slick-new-next {
+header.product_under_the_direction > div:last-child .arrows .slick-new-next {
   right: 0;
 }
 
 @media (max-width: 1300px) {
-  body.product_under_the_direction header.header > div:first-child > div:first-child {
-    max-width: 350px;
-  }
-  body.product_under_the_direction header.header > div:first-child > div:last-child {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 180px;
-    max-width: 350px;
-  }
-  body.product_under_the_direction header.header > div:first-child > div:last-child .buttons {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  body.product_under_the_direction header.header > div:last-child .slider .slide .slider-top-img img {
+  header.product_under_the_direction > div:last-child .slider .slide .slider-top-img img {
     margin: 0 auto;
   }
-  body.product_under_the_direction header.header > div:last-child .slider .slide .content {
+  header.product_under_the_direction > div:last-child .slider .slide .content {
     text-align: center;
   }
-  body.product_under_the_direction header.header > div:last-child .slider .slide h2 {
+  header.product_under_the_direction > div:last-child .slider .slide h2 {
     max-width: 290px;
     margin: auto;
   }
-  body.product_under_the_direction header.header > div:last-child .slider .slide p {
+  header.product_under_the_direction > div:last-child .slider .slide p {
     margin: 20px auto 0 auto;
   }
-  body.product_under_the_direction header.header > div:last-child .slider .slide button {
+  header.product_under_the_direction > div:last-child .slider .slide button {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -980,105 +821,95 @@ body.product_under_the_direction header.header > div:last-child .arrows .slick-n
 }
 
 @media (max-width: 991px) {
-  body.product_under_the_direction header.header {
+  header.product_under_the_direction {
     padding: 200px 90px 50px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
-  body.product_under_the_direction header.header > div:first-child {
+  header.product_under_the_direction > div:first-child {
     width: 100%;
   }
-  body.product_under_the_direction header.header > div:first-child > div:first-child {
+  header.product_under_the_direction .baner-paragraph {
     max-width: 450px;
     margin: auto;
   }
-  body.product_under_the_direction header.header > div:first-child > div:first-child .baner-text h1 {
+  header.product_under_the_direction .baner-text {
+    max-width: 450px;
+    margin: auto;
+  }
+  header.product_under_the_direction .baner-text h1 {
+    text-align: center;
     max-width: none;
+  }
+  header.product_under_the_direction .last {
+    margin-top: 50px;
     text-align: center;
   }
-  body.product_under_the_direction header.header > div:first-child > div:last-child {
-    margin-top: 50px;
-    max-width: none;
-  }
-  body.product_under_the_direction header.header > div:first-child > div:last-child .buttons {
-    margin: 0 auto;
-  }
-  body.product_under_the_direction header.header > div:last-child {
+  header.product_under_the_direction > div:last-child {
     margin: 30px 0 0;
     width: 100%;
   }
-  body.product_under_the_direction header.header > div:last-child .slider {
+  header.product_under_the_direction > div:last-child .slider {
     width: 100%;
   }
-  body.product_under_the_direction header.header > div:last-child .slider .slide button {
+  header.product_under_the_direction > div:last-child .slider .slide button {
     margin-top: 40px;
   }
 }
 
 @media (max-width: 800px) {
-  body.product_under_the_direction header.header {
+  header.product_under_the_direction {
     padding: 145px 90px 50px;
+  }
+  header.product_under_the_direction .baner-text div {
+    text-align: center;
   }
 }
 
 @media (max-width: 700px) {
-  body.product_under_the_direction header.header {
+  header.product_under_the_direction {
     padding: 145px 30px 50px;
-  }
-  body.product_under_the_direction header.header > div:first-child > div:first-child {
-    max-width: none;
   }
 }
 
 @media (max-width: 580px) {
-  body.product_under_the_direction header.header > div:last-child .arrows {
+  header.product_under_the_direction > div:last-child .arrows {
     display: none !important;
   }
 }
 
 @media (min-width: 320px) {
-  body.product_under_the_direction header.header {
+  header.product_under_the_direction {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
-  body.product_under_the_direction header.header > div:first-child {
+  header.product_under_the_direction .first {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
-  body.product_under_the_direction header.header > div:first-child > div:first-child {
+  header.product_under_the_direction .last {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
-  body.product_under_the_direction header.header > div:first-child > div:last-child {
+  header.product_under_the_direction > div:last-child {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
-  body.product_under_the_direction header.header > div:first-child > div:last-child .buttons {
+  header.product_under_the_direction > div:last-child .slider .slide .slider-top-img img {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
-  body.product_under_the_direction header.header > div:last-child {
+  header.product_under_the_direction > div:last-child .slider .slide .content {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
-  body.product_under_the_direction header.header > div:last-child .slider .slide .slider-top-img img {
+  header.product_under_the_direction > div:last-child .slider .slide h2 {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
-  body.product_under_the_direction header.header > div:last-child .slider .slide .content {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  body.product_under_the_direction header.header > div:last-child .slider .slide h2 {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  body.product_under_the_direction header.header > div:last-child .slider .slide p {
+  header.product_under_the_direction > div:last-child .slider .slide p {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
@@ -1133,29 +964,142 @@ header.blog-promotions .breadcrumb-cont {
   }
 }
 
-body.internal-transitions-page header.internal-promotion {
-  background-image: url("../images/Group360.png"), url("../images/Path293.png"), url("../images/Path294.png");
+header.internal-promotion {
+  font-family: "SFPro";
   background-repeat: no-repeat;
   background-position: 78% 55%, 78% 38%, 84% 42%;
   background-size: 38% auto,40% auto, 51% auto;
+  padding: 290px 190px 50px;
 }
 
-body.internal-transitions-page header.internal-promotion > div:last-child {
+header.internal-promotion > .first {
+  position: relative;
+}
+
+header.internal-promotion .baner-text {
+  max-width: 310px;
+}
+
+header.internal-promotion .baner-paragraph {
+  margin-top: 20px;
+}
+
+header.internal-promotion > .last {
   margin-top: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header.internal-promotion > .last button {
+  margin-left: 35px;
+  width: 205px;
+}
+
+@media (max-width: 1300px) {
+  header.internal-promotion > .last {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 90px;
+  }
+  header.internal-promotion .buttons {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 @media (max-width: 991px) {
-  body.internal-transitions-page header.internal-promotin > div:last-child {
-    margin-top: 90px;
+  header.internal-promotion {
+    padding: 200px 90px 50px;
   }
 }
 
 @media (max-width: 800px) {
-  body.internal-transitions-page header.internal-promotin {
-    background-image: none;
+  header.internal-promotion {
+    background-image: none !important;
+    padding: 145px 90px 50px;
   }
-  body.internal-transitions-page header.internal-promotin > div:last-child {
+  header.internal-promotion > .first {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header.internal-promotion .baner-text h1, header.internal-promotion .baner-text div {
+    text-align: center;
+  }
+  header.internal-promotion > .last {
     margin-top: 50px;
+  }
+}
+
+@media (max-width: 700px) {
+  header.internal-promotion {
+    padding: 145px 30px 50px;
+  }
+  header.internal-promotion .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header.internal-promotion .buttons button {
+    margin: 0;
+  }
+  header.internal-promotion .buttons img {
+    width: 15px;
+    height: 36px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  header.internal-promotion {
+    background-image: none !important;
+  }
+}
+
+@media (min-width: 320px) {
+  header.internal-promotion {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.internal-promotion .last {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.internal-promotion .first {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  header.internal-promotion .buttons {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.internal-promotion .buttons img {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
   }
 }
 
@@ -1167,22 +1111,15 @@ header.internal-news {
 }
 
 header.internal-news > .first {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   position: relative;
 }
 
-header.internal-news > .first .baner-text {
+header.internal-news .baner-text {
   max-width: 310px;
 }
 
-header.internal-news > .first .baner-paragraph {
-  padding-left: 0;
+header.internal-news .baner-paragraph {
+  margin-top: 20px;
 }
 
 header.internal-news > .last {
@@ -1195,13 +1132,12 @@ header.internal-news > .last {
           justify-content: space-between;
 }
 
-header.internal-news > .last .buttons button {
+header.internal-news .buttons button {
   margin-left: 35px;
 }
 
 @media (max-width: 1300px) {
   header.internal-news > .last {
-    text-align: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1211,7 +1147,7 @@ header.internal-news > .last .buttons button {
             align-items: center;
     margin-top: 90px;
   }
-  header.internal-news > .last .buttons {
+  header.internal-news .buttons {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -1230,21 +1166,24 @@ header.internal-news > .last .buttons button {
     background-image: none !important;
   }
   header.internal-news > .first {
+    max-width: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    max-width: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-top: 30px;
   }
-  header.internal-news > .first .baner-text {
+  header.internal-news .baner-text {
     max-width: 500px;
   }
-  header.internal-news > .first .baner-text h1, header.internal-news > .first .baner-text div {
+  header.internal-news .baner-text h1, header.internal-news .baner-text div {
     text-align: center;
-  }
-  header.internal-news > .first .baner-paragraph {
-    margin-top: 20px;
-    padding-left: 0;
   }
 }
 
@@ -1252,24 +1191,10 @@ header.internal-news > .last .buttons button {
   header.internal-news {
     padding: 145px 30px 50px;
   }
-  header.internal-news .goDown {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
   header.internal-news > .last {
-    text-align: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 60px;
+    margin-top: 50px;
   }
-  header.internal-news > .last .buttons {
-    text-align: center;
+  header.internal-news .buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1281,19 +1206,13 @@ header.internal-news > .last .buttons button {
         -ms-flex-align: center;
             align-items: center;
   }
-  header.internal-news > .last .buttons button {
+  header.internal-news .buttons button {
     margin: 0;
   }
-  header.internal-news > .last .buttons img {
+  header.internal-news .buttons img {
     width: 15px;
     height: 36px;
     margin-top: 40px;
-  }
-}
-
-@media (max-width: 500px) {
-  header.internal-news > .last {
-    margin-top: 50px;
   }
 }
 
@@ -1310,11 +1229,11 @@ header.internal-news > .last .buttons button {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
-  header.internal-news > .last .buttons {
+  header.internal-news .buttons {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
-  header.internal-news > .last .buttons button {
+  header.internal-news .buttons button {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
   }
