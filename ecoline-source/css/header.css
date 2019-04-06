@@ -1159,6 +1159,167 @@ body.internal-transitions-page header.internal-promotion > div:last-child {
   }
 }
 
+header.internal-news {
+  background-repeat: no-repeat;
+  background-position: 84% 43%, 65% 52%, 79% 54%;
+  background-size: 45% auto, 42% auto, 32% auto;
+  padding: 290px 190px 50px;
+}
+
+header.internal-news > .first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+header.internal-news > .first .baner-text {
+  max-width: 310px;
+}
+
+header.internal-news > .first .baner-paragraph {
+  padding-left: 0;
+}
+
+header.internal-news > .last {
+  margin-top: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header.internal-news > .last .buttons button {
+  margin-left: 35px;
+}
+
+@media (max-width: 1300px) {
+  header.internal-news > .last {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 90px;
+  }
+  header.internal-news > .last .buttons {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  header.internal-news {
+    padding: 200px 90px 50px;
+  }
+}
+
+@media (max-width: 800px) {
+  header.internal-news {
+    padding: 145px 90px 50px;
+    background-image: none !important;
+  }
+  header.internal-news > .first {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: none;
+    padding-top: 30px;
+  }
+  header.internal-news > .first .baner-text {
+    max-width: 500px;
+  }
+  header.internal-news > .first .baner-text h1, header.internal-news > .first .baner-text div {
+    text-align: center;
+  }
+  header.internal-news > .first .baner-paragraph {
+    margin-top: 20px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  header.internal-news {
+    padding: 145px 30px 50px;
+  }
+  header.internal-news .goDown {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  header.internal-news > .last {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 60px;
+  }
+  header.internal-news > .last .buttons {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header.internal-news > .last .buttons button {
+    margin: 0;
+  }
+  header.internal-news > .last .buttons img {
+    width: 15px;
+    height: 36px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  header.internal-news > .last {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 320px) {
+  header.internal-news {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.internal-news > .first {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.internal-news > .last {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.internal-news > .last .buttons {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  header.internal-news > .last .buttons button {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+}
+
 .simple-header {
   padding: 150px 90px 50px;
   display: -webkit-box;
