@@ -15,52 +15,45 @@
   font-style: normal;
 }
 
-header.header {
+header.main {
   padding: 270px 90px 90px 90px;
-  font-family: "SFPro";
-  background-repeat: no-repeat;
   background-position: 127% 19%, -216px -43px;
   background-size: 68% auto, calc(100% + 337px) 866px;
 }
 
-header.header > div:first-child {
+header.main > .first {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
 }
 
-header.header .baner-text {
+header.main .baner-text {
   max-width: 280px;
 }
 
-header.header .baner-paragraph {
+header.main .baner-paragraph {
   padding-left: 20px;
 }
 
-header.header > div:last-child {
+header.main > .last {
   margin-top: 270px;
 }
 
-header.header > div:last-child button {
-  margin-left: 35px;
-  width: 205px;
-}
-
 @media (max-width: 1250px) {
-  header.header {
+  header.main {
     background-position: 121% 74%, -216px -43px;
     background-size: 60% auto, calc(100% + 337px) 866px;
   }
 }
 
 @media (max-width: 800px) {
-  header.header {
+  header.main {
     padding-top: 170px;
     background-position: 110% 111%, -216px -43px;
-    background-size: 60% auto, calc(100% + 337px) 866px;
+    background-size: 0, calc(100% + 337px) 866px;
   }
-  header.header > div:first-child {
+  header.main > .first {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -69,73 +62,45 @@ header.header > div:last-child button {
         -ms-flex-align: center;
             align-items: center;
   }
-  header.header .baner-text h1, header.header .baner-text div {
+  header.main .baner-text {
+    max-width: none;
+  }
+  header.main .baner-text h1, header.main .baner-text div {
     text-align: center;
   }
-  header.header .baner-paragraph {
+  header.main .baner-paragraph {
     margin-top: 20px;
     padding-left: 0;
   }
-  header.header > div:last-child {
-    margin-top: 175px;
+  header.main > .last {
+    margin-top: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
 @media (max-width: 700px) {
-  .goDown {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  header.header {
+  header.main {
     background-position: 0 0, -166px -133px;
     background-size: 0, calc(100% + 209px) 819px;
     padding-bottom: 60px;
   }
-  header.header > div:last-child {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  header.main > .first {
     margin-top: 60px;
-  }
-  header.header > div:last-child button {
-    margin: 0;
-  }
-  header.header > div:last-child button:last-child {
-    margin-top: 20px;
-  }
-  header.header > div:last-child > a img {
-    width: 15px;
-    height: 36px;
-    margin-top: 40px;
   }
 }
 
 @media (max-width: 520px) {
-  header.header {
+  header.main {
     padding: 170px 30px 60px;
-  }
-  header.header .baner-text {
-    max-width: 320px;
-  }
-}
-
-@media (min-width: 320px) {
-  header.header {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.header > div:last-child {
-    -webkit-transition: .5s ease margin;
-    transition: .5s ease margin;
   }
 }
 
@@ -202,11 +167,9 @@ header.all-products-page .buttonsGroupe button:first-child {
 }
 
 header.product-assortment {
-  background-repeat: no-repeat;
   background-position: 80% 32%, 108% 33%;
   background-size: 42% auto, 59% auto;
   padding: 290px 190px 50px;
-  font-family: "SFPro";
 }
 
 header.product-assortment > .first {
@@ -230,11 +193,6 @@ header.product-assortment > .last {
   margin-top: 200px;
 }
 
-header.product-assortment > .last button {
-  margin-left: 35px;
-  width: 205px;
-}
-
 @media (min-width: 1441px) {
   header.product-assortment {
     background-size: 580px 420px, 65% auto;
@@ -251,14 +209,6 @@ header.product-assortment > .last button {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 100px;
-  }
-  header.product-assortment .buttons {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  header.product-assortment .download-licks {
-    margin-bottom: 40px;
   }
 }
 
@@ -289,32 +239,6 @@ header.product-assortment > .last button {
   header.product-assortment {
     padding: 145px 30px 50px;
   }
-  header.product-assortment .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  header.product-assortment .buttons button {
-    margin: 0;
-  }
-  header.product-assortment .buttons button:last-child {
-    margin-top: 20px;
-  }
-  header.product-assortment .buttons img {
-    width: 15px;
-    height: 36px;
-    margin-top: 40px;
-  }
-  header.product-assortment .download-licks div {
-    margin: 0 10px 10px;
-  }
   header.product-assortment > .last {
     margin-top: 50px;
   }
@@ -326,32 +250,7 @@ header.product-assortment > .last button {
   }
 }
 
-@media (min-width: 320px) {
-  header.product-assortment {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.product-assortment .last {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.product-assortment .first {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.product-assortment .buttons {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  header.product-assortment .buttons img {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-}
-
 header.internal-transitions {
-  font-family: "SFPro";
-  background-repeat: no-repeat;
   background-position: calc(100% - 203px) 82px, calc(100% - 456px) 87px, 108% 33%;
   background-size: auto 61%, auto 51%, 59% auto;
   padding: 290px 190px 50px;
@@ -379,11 +278,6 @@ header.internal-transitions > .last {
   margin-top: 170px;
 }
 
-header.internal-transitions > .last button {
-  margin-left: 35px;
-  width: 205px;
-}
-
 @media (max-width: 1300px) {
   header.internal-transitions {
     background-position: calc(100% - 103px) 142px, calc(100% - 301px) 155px, 108% 34%;
@@ -398,14 +292,6 @@ header.internal-transitions > .last button {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 90px;
-  }
-  header.internal-transitions .buttons {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  header.internal-transitions .download-licks {
-    margin-bottom: 40px;
   }
 }
 
@@ -454,33 +340,6 @@ header.internal-transitions > .last button {
   header.internal-transitions > .last {
     margin-top: 50px;
   }
-  header.internal-transitions .buttons {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  header.internal-transitions .buttons button {
-    margin: 0;
-  }
-  header.internal-transitions .buttons button:last-child {
-    margin-top: 20px;
-  }
-  header.internal-transitions .buttons img {
-    width: 15px;
-    height: 36px;
-    margin-top: 40px;
-  }
-  header.internal-transitions .download-licks div {
-    margin: 0 10px 10px;
-  }
 }
 
 @media (max-width: 500px) {
@@ -489,32 +348,7 @@ header.internal-transitions > .last button {
   }
 }
 
-@media (min-width: 320px) {
-  header.internal-transitions {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.internal-transitions .last {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.internal-transitions .first {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.internal-transitions .buttons {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  header.internal-transitions .buttons img {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-}
-
 header.internal {
-  font-family: "SFPro";
-  background-repeat: no-repeat;
   background-position: calc(100% - 38px) 30%, calc(100% - 382px) 35%, 108% 33%;
   background-size: auto, 25% auto, 59% auto;
   padding: 290px 190px 50px;
@@ -542,11 +376,6 @@ header.internal > .last {
   margin-top: 200px;
 }
 
-header.internal > .last button {
-  margin-left: 35px;
-  width: 205px;
-}
-
 @media (min-width: 1441px) {
   header.internal {
     background-size: auto, 25% auto, 59% auto;
@@ -567,14 +396,6 @@ header.internal > .last button {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 180px;
-  }
-  header.internal .buttons {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  header.internal .download-licks {
-    margin-bottom: 40px;
   }
 }
 
@@ -619,58 +440,11 @@ header.internal > .last button {
   header.internal > .last {
     margin-top: 50px;
   }
-  header.internal .buttons {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  header.internal .buttons button {
-    margin: 0;
-  }
-  header.internal .buttons img {
-    width: 15px;
-    height: 36px;
-    margin-top: 40px;
-  }
-  header.internal .download-licks div {
-    margin: 0 10px 10px;
-  }
 }
 
 @media (max-width: 500px) {
   header.internal {
     background-image: none !important;
-  }
-}
-
-@media (min-width: 320px) {
-  header.internal {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.internal .last {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.internal .first {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.internal .buttons {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  header.internal .buttons img {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
   }
 }
 
@@ -965,8 +739,6 @@ header.blog-promotions .breadcrumb-cont {
 }
 
 header.internal-promotion {
-  font-family: "SFPro";
-  background-repeat: no-repeat;
   background-position: 78% 55%, 78% 38%, 84% 42%;
   background-size: 38% auto,40% auto, 51% auto;
   padding: 290px 190px 50px;
@@ -994,11 +766,6 @@ header.internal-promotion > .last {
           justify-content: space-between;
 }
 
-header.internal-promotion > .last button {
-  margin-left: 35px;
-  width: 205px;
-}
-
 @media (max-width: 1300px) {
   header.internal-promotion > .last {
     -webkit-box-orient: vertical;
@@ -1009,11 +776,6 @@ header.internal-promotion > .last button {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 90px;
-  }
-  header.internal-promotion .buttons {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
   }
 }
 
@@ -1052,26 +814,6 @@ header.internal-promotion > .last button {
   header.internal-promotion {
     padding: 145px 30px 50px;
   }
-  header.internal-promotion .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  header.internal-promotion .buttons button {
-    margin: 0;
-  }
-  header.internal-promotion .buttons img {
-    width: 15px;
-    height: 36px;
-    margin-top: 40px;
-  }
 }
 
 @media (max-width: 500px) {
@@ -1080,31 +822,7 @@ header.internal-promotion > .last button {
   }
 }
 
-@media (min-width: 320px) {
-  header.internal-promotion {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.internal-promotion .last {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.internal-promotion .first {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-  header.internal-promotion .buttons {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  header.internal-promotion .buttons img {
-    -webkit-transition: .5s ease all;
-    transition: .5s ease all;
-  }
-}
-
 header.internal-news {
-  background-repeat: no-repeat;
   background-position: 84% 43%, 65% 52%, 79% 54%;
   background-size: 45% auto, 42% auto, 32% auto;
   padding: 290px 190px 50px;
@@ -1132,10 +850,6 @@ header.internal-news > .last {
           justify-content: space-between;
 }
 
-header.internal-news .buttons button {
-  margin-left: 35px;
-}
-
 @media (max-width: 1300px) {
   header.internal-news > .last {
     -webkit-box-orient: vertical;
@@ -1146,11 +860,6 @@ header.internal-news .buttons button {
         -ms-flex-align: center;
             align-items: center;
     margin-top: 90px;
-  }
-  header.internal-news .buttons {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
   }
 }
 
@@ -1193,49 +902,6 @@ header.internal-news .buttons button {
   }
   header.internal-news > .last {
     margin-top: 50px;
-  }
-  header.internal-news .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  header.internal-news .buttons button {
-    margin: 0;
-  }
-  header.internal-news .buttons img {
-    width: 15px;
-    height: 36px;
-    margin-top: 40px;
-  }
-}
-
-@media (min-width: 320px) {
-  header.internal-news {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  header.internal-news > .first {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  header.internal-news > .last {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  header.internal-news .buttons {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
-  }
-  header.internal-news .buttons button {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
   }
 }
 

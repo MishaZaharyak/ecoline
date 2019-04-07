@@ -440,19 +440,6 @@ ul.slider-list {
     }
 }
 
-.header-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    z-index: 1;
-    text-align: right;
-
-    img {
-        width: 100%;
-    }
-}
-
 .download-licks {
     display: flex;
     align-items: flex-end;
@@ -486,11 +473,94 @@ ul.slider-list {
     }
 }
 
+.buttons {
+    button {
+        width: 205px;
+
+        &:not(:nth-of-type(1)) {
+            margin-left: 35px;
+        }
+    }
+
+    img {
+        margin-right: 35px;
+    }
+}
+
+.common-header {
+    font-family: $S-FPro-Display;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1300px) {
+
+    .buttons {
+        order: 1;
+    }
+
+    .download-licks {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .goDown {
+        order: 1;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button:not(:nth-of-type(1)) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 15px;
+            height: 36px;
+            margin-top: 40px;
+            margin-right: 0;
+        }
+    }
+
+    .download-licks  div {
+        margin: 0 10px 10px;
+    }
+}
+
 @media (min-width: 320px) {
+    .common-header {
+        transition: .5s ease all;
+
+        .first {
+            transition: .5s ease margin;
+        }
+
+        .last {
+            transition: .5s ease margin;
+        }
+    }
+
     .download-licks {
         transition: .5s ease all;
 
         div {
+            transition: .5s ease all;
+        }
+    }
+
+    .buttons {
+        transition: all .5s ease;
+
+        button {
+            transition: all .5s ease;
+        }
+
+        img {
             transition: .5s ease all;
         }
     }

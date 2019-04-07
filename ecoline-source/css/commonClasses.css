@@ -497,19 +497,6 @@ ul.slider-list li.big-text.active::before {
   color: red;
 }
 
-.header-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  z-index: 1;
-  text-align: right;
-}
-
-.header-image img {
-  width: 100%;
-}
-
 .download-licks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -563,12 +550,97 @@ ul.slider-list li.big-text.active::before {
   margin: 10px auto 0;
 }
 
+.buttons button {
+  width: 205px;
+}
+
+.buttons button:not(:nth-of-type(1)) {
+  margin-left: 35px;
+}
+
+.buttons img {
+  margin-right: 35px;
+}
+
+.common-header {
+  font-family: "SFPro";
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1300px) {
+  .buttons {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .download-licks {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .goDown {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .buttons button:not(:nth-of-type(1)) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .buttons img {
+    width: 15px;
+    height: 36px;
+    margin-top: 40px;
+    margin-right: 0;
+  }
+  .download-licks div {
+    margin: 0 10px 10px;
+  }
+}
+
 @media (min-width: 320px) {
+  .common-header {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  .common-header .first {
+    -webkit-transition: .5s ease margin;
+    transition: .5s ease margin;
+  }
+  .common-header .last {
+    -webkit-transition: .5s ease margin;
+    transition: .5s ease margin;
+  }
   .download-licks {
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
   }
   .download-licks div {
+    -webkit-transition: .5s ease all;
+    transition: .5s ease all;
+  }
+  .buttons {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .buttons button {
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+  .buttons img {
     -webkit-transition: .5s ease all;
     transition: .5s ease all;
   }

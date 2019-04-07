@@ -1,14 +1,12 @@
 @import './vars.scss';
 @import './font-size.scss';
 
-header.header {
+header.main {
     padding: 270px 90px 90px 90px;
-    font-family: $S-FPro-Display;
-    background-repeat: no-repeat;
     background-position: 127% 19%, -216px -43px;
     background-size: 68% auto, calc(100% + 337px) 866px;
 
-    & > div:first-child {
+    & > .first {
         display: flex;
         position: relative;
     }
@@ -21,35 +19,32 @@ header.header {
         padding-left: 20px;
     }
 
-    & > div:last-child {
+    & > .last {
         margin-top: 270px;
-
-        button {
-            margin-left: 35px;
-            width: 205px;
-        }
     }
 }
 
 @media (max-width: 1250px) {
-    header.header {
+    header.main {
         background-position: 121% 74%, -216px -43px;
         background-size: 60% auto, calc(100% + 337px) 866px;
     }
 }
 
 @media (max-width: 800px) {
-    header.header {
+    header.main {
         padding-top: 170px;
         background-position: 110% 111%, -216px -43px;
-        background-size: 60% auto, calc(100% + 337px) 866px;
+        background-size: 0, calc(100% + 337px) 866px;
 
-        & > div:first-child {
+        & > .first {
             flex-direction: column;
             align-items: center;
         }
 
         .baner-text {
+            max-width: none;
+
             h1, div {
                 text-align: center;
             }
@@ -60,65 +55,31 @@ header.header {
             padding-left: 0;
         }
 
-        & > div:last-child {
-            margin-top: 175px;
+        & > .last {
+            margin-top: 60px;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
         }
     }
 }
 
 @media (max-width: 700px) {
-
-    .goDown {
-        order: 1;
-    }
-
-    header.header {
+    header.main {
         background-position: 0 0, -166px -133px;
         background-size: 0, calc(100% + 209px) 819px;
         padding-bottom: 60px;
 
-        & > div:last-child {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        & > .first {
             margin-top: 60px;
-
-            button {
-                margin: 0;
-
-                &:last-child {
-                    margin-top: 20px;
-                }
-            }
-
-            & > a img {
-                width: 15px;
-                height: 36px;
-                margin-top: 40px;
-            }
         }
 
     }
 }
 
 @media (max-width: 520px) {
-    header.header {
+    header.main {
         padding: 170px 30px 60px;
-
-        .baner-text {
-            max-width: 320px;
-        }
-    }
-}
-
-@media (min-width: 320px) {
-    header.header {
-        transition: .5s ease all;
-
-        & > div:last-child {
-            transition: .5s ease margin;
-        }
     }
 }
 
@@ -181,11 +142,9 @@ header.all-products-page {
 
 //product-assortment-page
 header.product-assortment {
-    background-repeat: no-repeat;
     background-position: 80% 32%, 108% 33%;
     background-size: 42% auto, 59% auto;
     padding: 290px 190px 50px;
-    font-family: $S-FPro-Display;
 
     & > .first {
         flex-direction: column;
@@ -197,11 +156,6 @@ header.product-assortment {
         display: flex;
         justify-content: space-between;
         margin-top: 200px;
-
-        button {
-            margin-left: 35px;
-            width: 205px;
-        }
     }
 }
 
@@ -217,14 +171,6 @@ header.product-assortment {
             flex-direction: column;
             align-items: center;
             margin-top: 100px;
-        }
-
-        .buttons {
-            order: 1;
-        }
-
-        .download-licks {
-            margin-bottom: 40px;
         }
     }
 }
@@ -256,30 +202,6 @@ header.product-assortment {
     header.product-assortment {
         padding: 145px 30px 50px;
 
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            button {
-                margin: 0;
-
-                &:last-child {
-                    margin-top: 20px;
-                }
-            }
-
-            img {
-                width: 15px;
-                height: 36px;
-                margin-top: 40px;
-            }
-        }
-
-        .download-licks  div {
-            margin: 0 10px 10px;
-        }
-
         & > .last {
             margin-top: 50px;
         }
@@ -291,35 +213,11 @@ header.product-assortment {
         background-image: none !important;
     }
 }
-
-@media (min-width: 320px) {
-    header.product-assortment {
-        transition: .5s ease all;
-
-        .last {
-            transition: .5s ease all;
-        }
-
-        .first {
-            transition: .5s ease all;
-        }
-
-        .buttons {
-            transition: all .5s ease;
-
-            img {
-                transition: .5s ease all;
-            }
-        }
-    }
-}
 //end product-assortment-page
 
 
 // internal-transitions-page
 header.internal-transitions {
-    font-family: $S-FPro-Display;
-    background-repeat: no-repeat;
     background-position: calc(100% - 203px) 82px, calc(100% - 456px) 87px, 108% 33%;
     background-size: auto 61%, auto 51%, 59% auto;
     padding: 290px 190px 50px;
@@ -340,11 +238,6 @@ header.internal-transitions {
         display: flex;
         justify-content: space-between;
         margin-top: 170px;
-
-        button {
-            margin-left: 35px;
-            width: 205px;
-        }
     }
 }
 
@@ -357,14 +250,6 @@ header.internal-transitions {
             flex-direction: column;
             align-items: center;
             margin-top: 90px;
-        }
-
-        .buttons {
-            order: 1;
-        }
-
-        .download-licks {
-            margin-bottom: 40px;
         }
     }
 }
@@ -411,31 +296,6 @@ header.internal-transitions {
         & > .last {
             margin-top: 50px;
         }
-
-        .buttons {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            button {
-                margin: 0;
-
-                &:last-child {
-                    margin-top: 20px;
-                }
-            }
-
-            img {
-                width: 15px;
-                height: 36px;
-                margin-top: 40px;
-            }
-        }
-
-        .download-licks  div {
-            margin: 0 10px 10px;
-        }
     }
 }
 
@@ -444,35 +304,11 @@ header.internal-transitions {
         background-image: none !important;
     }
 }
-
-@media (min-width: 320px) {
-    header.internal-transitions {
-        transition: .5s ease all;
-
-        .last {
-            transition: .5s ease all;
-        }
-
-        .first {
-            transition: .5s ease all;
-        }
-
-        .buttons {
-            transition: all .5s ease;
-
-            img {
-                transition: .5s ease all;
-            }
-        }
-    }
-}
 // end internal-transitions-page
 
 
 // internal page
 header.internal {
-    font-family: $S-FPro-Display;
-    background-repeat: no-repeat;
     background-position: calc(100% - 38px) 30%, calc(100% - 382px) 35%, 108% 33%;
     background-size: auto, 25% auto, 59% auto;
     padding: 290px 190px 50px;
@@ -493,11 +329,6 @@ header.internal {
         display: flex;
         justify-content: space-between;
         margin-top: 200px;
-
-        button {
-            margin-left: 35px;
-            width: 205px;
-        }
     }
 }
 
@@ -516,14 +347,6 @@ header.internal {
             flex-direction: column;
             align-items: center;
             margin-top: 180px;
-        }
-
-        .buttons {
-            order: 1;
-        }
-
-        .download-licks {
-            margin-bottom: 40px;
         }
     }
 }
@@ -567,55 +390,12 @@ header.internal {
         & > .last {
             margin-top: 50px;
         }
-
-        .buttons {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            button {
-                margin: 0;
-            }
-
-            img {
-                width: 15px;
-                height: 36px;
-                margin-top: 40px;
-            }
-        }
-
-        .download-licks  div {
-            margin: 0 10px 10px;
-        }
     }
 }
 
 @media (max-width: 500px) {
     header.internal {
         background-image: none !important;
-    }
-}
-
-@media (min-width: 320px) {
-    header.internal {
-        transition: .5s ease all;
-
-        .last {
-            transition: .5s ease all;
-        }
-
-        .first {
-            transition: .5s ease all;
-        }
-
-        .buttons {
-            transition: all .5s ease;
-
-            img {
-                transition: .5s ease all;
-            }
-        }
     }
 }
 // end internal page
@@ -908,8 +688,6 @@ header.blog-promotions {
 
 // internal-promotion 
 header.internal-promotion {
-    font-family: $S-FPro-Display;
-    background-repeat: no-repeat;
     background-position: 78% 55%, 78% 38%, 84% 42%;
     background-size: 38% auto,40% auto, 51% auto;
     padding: 290px 190px 50px;
@@ -930,11 +708,6 @@ header.internal-promotion {
         margin-top: 140px;
         display: flex;
         justify-content: space-between;
-
-        button {
-            margin-left: 35px;
-            width: 205px;
-        }
     }
 }
 
@@ -944,10 +717,6 @@ header.internal-promotion {
             flex-direction: column;
             align-items: center;
             margin-top: 90px;
-        }
-
-        .buttons {
-            order: 1;
         }
     }
 }
@@ -984,22 +753,6 @@ header.internal-promotion {
 @media (max-width: 700px) {
     header.internal-promotion {
         padding: 145px 30px 50px;
-
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            button {
-                margin: 0;
-            }
-
-            img {
-                width: 15px;
-                height: 36px;
-                margin-top: 40px;
-            }
-        }
     }
 }
 
@@ -1008,33 +761,10 @@ header.internal-promotion {
         background-image: none !important;
     }
 }
-
-@media (min-width: 320px) {
-    header.internal-promotion {
-        transition: .5s ease all;
-
-        .last {
-            transition: .5s ease all;
-        }
-
-        .first {
-            transition: .5s ease all;
-        }
-
-        .buttons {
-            transition: all .5s ease;
-
-            img {
-                transition: .5s ease all;
-            }
-        }
-    }
-}
 // end internal-promotion
 
 // internal-news page
 header.internal-news {
-    background-repeat: no-repeat;
     background-position: 84% 43%, 65% 52%, 79% 54%;
     background-size: 45% auto, 42% auto, 32% auto;
     padding: 290px 190px 50px;
@@ -1056,23 +786,13 @@ header.internal-news {
         display: flex;
         justify-content: space-between;
     }
-
-    .buttons button {
-        margin-left: 35px;
-    }
 }
 
 @media (max-width: 1300px) {
-    header.internal-news {
-        & > .last {
-            flex-direction: column;
-            align-items: center;
-            margin-top: 90px;
-        }
-
-        .buttons {
-            order: 1;
-        }
+    header.internal-news  > .last {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 90px;
     }
 }
 
@@ -1111,44 +831,6 @@ header.internal-news {
 
         & > .last {
             margin-top: 50px;
-        }
-
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            button {
-                margin: 0;
-            }
-
-            img {
-                width: 15px;
-                height: 36px;
-                margin-top: 40px;
-            }
-        }
-    }
-}
-
-@media (min-width: 320px) {
-    header.internal-news {
-        transition: all .5s ease;
-
-        & > .first {
-            transition: all .5s ease;
-        }
-        
-        & > .last {
-            transition: all .5s ease;
-        }
-
-        .buttons {
-            transition: all .5s ease;
-
-            button {
-                transition: all .5s ease;
-            }
         }
     }
 }
