@@ -3808,39 +3808,6 @@ body.product_under_the_direction .text-section {
   line-height: 1.308;
 }
 
-.grid-section .pagination li .page-link {
-  border: none;
-  border-radius: 50%;
-  color: #62c622;
-  padding: 6px 12px;
-  margin: 0 5px;
-}
-
-.grid-section .pagination li .page-link:not(.nav-arrow) {
-  background-color: #e9f0f6;
-}
-
-.grid-section .pagination li .page-link:hover {
-  color: white;
-  background-color: #62c622;
-}
-
-.grid-section .pagination li .page-link:focus {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.grid-section .pagination li.active .page-link {
-  background-color: #62c622;
-  color: white;
-}
-
-.grid-section .pagination * {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
 .grid-section.grid-primary > div:not(.pagginate-cont) {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -3897,20 +3864,6 @@ body.product_under_the_direction .text-section {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
-  color: white;
-}
-
-.grid-section.grid-primary .pagination li .page-link {
-  color: #003de8;
-}
-
-.grid-section.grid-primary .pagination li .page-link:hover {
-  background-color: #003de8;
-  color: white;
-}
-
-.grid-section.grid-primary .pagination li.active .page-link {
-  background-color: #003de8;
   color: white;
 }
 

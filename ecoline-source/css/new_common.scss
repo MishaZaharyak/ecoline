@@ -1,3 +1,6 @@
+@import './vars.scss';
+@import './font-size.scss';
+
 // gallery page
 .gallery {
     & > div:not(.pagginate-cont) {
@@ -19,3 +22,142 @@
     }
 }
 // end gallery page
+
+// review page
+.review_section {
+    padding: 0 90px 50px;
+    font-family: $S-FPro-Display;
+    margin: 0;
+    max-width: 1440px;
+    margin: 0 auto;
+    transition: all .5s ease;
+
+    .review_item {
+        max-height: 240px;
+        height: 100%;
+        margin: 0 3px;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid $mainBackgrondColor;
+        border-radius: 3px;
+        padding: 30px 40px;
+        position: relative;
+        transition: all .5s ease;
+
+        div img {
+            max-width: 40px;
+            max-height: 40px;
+        }
+    }
+
+    .name {
+        padding-top: 20px;
+        font-size: 18px;
+        line-height: 18px;
+        color: $primary;
+        font-weight: bold;
+    }
+
+    .comment {
+        font-size: 12px;
+        line-height: 18px;
+        overflow-y: auto;
+        padding-right: 5px;
+        max-height: 72px;
+        color: $secondary;
+    }
+
+    .quotes {
+        position: absolute;
+        right: 40px;
+        top: -40px;
+    }
+
+    .form_item {
+        max-height: 240px;
+        height: 100vh;
+        margin: 0 3px;
+        background-color: #edf6ed;
+        border: 2px solid $mainBackgrondColor;
+        padding: 30px 40px;
+        position: relative;
+        border-radius: 3px;
+        transition: all .5s ease;
+
+        button {
+            max-width: 140px;
+        }
+
+        input, textarea {
+            color: $primary;
+            font-size: 15px;
+            background-color: transparent;
+            padding-bottom: 4px;
+            border: 0;
+            border-bottom: 1px solid $primary;
+            font-weight: 400;
+            outline: none;
+        }
+
+        input {
+            width: 100%;
+            max-width: 150px;
+
+            &::placeholder {
+                line-height: 18px;
+                line-height: 22px;
+                font-weight: 100;
+                -webkit-text-fill-color: $primary;
+                transition: .5s ease font-size;
+            }
+
+            &:focus {
+                &::placeholder {
+                    font-size: 9px;
+                    transition: .5s ease font-size;
+                }
+            }
+        }
+
+        label {
+            color: $primary;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: bold;
+            color: $primary;
+            line-height: 1.2;
+            position: absolute;
+            left: 40px;
+            top: -22px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .review_section {
+        padding: 0 30px 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .review_section {
+        .review_item, .form_item {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .review_section {
+        .review_item, .form_item {
+            padding: 15px;
+        }
+    }
+}
+// end review page

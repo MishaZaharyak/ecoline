@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'SFPro';
+  src: url("../fonts/formats/SFProDisplay-Bold.eot");
+  /* IE9+ Compat Modes */
+  src: url("../fonts/formats/SFProDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/formats/SFProDisplay-Bold.woff2") format("woff2"), url("../fonts/formats/SFProDisplay-Bold.woff") format("woff"), url("../fonts/formats/SFProDisplay-Bold.ttf") format("truetype"), url("../fonts/formats/SFProDisplay-Bold.svg#SFPro") format("svg"), url("../fonts/SF-Pro-Display-Bold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFPro';
+  src: url("../fonts/SF-Pro-Display-Medium.otf");
+  src: url("../fonts/formats/SFProDisplay-Medium.woff2") format("woff2"), url("../fonts/formats/SFProDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
 .gallery > div:not(.pagginate-cont) {
   max-width: none;
 }
@@ -13,6 +30,191 @@
 @media (max-width: 767px) {
   .gallery .image-cont p {
     max-width: none;
+  }
+}
+
+.review_section {
+  padding: 0 90px 50px;
+  font-family: "SFPro";
+  margin: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.review_section .review_item {
+  max-height: 240px;
+  height: 100%;
+  margin: 0 3px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 2px solid #e9f0f6;
+  border-radius: 3px;
+  padding: 30px 40px;
+  position: relative;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.review_section .review_item div img {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.review_section .name {
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #003de8;
+  font-weight: bold;
+}
+
+.review_section .comment {
+  font-size: 12px;
+  line-height: 18px;
+  overflow-y: auto;
+  padding-right: 5px;
+  max-height: 72px;
+  color: #333333;
+}
+
+.review_section .quotes {
+  position: absolute;
+  right: 40px;
+  top: -40px;
+}
+
+.review_section .form_item {
+  max-height: 240px;
+  height: 100vh;
+  margin: 0 3px;
+  background-color: #edf6ed;
+  border: 2px solid #e9f0f6;
+  padding: 30px 40px;
+  position: relative;
+  border-radius: 3px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.review_section .form_item button {
+  max-width: 140px;
+}
+
+.review_section .form_item input, .review_section .form_item textarea {
+  color: #003de8;
+  font-size: 15px;
+  background-color: transparent;
+  padding-bottom: 4px;
+  border: 0;
+  border-bottom: 1px solid #003de8;
+  font-weight: 400;
+  outline: none;
+}
+
+.review_section .form_item input {
+  width: 100%;
+  max-width: 150px;
+}
+
+.review_section .form_item input::-webkit-input-placeholder {
+  line-height: 18px;
+  line-height: 22px;
+  font-weight: 100;
+  -webkit-text-fill-color: #003de8;
+  -webkit-transition: .5s ease font-size;
+  transition: .5s ease font-size;
+}
+
+.review_section .form_item input:-ms-input-placeholder {
+  line-height: 18px;
+  line-height: 22px;
+  font-weight: 100;
+  -webkit-text-fill-color: #003de8;
+  -webkit-transition: .5s ease font-size;
+  transition: .5s ease font-size;
+}
+
+.review_section .form_item input::-ms-input-placeholder {
+  line-height: 18px;
+  line-height: 22px;
+  font-weight: 100;
+  -webkit-text-fill-color: #003de8;
+  -webkit-transition: .5s ease font-size;
+  transition: .5s ease font-size;
+}
+
+.review_section .form_item input::placeholder {
+  line-height: 18px;
+  line-height: 22px;
+  font-weight: 100;
+  -webkit-text-fill-color: #003de8;
+  -webkit-transition: .5s ease font-size;
+  transition: .5s ease font-size;
+}
+
+.review_section .form_item input:focus::-webkit-input-placeholder {
+  font-size: 9px;
+  -webkit-transition: .5s ease font-size;
+  transition: .5s ease font-size;
+}
+
+.review_section .form_item input:focus:-ms-input-placeholder {
+  font-size: 9px;
+  -webkit-transition: .5s ease font-size;
+  transition: .5s ease font-size;
+}
+
+.review_section .form_item input:focus::-ms-input-placeholder {
+  font-size: 9px;
+  -webkit-transition: .5s ease font-size;
+  transition: .5s ease font-size;
+}
+
+.review_section .form_item input:focus::placeholder {
+  font-size: 9px;
+  -webkit-transition: .5s ease font-size;
+  transition: .5s ease font-size;
+}
+
+.review_section .form_item label {
+  color: #003de8;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.review_section .form_item p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #003de8;
+  line-height: 1.2;
+  position: absolute;
+  left: 40px;
+  top: -22px;
+}
+
+@media (max-width: 991px) {
+  .review_section {
+    padding: 0 30px 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .review_section .review_item, .review_section .form_item {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .review_section .review_item, .review_section .form_item {
+    padding: 15px;
   }
 }
 /*# sourceMappingURL=new_common.css.map */

@@ -3652,41 +3652,6 @@ body.product_under_the_direction {
         }
     }
 
-    .pagination {
-        li {
-            .page-link {
-                border: none;
-                border-radius: 50%;
-                color: $success;
-                padding: 6px 12px;
-                margin: 0 5px;
-
-                &:not(.nav-arrow) {
-                    background-color: $mainBackgrondColor;
-                }
-    
-                &:hover {
-                    color: white;
-                    background-color: $success;
-                }
-
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-            }
-
-            &.active .page-link {
-                background-color: $success;
-                color: white;
-            }
-        }
-
-        * {
-            transition: all .3s ease;
-        }
-    }
-
     &.grid-primary {
         & > div:not(.pagginate-cont) {
             align-items: center;
@@ -3728,24 +3693,6 @@ body.product_under_the_direction {
             span {
                 order: -1;
                 color: white;
-            }
-        }
-
-        .pagination {
-            li {
-                .page-link {
-                    color: $primary;
-        
-                    &:hover {
-                        background-color: $primary;
-                        color: white;
-                    }
-                }
-    
-                &.active .page-link {
-                    background-color: $primary;
-                    color: white;
-                }
             }
         }
     }
