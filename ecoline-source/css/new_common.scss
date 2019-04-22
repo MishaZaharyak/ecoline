@@ -1,0 +1,21 @@
+// gallery page
+.gallery {
+    & > div:not(.pagginate-cont) {
+        max-width: none; 
+    }
+
+    .image-cont p {
+        max-width: 100px;
+    }
+
+    &.grid-primary .button-cont button {
+        width: 176px;
+    }
+}
+
+@media (max-width: 767px) {
+    .gallery .image-cont p {
+        max-width: none;
+    }
+}
+// end gallery page

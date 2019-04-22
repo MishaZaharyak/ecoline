@@ -62,7 +62,15 @@ body::-webkit-scrollbar-thumb {
 
 .primary-btn.has-link a {
   padding: 6px 20px;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .success-btn {
@@ -97,6 +105,15 @@ body::-webkit-scrollbar-thumb {
 .success-btn.has-link a {
   padding: 6px 20px;
   display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .light-btn {
@@ -131,6 +148,15 @@ body::-webkit-scrollbar-thumb {
 .light-btn.has-link a {
   padding: 6px 20px;
   display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .danger-btn {
@@ -166,6 +192,15 @@ body::-webkit-scrollbar-thumb {
 .danger-btn.has-link a {
   padding: 6px 20px;
   display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .secondary-paragraph {

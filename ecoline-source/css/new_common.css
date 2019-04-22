@@ -1,0 +1,18 @@
+.gallery > div:not(.pagginate-cont) {
+  max-width: none;
+}
+
+.gallery .image-cont p {
+  max-width: 100px;
+}
+
+.gallery.grid-primary .button-cont button {
+  width: 176px;
+}
+
+@media (max-width: 767px) {
+  .gallery .image-cont p {
+    max-width: none;
+  }
+}
+/*# sourceMappingURL=new_common.css.map */
