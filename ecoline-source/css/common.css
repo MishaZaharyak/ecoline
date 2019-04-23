@@ -978,7 +978,7 @@
 
 .section-with-slider.left > div:first-child .slider .slide button {
   margin-top: 25px;
-  max-width: 130px;
+  width: 130px;
 }
 
 .section-with-slider.left > div:first-child .slider .slick-dots {

@@ -217,4 +217,246 @@
     padding: 15px;
   }
 }
+
+.contact_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0 15px;
+  max-height: 290px;
+  height: 100%;
+  max-width: 213px;
+}
+
+.contact_item img {
+  max-width: 35px;
+  max-height: 35px;
+  margin-bottom: 20px;
+}
+
+.contact_item h2 {
+  font-size: 1.25rem;
+  color: #003de8;
+  font-weight: bold;
+}
+
+@media (max-width: 1440px) {
+  .contact_item h2 {
+    font-size: calc(0.935rem + 0.35vw) ;
+  }
+}
+
+.contact_item p {
+  margin: 0;
+}
+
+.contact_item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.contact_item ul li {
+  font-size: 15px;
+  line-height: 22px;
+  color: #333333;
+}
+
+.contact_item button {
+  margin-top: 25px;
+  width: 130px;
+}
+
+.schedule {
+  /* ff3.6+ */
+  /* safari4+,chrome */
+  /* safari5.1+,chrome10+ */
+  /* opera 11.10+ */
+  /* ie10+ */
+  background: linear-gradient(89deg, #003de8 0%, #62c622 100%);
+  /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003de8', endColorstr='#62c622',GradientType=1 );
+  /* ie6-9 */
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.schedule p {
+  font-size: 1.25rem;
+  color: white;
+  font-weight: bold;
+  line-height: 1.1;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+@media (max-width: 1440px) {
+  .schedule p {
+    font-size: calc(0.935rem + 0.35vw) ;
+  }
+}
+
+.schedule ul {
+  background-color: white;
+  padding: 0 5px;
+  border-radius: 5px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.schedule ul li {
+  padding: 15px;
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.571;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.schedule ul li:not(:last-child) {
+  border-bottom: 1px solid #e9f0f6;
+}
+
+.schedule ul li .time {
+  margin-left: 30px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.contacts_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-family: "SFPro";
+  padding-right: 90px;
+  padding-bottom: 80px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.contacts_section .column_cont {
+  background-color: #e9f0f6;
+  border-radius: 0 10px 10px 0;
+  margin-right: 50px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.contacts_section .max_width_cont {
+  max-width: 880px;
+  padding: 55px 100px 50px 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.contacts_section .schedule_cont {
+  margin-left: auto;
+  max-width: 380px;
+  width: 100%;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.contacts_section .addition_info {
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.571;
+}
+
+.contacts_section .addition_info > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0 20px;
+  padding: 15px 0;
+}
+
+.contacts_section .addition_info > div:first-child {
+  border-bottom: 1px solid #e9f0f6;
+}
+
+@media (max-width: 1150px) {
+  .contacts_section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-right: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts_section .column_cont {
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .contacts_section .max_width_cont {
+    padding: 50px 30px;
+    max-width: 770px;
+  }
+  .contacts_section .schedule_cont {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin: 0 30px 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .schedule {
+    border-radius: 0;
+  }
+  .schedule p {
+    text-align: center;
+  }
+  .schedule ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .schedule ul li .time {
+    margin: 10px 0 0;
+  }
+  .contacts_section .addition_info > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 /*# sourceMappingURL=new_common.css.map */
