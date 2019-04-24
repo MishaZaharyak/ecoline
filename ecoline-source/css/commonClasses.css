@@ -221,6 +221,12 @@ body::-webkit-scrollbar-thumb {
   color: white;
 }
 
+.primary-paragraph {
+  font-size: 13px;
+  line-height: 17px;
+  color: #003de8;
+}
+
 .a-link {
   text-decoration: none;
   color: inherit;

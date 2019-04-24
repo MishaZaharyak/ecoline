@@ -61,7 +61,6 @@ $(document).ready(function() {
     const fullWidthMenu = $('.fullWidthMenu');
     const menu = $('.topMenu');
     const topmenuNav = $(menu).find('.navigation');
-    const header = $('.header');
 
     if ($(this).hasClass('open')) {
       $(menu).addClass('white');

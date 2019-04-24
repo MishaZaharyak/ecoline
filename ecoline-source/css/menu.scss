@@ -172,6 +172,8 @@
     .topMenu {
         display: flex;
         justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
         .feedback-btn {
             display: none;
@@ -189,7 +191,7 @@
 
 @media (max-width: 520px) {
     .topMenu {
-        padding: 25px 30px;
+        padding: 10px 30px;
     }
 }
 
@@ -427,6 +429,12 @@
                 margin-bottom: 15px;
             }
         }
+    }
+}
+
+@media (max-width: 800px) {
+    .fullWidthMenu {
+        top: 68px;
     }
 }
 

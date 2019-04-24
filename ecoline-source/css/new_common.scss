@@ -345,3 +345,148 @@
     }
 }
 // end contact page
+
+
+// prices page
+.price_section {
+    padding-bottom: 90px;
+    padding-top: 20px;
+    transition: all .5s ease;
+
+    .first, .last {
+        padding: 60px 100px;
+        flex: 1;
+        justify-content: space-between;
+        transition: all .5s ease;
+    }
+
+    .first {
+        @include bg_horisontal;
+        border-radius: 0 10px 10px 0;
+        margin-right: 7px;
+    }
+
+    .last {
+        border-radius: 10px 0 0 10px;
+        background-color: $mainBackgrondColor;
+    }
+
+    .flag {
+        width: 30px;
+    }
+
+    h3 {
+        @include font-size(40px);
+        color: $primary;
+        font-weight: bold;
+        line-height: 1;          
+
+        &.light {
+            color: white;
+        }
+    }
+
+    .text {
+        max-width: 200px;
+        transition: all .5s ease;
+    }
+
+    .download-btns {
+        button {
+            width: 200px;
+            margin: 8px 0;
+        }
+
+        img {
+            width: 15px;
+            margin-left: 7px;
+
+            &.light {
+                display: none;
+            }
+        }
+
+        button:hover img {
+            &.primary {
+                display: none;
+            }
+
+            &.light {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width: 1500px) {
+    .price_section {
+        max-width: 1440px;
+        margin: 0 auto;
+
+        .first {
+            border-radius: 10px;
+        }
+
+        .last {
+            border-radius: 10px;
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .price_section {
+        .first, .last {
+            padding: 50px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .price_section {
+        flex-direction: column;
+        padding: 20px 30px 70px;
+
+        .first, .last {
+            max-width: 715px;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+    
+        .last {
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .price_section {
+        padding: 20px 0 70px;
+
+        .first, .last {
+            flex-direction: column;
+            padding: 50px 30px;
+            border-radius: 0;
+        }
+
+        .last {
+            margin-top: 0;
+
+            .text {
+                order: -1;
+            }
+        }
+
+        .text {
+            max-width: none;
+            text-align: center;
+            margin-bottom: 30px;
+
+            p {
+                max-width: 450px;
+                text-align: left;
+            }
+        }
+    }
+}
+// end prices page
